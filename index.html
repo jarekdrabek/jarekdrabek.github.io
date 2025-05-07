@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jarosław Drabek - Rozwiązania Webowe i Automatyzacja Oparte na AI</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Tektur:wght@400&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif; /* Default body font */
+            scroll-behavior: smooth;
+        }
+        .hero-bg {
+            background-color: #1a202c; /* Dark background for hero */
+        }
+        .section-bg {
+            background-color: #f7fafc; /* Light gray for sections */
+        }
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+        .brand-gradient {
+            background-image: linear-gradient(to right, #4f46e5, #7c3aed);
+        }
+        .brand-gradient-text { /* Used for some subheadings */
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+            background-image: linear-gradient(to right, #4f46e5, #7c3aed);
+        }
+        .social-icon svg { /* Styling for social media icons */
+            width: 24px;
+            height: 24px;
+            fill: currentColor;
+        }
+        /* Base class for the Tektur font */
+        .logo-font-tektur {
+            font-family: 'Tektur', sans-serif; /* Tektur font with sans-serif fallback */
+            font-weight: 400; /* Regular weight for Tektur */
+            color: #2d3748; /* Default dark gray color for nav, overridden for footer */
+        }
+        /* Specific Tektur styling for navigation logo */
+        .logo-font-tektur-nav {
+            font-size: 2.25rem;
+            line-height: 1.3;
+        }
+        /* Specific Tektur styling for footer logo */
+        .logo-font-tektur-footer {
+            font-size: 1.875rem;
+            line-height: 1.3;
+            color: #D1D5DB; /* Light gray (Tailwind gray-300) for footer visibility */
+        }
+        /* Hero text specific styling for Tektur */
+        .hero-text-tektur {
+            font-family: 'Tektur', sans-serif;
+            font-weight: 400;
+             /* Color will be inherited from .text-white or .text-gray-300 in the hero section */
+        }
+
+    </style>
+</head>
+<body class="bg-white text-gray-800">
+
+    <nav class="bg-white shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="logo-font-tektur logo-font-tektur-nav">Jarosław Drabek</a>
+            <div class="flex items-center">
+                <div class="space-x-4 mr-6">
+                    <a href="#about" class="text-gray-600 hover:text-indigo-600" data-i18n="nav.about">O mnie</a>
+                    <a href="#services" class="text-gray-600 hover:text-indigo-600" data-i18n="nav.services">Usługi</a>
+                    <a href="#why-me" class="text-gray-600 hover:text-indigo-600" data-i18n="nav.whyMe">Dlaczego ja?</a>
+                    <a href="#contact" class="text-gray-600 hover:text-indigo-600" data-i18n="nav.contact">Kontakt</a>
+                </div>
+                <div class="flex space-x-2">
+                    <button id="lang-pl" class="px-2 py-1 rounded text-sm font-medium bg-indigo-600 text-white">PL</button>
+                    <button id="lang-en" class="px-2 py-1 rounded text-sm font-medium bg-gray-200 text-gray-700">EN</button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <header class="hero-bg text-white py-20 md:py-32">
+        <div class="container mx-auto px-6 text-center">
+            <h1 class="text-4xl md:text-6xl mb-6 hero-text-tektur" data-i18n="hero.title">Transformuj Swój Biznes z Rozwiązaniami Webowymi Opartymi na AI</h1>
+            <p class="text-lg md:text-xl mb-8 text-gray-300 hero-text-tektur" data-i18n="hero.subtitle">Jestem Jarosław Drabek, Specjalista ds. AI i Automatyzacji, tworzę inteligentne aplikacje webowe i automatyzację, aby napędzać wzrost i efektywność.</p>
+            <a href="#contact" class="bg-indigo-600 hover:bg-indigo-700 text-white py-3 px-8 rounded-lg text-lg shadow-lg transition duration-300 hero-text-tektur" data-i18n="hero.cta">Rozpocznij Swoją Inicjatywę AI</a>
+        </div>
+    </header>
+
+    <section id="about" class="py-16 md:py-24 section-bg">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800" data-i18n="about.title">O Mnie</h2>
+                <p class="text-gray-600 mt-2" data-i18n="about.subtitle">Z pasją rozwiązuję złożone wyzwania za pomocą technologii.</p>
+            </div>
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-2/3 md:pr-12 mb-8 md:mb-0">
+                    <p class="text-lg text-gray-700 mb-4" data-i18n="about.paragraph1">
+                        Cześć! Jestem Jarosław, doświadczony inżynier oprogramowania z ponad dziesięcioletnim doświadczeniem w tworzeniu solidnych, skalowalnych aplikacji webowych i architektur mikroserwisowych w chmurze. Moja droga w rozwoju oprogramowania była napędzana pasją do rozwiązywania trudnych problemów i zaangażowaniem w dostarczanie wysokiej jakości, skutecznych rozwiązań.
+                    </p>
+                    <p class="text-lg text-gray-700 mb-4" data-i18n="about.paragraph2">
+                        Rozwijam się w dynamicznych środowiskach, koncentrując się na efektywnym dostarczaniu, ciągłej informacji zwrotnej i mierzalnych wynikach. Moje podejście opiera się na Test-Driven Development (TDD) i zautomatyzowanych testach, aby zapewnić jakość i niezawodność kodu.
+                    </p>
+                    <p class="text-lg text-gray-700" data-i18n="about.paragraph3">
+                        Z solidnymi podstawami w informatyce (licencjat i magister) oraz zainteresowaniem sztuczną inteligencją i uczeniem maszynowym, z przyjemnością pomogę firmom takim jak Twoja wykorzystać moc AI do innowacji i optymalizacji działań.
+                    </p>
+                </div>
+                <div class="md:w-1/3 text-center">
+                    <img src="1651059159546.jpeg" alt="Jarosław Drabek" class="rounded-full shadow-lg mx-auto" style="width: 250px; height: 250px; object-fit: cover;" onerror="this.onerror=null;this.src='https://placehold.co/250x250/E2E8F0/2D3748?text=Photo+Not+Found';">
+                    <p class="mt-4 text-xl font-semibold">Jarosław Drabek</p>
+                    <p class="text-gray-600" data-i18n="about.role">Specjalista ds. AI i Automatyzacji</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="services" class="py-16 md:py-24">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800" data-i18n="services.title">Oferowane Usługi</h2>
+                <p class="text-gray-600 mt-2" data-i18n="services.subtitle">Wykorzystuję technologię, aby budować przyszłość Twojego biznesu.</p>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white p-8 rounded-xl shadow-xl card-hover transition duration-300">
+                    <div class="text-indigo-600 mb-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-12 h-12">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M6.75 7.5l3 2.25-3 2.25m4.5 0h3m-9 8.25h13.5A2.25 2.25 0 0021 18V6a2.25 2.25 0 00-2.25-2.25H5.25A2.25 2.25 0 003 6v12a2.25 2.25 0 002.25 2.25z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-semibold mb-3" data-i18n="services.web.title">Niestandardowe Aplikacje Webowe</h3>
+                    <p class="text-gray-600" data-i18n="services.web.description">
+                        Tworzenie dostosowanych aplikacji webowych, od dynamicznych interfejsów użytkownika po solidne systemy backendowe. Specjalizuję się w architekturze mikroserwisów i rozwiązaniach chmurowych (GCP, AWS) dla skalowalności i wydajności.
+                    </p>
+                </div>
+
+                <div class="bg-white p-8 rounded-xl shadow-xl card-hover transition duration-300">
+                    <div class="text-indigo-600 mb-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-12 h-12">
+                          <path stroke-linecap="round" stroke-linejoin="round" d="M10.343 3.94c.09-.542.56-.94 1.11-.94h1.093c.55 0 1.02.398 1.11.94l.149.894c.07.424.384.764.78.93.398.164.855.142 1.205-.108l.737-.527a1.125 1.125 0 0 1 1.45.12l.773.774c.39.389.39 1.024 0 1.414l-.527.737c-.25.35-.272.806-.107 1.204.165.397.505.71.93.78l.893.15c.543.09.94.56.94 1.11v1.093c0 .55-.397 1.02-.94 1.11l-.893.149c-.425.07-.764.383-.93.78-.165.398-.143.854.107 1.204l.527.738c.39.39.39 1.024 0 1.414l-.773.774a1.125 1.125 0 0 1-1.449.12l-.738-.527c-.35-.25-.806-.272-1.203-.107-.397.165-.71.505-.78.93l-.15.893c-.09.543-.56.94-1.11.94h-1.093c-.55 0-1.02-.397-1.11-.94l-.149-.893c-.07-.425-.383-.764-.78-.93-.398-.165-.854-.143-1.204.107l-.738.527a1.125 1.125 0 0 1-1.45-.12l-.773-.774a1.125 1.125 0 0 1 0-1.414l.527-.738c.25-.35.273-.806.108-1.204-.165-.397-.506-.71-.93-.78l-.894-.15c-.542-.09-.94-.56-.94-1.11v-1.093c0-.55.398-1.02.94-1.11l.894-.149c.424-.07.765-.383.93-.78.165-.398.143-.854-.108-1.204l-.526-.738a1.125 1.125 0 0 1 .12-1.45l.773-.773a1.125 1.125 0 0 1 1.45-.12l.737.527c.35.25.807.272 1.204.107.397-.165.71-.505.78-.93l.15-.893Z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-semibold mb-3" data-i18n="services.automation.title">Automatyzacja Oparta na AI</h3>
+                    <p class="text-gray-600" data-i18n="services.automation.description">
+                        Projektowanie i wdrażanie inteligentnych rozwiązań automatyzacyjnych w celu usprawnienia procesów biznesowych, zmniejszenia ręcznego wysiłku i poprawy dokładności. Wykorzystuję techniki AI/ML, aby uczynić Twoje operacje inteligentniejszymi.
+                    </p>
+                </div>
+
+                <div class="bg-white p-8 rounded-xl shadow-xl card-hover transition duration-300">
+                     <div class="text-indigo-600 mb-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-12 h-12">
+                          <path stroke-linecap="round" stroke-linejoin="round" d="M14.25 6.083c-.431.118-.88.183-1.35.183H10.5A2.25 2.25 0 0 0 8.25 8.505v1.242H7.5A2.25 2.25 0 0 0 5.25 12v1.5c0 .414.336.75.75.75h1.5v1.242a2.25 2.25 0 0 0 2.25 2.253h1.5a2.25 2.25 0 0 0 2.25-2.253v-1.242h1.5a.75.75 0 0 0 .75-.75v-1.5a2.25 2.25 0 0 0-2.25-2.25h-1.5V8.505c0-.414.336-.75.75-.75h1.5c.47 0 .919-.065 1.35-.183A2.25 2.25 0 0 0 15.75 6h-1.5Zm3.75 6a2.25 2.25 0 1 1 4.5 0 2.25 2.25 0 0 1-4.5 0ZM4.5 12a2.25 2.25 0 1 1 4.5 0 2.25 2.25 0 0 1-4.5 0Z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-semibold mb-3" data-i18n="services.ai.title">Integracja AI i Rozwiązania ML</h3>
+                    <p class="text-gray-600" data-i18n="services.ai.description">
+                        Integracja możliwości AI z istniejącymi systemami lub tworzenie niestandardowych modeli uczenia maszynowego (np. do analizy danych, prognozowania) przy użyciu narzędzi takich jak TensorFlow/Keras i scikit-learn.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="why-me" class="py-16 md:py-24 section-bg">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800" data-i18n="whyMe.title">Dlaczego Warto Współpracować Ze Mną?</h2>
+            </div>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="p-6">
+                    <h4 class="text-xl font-semibold mb-2 brand-gradient-text" data-i18n="whyMe.experience.title">Rozległe Doświadczenie</h4>
+                    <p class="text-gray-700" data-i18n="whyMe.experience.description">Ponad 10 lat w pełnym cyklu wytwarzania oprogramowania (SDLC), budowanie złożonych aplikacji webowych i mikroserwisów dla wiodących firm technologicznych.</p>
+                </div>
+                <div class="p-6">
+                    <h4 class="text-xl font-semibold mb-2 brand-gradient-text" data-i18n="whyMe.cloud.title">Wiedza o Chmurze</h4>
+                    <p class="text-gray-700" data-i18n="whyMe.cloud.description">Biegłość w tworzeniu i wdrażaniu rozwiązań na głównych platformach chmurowych, takich jak Google Cloud Platform (GCP) i Amazon Web Services (AWS).</p>
+                </div>
+                <div class="p-6">
+                    <h4 class="text-xl font-semibold mb-2 brand-gradient-text" data-i18n="whyMe.ai.title">Wiedza o AI i ML</h4>
+                    <p class="text-gray-700" data-i18n="whyMe.ai.description">Solidne zrozumienie i praktyczne doświadczenie z koncepcjami i narzędziami AI/ML (Pandas, NumPy, TensorFlow, scikit-learn) do dostarczania inteligentnych rozwiązań.</p>
+                </div>
+                <div class="p-6">
+                    <h4 class="text-xl font-semibold mb-2 brand-gradient-text" data-i18n="whyMe.quality.title">Skupienie na Jakości</h4>
+                    <p class="text-gray-700" data-i18n="whyMe.quality.description">Zaangażowanie w wysokiej jakości kod poprzez TDD, zautomatyzowane testy i najlepsze praktyki. Koncentracja na dostarczaniu, informacji zwrotnej i pomiarach.</p>
+                </div>
+                <div class="p-6">
+                    <h4 class="text-xl font-semibold mb-2 brand-gradient-text" data-i18n="whyMe.collaborative.title">Podejście Oparte na Współpracy</h4>
+                    <p class="text-gray-700" data-i18n="whyMe.collaborative.description">Silny gracz zespołowy i komunikator, lubię ściśle współpracować z klientami, aby zrozumieć ich potrzeby i dostarczać dostosowane rozwiązania.</p>
+                </div>
+                 <div class="p-6">
+                    <h4 class="text-xl font-semibold mb-2 brand-gradient-text" data-i18n="whyMe.problemSolver.title">Rozwiązywanie Problemów</h4>
+                    <p class="text-gray-700" data-i18n="whyMe.problemSolver.description">Entuzjastyczne podejście do rozwiązywania najtrudniejszych problemów i znajdowania innowacyjnych, skutecznych rozwiązań.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="technologies" class="py-16 md:py-24">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800" data-i18n="tech.title">Technologie, Które Opanowałem</h2>
+                <p class="text-gray-600 mt-2" data-i18n="tech.subtitle">Wykorzystuję nowoczesny i solidny stos technologiczny.</p>
+            </div>
+            <div class="flex flex-wrap justify-center items-center gap-6 md:gap-8">
+                <span class="bg-indigo-100 text-indigo-700 px-4 py-2 rounded-full text-sm font-medium">Java</span>
+                <span class="bg-indigo-100 text-indigo-700 px-4 py-2 rounded-full text-sm font-medium">Python</span>
+                <span class="bg-indigo-100 text-indigo-700 px-4 py-2 rounded-full text-sm font-medium">Spring Boot</span>
+                <span class="bg-indigo-100 text-indigo-700 px-4 py-2 rounded-full text-sm font-medium">Spring Cloud</span>
+                <span class="bg-indigo-100 text-indigo-700 px-4 py-2 rounded-full text-sm font-medium">REST APIs</span>
+                <span class="bg-indigo-100 text-indigo-700 px-4 py-2 rounded-full text-sm font-medium">Microservices</span>
+                <span class="bg-indigo-100 text-indigo-700 px-4 py-2 rounded-full text-sm font-medium">Docker</span>
+                <span class="bg-indigo-100 text-indigo-700 px-4 py-2 rounded-full text-sm font-medium">Kubernetes</span>
+                <span class="bg-indigo-100 text-indigo-700 px-4 py-2 rounded-full text-sm font-medium">GCP</span>
+                <span class="bg-indigo-100 text-indigo-700 px-4 py-2 rounded-full text-sm font-medium">AWS</span>
+                <span class="bg-indigo-100 text-indigo-700 px-4 py-2 rounded-full text-sm font-medium">SQL</span>
+                <span class="bg-indigo-100 text-indigo-700 px-4 py-2 rounded-full text-sm font-medium">NoSQL (DynamoDB, Datastore)</span>
+                <span class="bg-indigo-100 text-indigo-700 px-4 py-2 rounded-full text-sm font-medium">Elasticsearch</span>
+                <span class="bg-indigo-100 text-indigo-700 px-4 py-2 rounded-full text-sm font-medium">Kafka</span>
+                <span class="bg-indigo-100 text-indigo-700 px-4 py-2 rounded-full text-sm font-medium">TensorFlow/Keras</span>
+                <span class="bg-indigo-100 text-indigo-700 px-4 py-2 rounded-full text-sm font-medium">Scikit-learn</span>
+                <span class="bg-indigo-100 text-indigo-700 px-4 py-2 rounded-full text-sm font-medium">Pandas</span>
+                <span class="bg-indigo-100 text-indigo-700 px-4 py-2 rounded-full text-sm font-medium">NumPy</span>
+                <span class="bg-gray-200 text-gray-700 px-4 py-2 rounded-full text-sm font-medium">JavaScript (Podstawy)</span>
+                <span class="bg-gray-200 text-gray-700 px-4 py-2 rounded-full text-sm font-medium">HTML/CSS</span>
+                <span class="bg-gray-200 text-gray-700 px-4 py-2 rounded-full text-sm font-medium">React.js (Podstawy)</span>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="py-16 md:py-24 section-bg">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800" data-i18n="contact.title">Zbudujmy Razem Coś Niesamowitego</h2>
+                <p class="text-gray-600 mt-2" data-i18n="contact.subtitle">Gotowy omówić swój projekt lub masz pytanie? Skontaktuj się!</p>
+            </div>
+            <div class="max-w-lg mx-auto bg-white p-8 rounded-xl shadow-xl">
+                <p class="text-lg text-gray-700 mb-6 text-center" data-i18n="contact.availability">
+                    Jestem obecnie dostępny dla nowych projektów i współpracy.
+                </p>
+                <div class="text-center space-y-4">
+                     <p class="text-xl">
+                        <strong class="font-semibold">Jarosław Drabek</strong>
+                    </p>
+                    <p>
+                        <a href="mailto:jarekdrabek@gmail.com" class="text-indigo-600 hover:text-indigo-800 text-lg">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5 inline-block mr-2 align-middle">
+                                <path d="M3 4a2 2 0 00-2 2v1.161l8.441 4.221a1.25 1.25 0 001.118 0L19 7.162V6a2 2 0 00-2-2H3z" />
+                                <path d="M19 8.839l-7.77 3.885a2.75 2.75 0 01-2.46 0L1 8.839V14a2 2 0 002 2h14a2 2 0 002-2V8.839z" />
+                            </svg>
+                            jarekdrabek@gmail.com
+                        </a>
+                    </p>
+                    <p>
+                        <a href="tel:+48662077499" class="text-indigo-600 hover:text-indigo-800 text-lg">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5 inline-block mr-2 align-middle">
+                                <path fill-rule="evenodd" d="M1.5 4.5a3 3 0 0 1 3-3h1.372c.86 0 1.61.586 1.819 1.42l1.105 4.423a1.875 1.875 0 0 1-.694 1.955l-1.293.97c-.135.101-.164.279-.087.431l4.258 6.157c.077.112.256.14.431.087l.97-1.293a1.875 1.875 0 0 1 1.955-.694l4.423 1.105c.834.209 1.42.959 1.42 1.82V19.5a3 3 0 0 1-3 3h-2.25C6.55 22.5 1.5 17.45 1.5 10.5V4.5Z" clip-rule="evenodd" />
+                            </svg>
+                           (+48) 662 077 499
+                        </a>
+                    </p>
+                    <div class="flex justify-center space-x-6 mt-4 pt-4 border-t border-gray-200">
+                        <a href="YOUR_LINKEDIN_URL" target="_blank" rel="noopener noreferrer" class="text-gray-500 hover:text-indigo-600 social-icon" title="LinkedIn">
+                            <svg viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                        </a>
+                    </div>
+                </div>
+
+                <form action="https://formspree.io/f/xanojqqp" method="POST" class="mt-8 space-y-6">
+                    <div>
+                        <label for="name" class="sr-only" data-i18n="contact.form.name.label">Imię i nazwisko</label>
+                        <input type="text" name="name" id="name" autocomplete="name" required class="w-full px-4 py-3 rounded-lg border-gray-300 focus:border-indigo-500 focus:ring-indigo-500 shadow-sm" placeholder="Imię i nazwisko" data-i18n-placeholder="contact.form.name.placeholder">
+                    </div>
+                    <div>
+                        <label for="email" class="sr-only" data-i18n="contact.form.email.label">Adres email</label>
+                        <input type="email" name="email" id="email" autocomplete="email" required class="w-full px-4 py-3 rounded-lg border-gray-300 focus:border-indigo-500 focus:ring-indigo-500 shadow-sm" placeholder="Adres email" data-i18n-placeholder="contact.form.email.placeholder">
+                    </div>
+                    <div>
+                        <label for="message" class="sr-only" data-i18n="contact.form.message.label">Wiadomość</label>
+                        <textarea id="message" name="message" rows="4" required class="w-full px-4 py-3 rounded-lg border-gray-300 focus:border-indigo-500 focus:ring-indigo-500 shadow-sm" placeholder="Twoja wiadomość..." data-i18n-placeholder="contact.form.message.placeholder"></textarea>
+                    </div>
+                    <div>
+                        <button type="submit" class="w-full brand-gradient text-white font-semibold py-3 px-6 rounded-lg hover:opacity-90 transition duration-300 shadow-md" data-i18n="contact.form.submit">
+                            Wyślij Wiadomość
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-gray-800 text-gray-300 py-12">
+        <div class="container mx-auto px-6 text-center">
+            <p class="logo-font-tektur logo-font-tektur-footer mb-4">Jarosław Drabek</p>
+
+            <div class="flex justify-center space-x-6 mb-6 social-icon">
+                <a href="YOUR_LINKEDIN_URL" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-white" title="LinkedIn">
+                    <svg viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                </a>
+            </div>
+
+            <p data-i18n="footer.copyright">&copy; <span id="currentYear"></span> Jarosław Drabek. Wszelkie prawa zastrzeżone.</p>
+            <p class="text-sm mt-1" data-i18n="footer.tagline">Budowanie innowacyjnych rozwiązań dla inteligentniejszej przyszłości.</p>
+        </div>
+    </footer>
+
+    <!-- Load translation files -->
+    <script src="js/translations/pl.js"></script>
+    <script src="js/translations/en.js"></script>
+    <script src="js/translations/translations.js"></script>
+
+    <script>
+        // Language switching functionality
+        let currentLang = 'pl'; // Default language is Polish
+
+        // Initialize translations
+        translations = loadTranslations(currentLang);
+
+        function setLanguage(lang) {
+            currentLang = lang;
+
+            // Load translations for the selected language
+            translations = loadTranslations(lang);
+
+            // Update HTML lang attribute
+            document.documentElement.lang = lang;
+
+            // Update all elements with data-i18n attribute
+            document.querySelectorAll('[data-i18n]').forEach(element => {
+                const key = element.getAttribute('data-i18n');
+                if (translations[key]) {
+                    element.innerHTML = translations[key];
+                }
+            });
+
+            // Update placeholders
+            document.querySelectorAll('[data-i18n-placeholder]').forEach(element => {
+                const key = element.getAttribute('data-i18n-placeholder');
+                if (translations[key]) {
+                    element.placeholder = translations[key];
+                }
+            });
+
+            // Update button styles
+            document.getElementById('lang-pl').className = lang === 'pl' 
+                ? 'px-2 py-1 rounded text-sm font-medium bg-indigo-600 text-white' 
+                : 'px-2 py-1 rounded text-sm font-medium bg-gray-200 text-gray-700';
+
+            document.getElementById('lang-en').className = lang === 'en' 
+                ? 'px-2 py-1 rounded text-sm font-medium bg-indigo-600 text-white' 
+                : 'px-2 py-1 rounded text-sm font-medium bg-gray-200 text-gray-700';
+
+            // Update title
+            document.title = lang === 'pl' 
+                ? 'Jarosław Drabek - Rozwiązania Webowe i Automatyzacja Oparte na AI' 
+                : 'Jarosław Drabek - AI-Powered Web Solutions & Automation';
+
+            // Fix copyright year
+            const copyrightText = translations['footer.copyright'];
+            document.querySelector('[data-i18n="footer.copyright"]').innerHTML = 
+                copyrightText.replace(lang === 'pl' ? '[rok]' : '[year]', document.getElementById('currentYear').textContent);
+        }
+
+        // Add event listeners to language buttons
+        document.getElementById('lang-pl').addEventListener('click', () => setLanguage('pl'));
+        document.getElementById('lang-en').addEventListener('click', () => setLanguage('en'));
+
+        // Smooth scroll for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') {
+                    window.scrollTo({
+                        top: 0,
+                        behavior: 'smooth'
+                    });
+                } else {
+                    const targetElement = document.querySelector(targetId);
+                    if (targetElement) {
+                        targetElement.scrollIntoView({
+                            behavior: 'smooth'
+                        });
+                    }
+                }
+            });
+        });
+
+        // Set current year in footer
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+
+        // Initialize with Polish language
+        setLanguage('pl');
+    </script>
+
+</body>
+</html>
