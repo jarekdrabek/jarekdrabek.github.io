@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dlaczego software generowany przez AI nadal potrzebuje architektury - Jarek Drabek</title>
+    <meta name="description" content="Dlaczego software generowany przez AI nadal potrzebuje architektury, czystych granic i ludzkiego osądu technicznego.">
+    <meta property="og:title" content="Dlaczego software generowany przez AI nadal potrzebuje architektury">
+    <meta property="og:description" content="AI może przyspieszyć implementację, ale architektura nadal decyduje, czy software da się rozumieć, zmieniać, testować, utrzymywać i ufać mu w praktyce.">
+    <meta property="og:type" content="article">
+    <link rel="canonical" href="https://jarekdrabek.pl/pl/blog/dlaczego-oprogramowanie-generowane-przez-ai-nadal-potrzebuje-architektury/">
+    <link rel="alternate" hreflang="en" href="https://jarekdrabek.pl/en/blog/why-ai-generated-software-still-needs-architecture/">
+    <link rel="alternate" hreflang="pl" href="https://jarekdrabek.pl/pl/blog/dlaczego-oprogramowanie-generowane-przez-ai-nadal-potrzebuje-architektury/">
+    <link rel="alternate" hreflang="x-default" href="https://jarekdrabek.pl/en/blog/why-ai-generated-software-still-needs-architecture/">
+    <link rel="icon" type="image/jpeg" href="/1651059159546_.jpeg">
+    <link rel="apple-touch-icon" href="/1651059159546_.jpeg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;850&family=Tektur:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/site.css">
+</head>
+<body>
+    <!--
+    article.title: Dlaczego software generowany przez AI nadal potrzebuje architektury
+    article.slug: dlaczego-oprogramowanie-generowane-przez-ai-nadal-potrzebuje-architektury
+    article.language: pl
+    article.translation: /en/blog/why-ai-generated-software-still-needs-architecture/
+    article.description: Przykładowy artykuł o software generowanym przez AI, clean architecture i praktycznym osądzie technicznym.
+    article.date: 2026-06-03
+    article.audience: Ogólne
+    article.tags: AI-native engineering, architektura, projektowanie softwareu
+    article.seoTitle: Dlaczego software generowany przez AI nadal potrzebuje architektury
+    article.metaDescription: Dlaczego software generowany przez AI nadal potrzebuje architektury, granic i ludzkiego osądu technicznego.
+    article.imagePrompt: Editorial image of clean software architecture diagrams and AI-assisted code review on a calm desk setup.
+    article.linkedinPost: Tu może mieszkać roboczy post na LinkedIn, gdy artykuł będzie gotowy do publikacji.
+    -->
+    <nav class="site-nav">
+        <div class="nav-inner">
+            <a class="brand-link brand-font" href="/pl/">Jarek Drabek</a>
+            <div class="nav-links">
+                <a href="/pl/saas-i-zespoly-produktowe/">SaaS i zespoły produktowe</a>
+                <a href="/pl/automatyzacja-biznesu/">Automatyzacja biznesu</a>
+                <a href="/pl/zespoly-techniczne/">Zespoły techniczne</a>
+                <a href="/pl/blog/">Blog</a>
+                <a href="/pl/kontakt/">Kontakt</a>
+            </div>
+            <div class="nav-actions">
+                <a class="button" href="/pl/kontakt/">Kontakt</a>
+                <a class="lang-link active" href="/pl/blog/dlaczego-oprogramowanie-generowane-przez-ai-nadal-potrzebuje-architektury/" aria-current="page">PL</a>
+                <a class="lang-link" href="/en/blog/why-ai-generated-software-still-needs-architecture/">EN</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="page-header">
+        <article class="container" style="max-width: 840px;">
+            <p class="breadcrumb"><a href="/pl/">Strona główna</a> / <a href="/pl/blog/">Blog</a></p>
+            <p class="eyebrow">Przykładowy artykuł</p>
+            <h1>Dlaczego software generowany przez AI nadal potrzebuje architektury</h1>
+            <p>AI potrafi szybko generować kod. Nie potrafi automatycznie zdecydować, z jakimi granicami, tradeoffami, workflowami i trybami awarii Twoja firma powinna żyć.</p>
+            <div class="tag-row">
+                <span class="tag">AI-native engineering</span>
+                <span class="tag">Architektura</span>
+                <span class="tag">Projektowanie softwareu</span>
+                <span class="tag">Ogólne</span>
+            </div>
+
+            <div class="article-body">
+                <h2>TL;DR</h2>
+                <p>To jest treść przykładowa. Główna myśl jest prosta: AI może przyspieszyć implementację, ale architektura nadal decyduje, czy system da się zrozumieć, zmienić, testować, utrzymywać i zaufać mu w praktyce.</p>
+
+                <h2>Dla founderów, SaaS builderów, managerów i product ownerów</h2>
+                <p>Software generowany przez AI może obniżyć koszt i skrócić czas dojścia do pierwszej wersji, zwłaszcza gdy cel jest jasny. Ryzyko polega na traktowaniu wygenerowanego kodu jak gotowego produktu, a nie punktu startowego.</p>
+                <ul>
+                    <li>Używaj AI, żeby poruszać się szybciej, ale utrzymuj mały i widoczny zakres.</li>
+                    <li>Pytaj, co stanie się, gdy workflow się zmieni, dane będą brudne albo użytkownicy zrobią coś nieoczekiwanego.</li>
+                    <li>Inwestuj w architekturę tam, gdzie chroni delivery, utrzymanie i zaufanie.</li>
+                </ul>
+
+                <h2>Dla software engineerów, tech leadów i CTOs</h2>
+                <p>Użyteczne pytanie nie brzmi, czy AI potrafi pisać kod. Potrafi. Trudniejsze pytanie brzmi, czy powstały system ma właściwe granice, abstrakcje, testy, obserwowalność i model ownershipu.</p>
+                <p>Wygenerowany kod nadal wymaga review wobec realnych ograniczeń: reguł domenowych, przepływów danych, bezpieczeństwa, zachowania przy awariach, deploymentu i przyszłych zmian.</p>
+
+                <h2>Praktyczny wniosek</h2>
+                <p>Traktuj AI jako przyspieszenie, nie jako zamiennik osądu technicznego. Im szybciej pojawia się kod, tym ważniejsze staje się pytanie, jaki system naprawdę budujesz.</p>
+
+                <h2>Myśl końcowa</h2>
+                <p>Przyszłość pracy nad softwarem to nie mniej architektury. To architektura stosowana wcześniej, prostszym językiem i z ciaśniejszymi pętlami feedbacku.</p>
+            </div>
+        </article>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-inner">
+            <div><p class="brand-font">Jarek Drabek</p><p class="footer-meta">© 2026 Jarek Drabek. Wszelkie prawa zastrzeżone.</p></div>
+            <div class="footer-links"><a href="/pl/blog/">Blog</a><a href="/pl/kontakt/">Kontakt</a><a href="https://www.linkedin.com/in/jarekdrabek/">LinkedIn</a><a href="/en/blog/why-ai-generated-software-still-needs-architecture/">EN</a></div>
+        </div>
+    </footer>
+</body>
+</html>

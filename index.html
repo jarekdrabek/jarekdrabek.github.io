@@ -3,389 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jarek Drabek — Production-Grade AI Systems for Startups and Businesses</title>
-    <meta name="description" content="Senior software engineer and AI-native technical partner helping startups and businesses build production-grade AI features, RAG systems, copilots, workflow automations, and reliable AI products.">
-    <meta name="keywords" content="production-grade AI systems, AI technical partner, AI SaaS engineer, AI workflow automation, RAG systems developer, LLM integration consultant, AI prototype to production, AI-native engineering">
-    <meta property="og:title" content="AI systems that survive beyond the demo">
-    <meta property="og:description" content="AI-native technical partner for startups and businesses that need reliable AI products, workflows, integrations, and production architecture.">
+    <title>Jarek Drabek - IT Systems, Software, and AI Consulting</title>
+    <meta name="description" content="Jarek Drabek helps companies design, fix, and automate IT systems in the age of AI. Choose English or Polish.">
+    <meta property="og:title" content="Jarek Drabek - IT Systems, Software, and AI Consulting">
+    <meta property="og:description" content="I help companies design, fix, and automate IT systems in the age of AI.">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="Jarek Drabek">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Tektur:wght@400;500&display=swap" rel="stylesheet">
-    <style>
-        :root {
-            --ink: #111827;
-            --paper: #fbfaf8;
-            --line: #e5e7eb;
-            --accent: #0f766e;
-        }
-
-        html {
-            scroll-behavior: smooth;
-        }
-
-        body {
-            font-family: 'Inter', sans-serif;
-            background: var(--paper);
-            color: var(--ink);
-        }
-
-        .brand-font {
-            font-family: 'Tektur', sans-serif;
-            font-weight: 500;
-        }
-
-        .section-rule {
-            border-top: 1px solid var(--line);
-        }
-
-        .text-balance {
-            text-wrap: balance;
-        }
-
-        .soft-card {
-            transition: border-color 180ms ease, box-shadow 180ms ease, transform 180ms ease;
-        }
-
-        .soft-card:hover {
-            transform: translateY(-2px);
-            border-color: rgba(15, 118, 110, 0.35);
-            box-shadow: 0 14px 34px rgba(17, 24, 39, 0.06);
-        }
-
-        .focus-ring:focus-visible {
-            outline: 3px solid rgba(15, 118, 110, 0.35);
-            outline-offset: 3px;
-        }
-    </style>
+    <link rel="canonical" href="https://jarekdrabek.pl/">
+    <link rel="alternate" hreflang="en" href="https://jarekdrabek.pl/en/">
+    <link rel="alternate" hreflang="pl" href="https://jarekdrabek.pl/pl/">
+    <link rel="alternate" hreflang="x-default" href="https://jarekdrabek.pl/en/">
+    <link rel="icon" type="image/jpeg" href="1651059159546_.jpeg">
+    <link rel="apple-touch-icon" href="1651059159546_.jpeg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;850&family=Tektur:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/site.css">
+    <script>
+        (function () {
+            var languages = navigator.languages || [navigator.language || 'en'];
+            var prefersPolish = languages.some(function (lang) {
+                return String(lang).toLowerCase().startsWith('pl');
+            });
+            window.location.replace(prefersPolish ? 'pl/' : 'en/');
+        })();
+    </script>
 </head>
 <body>
-    <nav class="sticky top-0 z-50 border-b border-gray-200 bg-[#fbfaf8]/90 backdrop-blur">
-        <div class="mx-auto flex max-w-7xl items-center justify-between gap-4 px-5 py-4 md:px-8">
-            <a href="#" class="brand-font shrink-0 text-xl text-gray-950 md:text-2xl">Jarek Drabek</a>
-            <div class="hidden items-center gap-7 text-sm font-medium text-gray-600 lg:flex">
-                <a href="#services" class="hover:text-teal-800" data-i18n="nav.services">Services</a>
-                <a href="#production" class="hover:text-teal-800" data-i18n="nav.production">Production</a>
-                <a href="#approach" class="hover:text-teal-800" data-i18n="nav.approach">How I work</a>
-                <a href="#about" class="hover:text-teal-800" data-i18n="nav.about">About</a>
-                <a href="#contact" class="hover:text-teal-800" data-i18n="nav.contact">Contact</a>
-            </div>
-            <div class="flex items-center gap-3">
-                <a href="https://calendar.app.google/M4yVwNGidYNer4XP9" class="focus-ring hidden rounded-md bg-teal-800 px-4 py-2 text-xs font-bold text-white hover:bg-teal-900 sm:inline-flex" data-i18n="nav.cta">Book a call</a>
-                <div class="flex items-center gap-2">
-                    <button id="lang-pl" class="focus-ring rounded-full bg-gray-950 px-3 py-1.5 text-xs font-semibold text-white">PL</button>
-                    <button id="lang-en" class="focus-ring rounded-full border border-gray-300 px-3 py-1.5 text-xs font-semibold text-gray-700">EN</button>
-                </div>
+    <main class="hero">
+        <div class="container">
+            <p class="brand-font" style="font-size: 1.4rem;">Jarek Drabek</p>
+            <h1 style="max-width: 760px; margin-top: 32px;">I help companies design, fix, and automate IT systems in the age of AI.</h1>
+            <p class="hero-lede">Choose your preferred language. If JavaScript is enabled, this page redirects automatically based on your browser language.</p>
+            <div class="hero-actions">
+                <a class="button" href="en/">English</a>
+                <a class="button-secondary" href="pl/">Polski</a>
             </div>
         </div>
-    </nav>
-
-    <main>
-        <header class="overflow-hidden">
-            <div class="mx-auto grid max-w-7xl gap-12 px-5 py-16 md:px-8 md:py-24 lg:grid-cols-[1.05fr_0.95fr] lg:items-center">
-                <div>
-                    <p class="text-sm font-semibold uppercase tracking-[0.16em] text-teal-800" data-i18n="hero.eyebrow">AI-native technical partner for startups and businesses</p>
-                    <h1 class="mt-5 max-w-4xl text-balance text-4xl font-extrabold leading-[1.08] tracking-tight text-gray-950 md:text-5xl lg:text-6xl" data-i18n="hero.title">AI systems that survive beyond the demo</h1>
-                    <p class="mt-6 max-w-2xl text-lg leading-8 text-gray-700" data-i18n="hero.subtitle">I help startups and businesses build production-grade AI features, internal copilots, RAG systems, and workflow automations — with the architecture, integrations, and reliability needed for real use.</p>
-                    <div class="mt-8 flex flex-col gap-3 sm:flex-row sm:items-center">
-                        <a href="https://calendar.app.google/M4yVwNGidYNer4XP9" class="focus-ring inline-flex min-h-12 items-center justify-center rounded-md bg-teal-800 px-5 py-3 text-sm font-bold text-white hover:bg-teal-900" data-i18n="hero.primaryCta">Book a technical discovery call</a>
-                        <a href="#services" class="focus-ring inline-flex min-h-12 items-center justify-center rounded-md border border-gray-300 px-5 py-3 text-sm font-bold text-gray-900 hover:border-teal-700 hover:text-teal-900" data-i18n="hero.secondaryCta">See services</a>
-                    </div>
-                    <div class="mt-8 grid gap-3 text-sm leading-6 text-gray-700 sm:grid-cols-3">
-                        <p class="border-l-2 border-teal-800 pl-4" data-i18n="hero.proof1">10+ years in SaaS, backend, cloud, and distributed systems</p>
-                        <p class="border-l border-gray-200 pl-4" data-i18n="hero.proof2">LLM integrations, RAG, copilots, and workflow automation</p>
-                        <p class="border-l border-gray-200 pl-4" data-i18n="hero.proof3">Production-first architecture, maintainability, and technical ownership</p>
-                    </div>
-                </div>
-
-                <aside class="rounded-lg border border-gray-200 bg-white p-6 shadow-xl shadow-gray-900/5">
-                    <p class="text-sm font-semibold uppercase tracking-[0.16em] text-teal-800" data-i18n="hero.panelEyebrow">Common projects</p>
-                    <h2 class="mt-3 text-2xl font-extrabold tracking-tight text-gray-950" data-i18n="hero.panelTitle">Common projects</h2>
-                    <p class="mt-3 text-sm leading-6 text-gray-600" data-i18n="hero.panelText">Concrete AI implementation work, not vague AI strategy.</p>
-                    <ul class="mt-6 grid gap-3 text-sm font-semibold text-gray-900 sm:grid-cols-2">
-                        <li class="rounded-md border border-gray-200 bg-[#fbfaf8] px-4 py-3" data-i18n="hero.project1">AI SaaS features</li>
-                        <li class="rounded-md border border-gray-200 bg-[#fbfaf8] px-4 py-3" data-i18n="hero.project2">RAG knowledge assistants</li>
-                        <li class="rounded-md border border-gray-200 bg-[#fbfaf8] px-4 py-3" data-i18n="hero.project3">Internal copilots</li>
-                        <li class="rounded-md border border-gray-200 bg-[#fbfaf8] px-4 py-3" data-i18n="hero.project4">Workflow automation</li>
-                        <li class="rounded-md border border-gray-200 bg-[#fbfaf8] px-4 py-3" data-i18n="hero.project5">Document processing</li>
-                        <li class="rounded-md border border-gray-200 bg-[#fbfaf8] px-4 py-3" data-i18n="hero.project6">Prototype to production</li>
-                    </ul>
-                </aside>
-            </div>
-        </header>
-
-        <section id="services" class="section-rule bg-white">
-            <div class="mx-auto max-w-7xl px-5 py-16 md:px-8 md:py-24">
-                <div class="max-w-3xl">
-                    <p class="text-sm font-semibold uppercase tracking-[0.16em] text-teal-800" data-i18n="services.eyebrow">Services</p>
-                    <h2 class="mt-3 text-3xl font-extrabold tracking-tight text-gray-950 md:text-4xl" data-i18n="services.title">What I help you build</h2>
-                    <p class="mt-4 text-base leading-7 text-gray-700" data-i18n="services.intro">Focused implementation for teams that need AI to work inside real products, workflows, and operations.</p>
-                </div>
-                <div class="mt-10 grid gap-5 lg:grid-cols-2">
-                    <article class="soft-card rounded-lg border border-gray-200 bg-[#fbfaf8] p-6">
-                        <h3 class="text-xl font-bold text-gray-950" data-i18n="services.product.title">AI product features</h3>
-                        <p class="mt-3 text-sm leading-6 text-gray-600" data-i18n="services.product.text">Add AI-powered assistants, analysis, recommendations, or automation to an existing SaaS product or internal platform.</p>
-                        <p class="mt-5 text-xs font-bold uppercase tracking-[0.14em] text-gray-500" data-i18n="shared.examples">Examples</p>
-                        <ul class="mt-3 grid gap-2 text-sm text-gray-700 sm:grid-cols-3">
-                            <li data-i18n="services.product.ex1">AI feature development</li>
-                            <li data-i18n="services.product.ex2">Assistant inside product</li>
-                            <li data-i18n="services.product.ex3">Prototype to MVP</li>
-                        </ul>
-                    </article>
-                    <article class="soft-card rounded-lg border border-gray-200 bg-[#fbfaf8] p-6">
-                        <h3 class="text-xl font-bold text-gray-950" data-i18n="services.rag.title">RAG & knowledge systems</h3>
-                        <p class="mt-3 text-sm leading-6 text-gray-600" data-i18n="services.rag.text">Build search and question-answering systems over company documents, policies, tickets, knowledge bases, or operational data.</p>
-                        <p class="mt-5 text-xs font-bold uppercase tracking-[0.14em] text-gray-500" data-i18n="shared.examples">Examples</p>
-                        <ul class="mt-3 grid gap-2 text-sm text-gray-700 sm:grid-cols-3">
-                            <li data-i18n="services.rag.ex1">RAG architecture</li>
-                            <li data-i18n="services.rag.ex2">Semantic search</li>
-                            <li data-i18n="services.rag.ex3">Internal knowledge assistant</li>
-                        </ul>
-                    </article>
-                    <article class="soft-card rounded-lg border border-gray-200 bg-[#fbfaf8] p-6">
-                        <h3 class="text-xl font-bold text-gray-950" data-i18n="services.workflow.title">Workflow automation</h3>
-                        <p class="mt-3 text-sm leading-6 text-gray-600" data-i18n="services.workflow.text">Automate repeatable business processes by connecting AI to APIs, databases, CRM, email, Slack, Google Workspace, and reports.</p>
-                        <p class="mt-5 text-xs font-bold uppercase tracking-[0.14em] text-gray-500" data-i18n="shared.examples">Examples</p>
-                        <ul class="mt-3 grid gap-2 text-sm text-gray-700 sm:grid-cols-3">
-                            <li data-i18n="services.workflow.ex1">Document processing</li>
-                            <li data-i18n="services.workflow.ex2">Reporting automation</li>
-                            <li data-i18n="services.workflow.ex3">Human-in-the-loop workflows</li>
-                        </ul>
-                    </article>
-                    <article class="soft-card rounded-lg border border-gray-200 bg-[#fbfaf8] p-6">
-                        <h3 class="text-xl font-bold text-gray-950" data-i18n="services.advisory.title">AI architecture & advisory</h3>
-                        <p class="mt-3 text-sm leading-6 text-gray-600" data-i18n="services.advisory.text">Clarify feasibility, architecture, data flows, implementation path, and production risks before or during development.</p>
-                        <p class="mt-5 text-xs font-bold uppercase tracking-[0.14em] text-gray-500" data-i18n="shared.examples">Examples</p>
-                        <ul class="mt-3 grid gap-2 text-sm text-gray-700 sm:grid-cols-3">
-                            <li data-i18n="services.advisory.ex1">Architecture review</li>
-                            <li data-i18n="services.advisory.ex2">Technical roadmap</li>
-                            <li data-i18n="services.advisory.ex3">Production readiness</li>
-                        </ul>
-                    </article>
-                </div>
-            </div>
-        </section>
-
-        <section id="production" class="section-rule">
-            <div class="mx-auto max-w-7xl px-5 py-16 md:px-8 md:py-24">
-                <div class="max-w-3xl">
-                    <p class="text-sm font-semibold uppercase tracking-[0.16em] text-teal-800" data-i18n="production.eyebrow">Production</p>
-                    <h2 class="mt-3 text-3xl font-extrabold tracking-tight text-gray-950 md:text-4xl" data-i18n="production.title">From AI demo to production system</h2>
-                    <p class="mt-4 text-base leading-7 text-gray-700" data-i18n="production.intro">The model call is usually the easy part. The real work is connecting AI to users, permissions, business data, workflows, APIs, infrastructure, monitoring, and product requirements.</p>
-                </div>
-                <div class="mt-10 grid gap-5 lg:grid-cols-2">
-                    <article class="rounded-lg border border-gray-200 bg-white p-6">
-                        <h3 class="text-lg font-bold text-gray-950" data-i18n="production.demo.title">Fragile AI demo</h3>
-                        <ul class="mt-5 space-y-3 text-sm leading-6 text-gray-700">
-                            <li data-i18n="production.demo.item1">Works in a controlled scenario</li>
-                            <li data-i18n="production.demo.item2">Depends on prompt luck</li>
-                            <li data-i18n="production.demo.item3">Limited business context</li>
-                            <li data-i18n="production.demo.item4">Weak integration with real systems</li>
-                            <li data-i18n="production.demo.item5">No clear monitoring, fallback, or ownership</li>
-                        </ul>
-                    </article>
-                    <article class="rounded-lg border border-teal-800/30 bg-teal-50/60 p-6">
-                        <h3 class="text-lg font-bold text-gray-950" data-i18n="production.system.title">Production-grade AI system</h3>
-                        <ul class="mt-5 space-y-3 text-sm leading-6 text-gray-800">
-                            <li data-i18n="production.system.item1">Connected to real workflows</li>
-                            <li data-i18n="production.system.item2">Grounded in business data</li>
-                            <li data-i18n="production.system.item3">Permission-aware and testable</li>
-                            <li data-i18n="production.system.item4">Observable and maintainable</li>
-                            <li data-i18n="production.system.item5">Designed for edge cases and launch</li>
-                        </ul>
-                    </article>
-                </div>
-            </div>
-        </section>
-
-        <section class="section-rule bg-white">
-            <div class="mx-auto max-w-7xl px-5 py-16 md:px-8 md:py-24">
-                <div class="max-w-3xl">
-                    <p class="text-sm font-semibold uppercase tracking-[0.16em] text-teal-800" data-i18n="engagement.eyebrow">Engagement types</p>
-                    <h2 class="mt-3 text-3xl font-extrabold tracking-tight text-gray-950 md:text-4xl" data-i18n="engagement.title">Ways we can work together</h2>
-                    <p class="mt-4 text-base leading-7 text-gray-700" data-i18n="engagement.intro">Different projects need different levels of involvement — from technical review to hands-on implementation.</p>
-                </div>
-                <div class="mt-10 grid gap-5 md:grid-cols-2 lg:grid-cols-4">
-                    <article class="soft-card rounded-lg border border-gray-200 bg-[#fbfaf8] p-5">
-                        <p class="text-xs font-bold uppercase tracking-[0.14em] text-teal-800" data-i18n="engagement.card1.label">Build</p>
-                        <h3 class="mt-3 font-bold text-gray-950" data-i18n="engagement.card1.title">AI prototype to production</h3>
-                        <p class="mt-3 text-sm leading-6 text-gray-600" data-i18n="engagement.card1.text">Turn an existing demo into a reliable feature, internal tool, or workflow that can be deployed and maintained.</p>
-                    </article>
-                    <article class="soft-card rounded-lg border border-gray-200 bg-[#fbfaf8] p-5">
-                        <p class="text-xs font-bold uppercase tracking-[0.14em] text-teal-800" data-i18n="engagement.card2.label">Implementation</p>
-                        <h3 class="mt-3 font-bold text-gray-950" data-i18n="engagement.card2.title">RAG or internal copilot build</h3>
-                        <p class="mt-3 text-sm leading-6 text-gray-600" data-i18n="engagement.card2.text">Design and build a practical knowledge assistant grounded in company documents, tools, and workflows.</p>
-                    </article>
-                    <article class="soft-card rounded-lg border border-gray-200 bg-[#fbfaf8] p-5">
-                        <p class="text-xs font-bold uppercase tracking-[0.14em] text-teal-800" data-i18n="engagement.card3.label">Implementation</p>
-                        <h3 class="mt-3 font-bold text-gray-950" data-i18n="engagement.card3.title">Workflow automation implementation</h3>
-                        <p class="mt-3 text-sm leading-6 text-gray-600" data-i18n="engagement.card3.text">Identify and automate repetitive operational work while keeping humans, auditability, and data quality in the loop.</p>
-                    </article>
-                    <article class="soft-card rounded-lg border border-gray-200 bg-[#fbfaf8] p-5">
-                        <p class="text-xs font-bold uppercase tracking-[0.14em] text-teal-800" data-i18n="engagement.card4.label">Review</p>
-                        <h3 class="mt-3 font-bold text-gray-950" data-i18n="engagement.card4.title">AI architecture review</h3>
-                        <p class="mt-3 text-sm leading-6 text-gray-600" data-i18n="engagement.card4.text">Review feasibility, architecture, model choice, data flows, risks, and implementation plan before the team commits.</p>
-                    </article>
-                </div>
-            </div>
-        </section>
-
-        <section id="about" class="section-rule">
-            <div class="mx-auto grid max-w-7xl gap-10 px-5 py-16 md:px-8 md:py-24 lg:grid-cols-[0.85fr_1.15fr] lg:items-center">
-                <div class="overflow-hidden rounded-lg border border-gray-200 bg-white shadow-xl shadow-gray-900/5">
-                    <img src="Jarek -101.jpg" alt="Jarek Drabek" class="h-[520px] w-full object-cover" style="object-position: center 40%;" onerror="this.onerror=null;this.src='jarek6.jpg';">
-                </div>
-                <div>
-                    <p class="text-sm font-semibold uppercase tracking-[0.16em] text-teal-800" data-i18n="about.eyebrow">About</p>
-                    <h2 class="mt-3 text-3xl font-extrabold tracking-tight text-gray-950 md:text-4xl" data-i18n="about.title">Senior engineering background, AI-native execution</h2>
-                    <p class="mt-5 text-base leading-7 text-gray-700" data-i18n="about.text">I’m a senior software engineer and tech lead with 10+ years of experience building SaaS platforms, backend systems, cloud-native applications, and distributed systems. I bring production engineering discipline into AI implementation: architecture, integrations, testing, monitoring, maintainability, and clear technical judgment.</p>
-                    <ul class="mt-8 grid gap-3 text-sm leading-6 text-gray-700 sm:grid-cols-2">
-                        <li class="border-l-2 border-teal-800 pl-4" data-i18n="about.point1">SaaS, backend, cloud, and distributed systems</li>
-                        <li class="border-l border-gray-200 pl-4" data-i18n="about.point2">Python, Java, APIs, microservices, AWS/GCP, Terraform, Docker/Kubernetes</li>
-                        <li class="border-l border-gray-200 pl-4" data-i18n="about.point3">LLM integrations, RAG systems, copilots, and workflow automation</li>
-                        <li class="border-l border-gray-200 pl-4" data-i18n="about.point4">Product thinking, technical leadership, and founder-friendly communication</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-
-        <section id="approach" class="section-rule bg-white">
-            <div class="mx-auto max-w-7xl px-5 py-16 md:px-8 md:py-24">
-                <div class="max-w-3xl">
-                    <p class="text-sm font-semibold uppercase tracking-[0.16em] text-teal-800" data-i18n="process.eyebrow">Process</p>
-                    <h2 class="mt-3 text-3xl font-extrabold tracking-tight text-gray-950 md:text-4xl" data-i18n="process.title">How I work</h2>
-                    <p class="mt-4 text-base leading-7 text-gray-700" data-i18n="process.intro">Fast execution, but with architecture, reliability, and ownership in the room.</p>
-                </div>
-                <div class="mt-10 grid gap-5 md:grid-cols-2 lg:grid-cols-4">
-                    <article class="rounded-lg border border-gray-200 bg-[#fbfaf8] p-5">
-                        <p class="text-sm font-bold text-teal-800">01</p>
-                        <h3 class="mt-4 font-bold text-gray-950" data-i18n="process.step1.title">Understand the workflow</h3>
-                        <p class="mt-3 text-sm leading-6 text-gray-600" data-i18n="process.step1.text">Clarify the business process, users, failure modes, data, and constraints before choosing tools.</p>
-                    </article>
-                    <article class="rounded-lg border border-gray-200 bg-[#fbfaf8] p-5">
-                        <p class="text-sm font-bold text-teal-800">02</p>
-                        <h3 class="mt-4 font-bold text-gray-950" data-i18n="process.step2.title">Design the system</h3>
-                        <p class="mt-3 text-sm leading-6 text-gray-600" data-i18n="process.step2.text">Define architecture, integrations, data boundaries, permissions, monitoring, and deployment path.</p>
-                    </article>
-                    <article class="rounded-lg border border-gray-200 bg-[#fbfaf8] p-5">
-                        <p class="text-sm font-bold text-teal-800">03</p>
-                        <h3 class="mt-4 font-bold text-gray-950" data-i18n="process.step3.title">Build the first useful version</h3>
-                        <p class="mt-3 text-sm leading-6 text-gray-600" data-i18n="process.step3.text">Move quickly toward working software that solves a concrete problem.</p>
-                    </article>
-                    <article class="rounded-lg border border-gray-200 bg-[#fbfaf8] p-5">
-                        <p class="text-sm font-bold text-teal-800">04</p>
-                        <h3 class="mt-4 font-bold text-gray-950" data-i18n="process.step4.title">Harden for production</h3>
-                        <p class="mt-3 text-sm leading-6 text-gray-600" data-i18n="process.step4.text">Add tests, evals, fallbacks, observability, documentation, and iteration paths where needed.</p>
-                    </article>
-                </div>
-            </div>
-        </section>
-
-        <section id="contact" class="section-rule bg-gray-950 text-white">
-            <div class="mx-auto grid max-w-7xl gap-10 px-5 py-16 md:px-8 md:py-24 lg:grid-cols-[0.9fr_1.1fr]">
-                <div>
-                    <p class="text-sm font-semibold uppercase tracking-[0.16em] text-teal-300" data-i18n="contact.eyebrow">Contact</p>
-                    <h2 class="mt-3 text-3xl font-extrabold tracking-tight md:text-4xl" data-i18n="contact.title">Have an AI prototype, workflow, or product idea worth building properly?</h2>
-                    <p class="mt-5 text-base leading-7 text-gray-300" data-i18n="contact.text">If the goal is a system people can actually use and trust, I can help you talk through the architecture, delivery path, and practical next step.</p>
-                    <div class="mt-8 grid gap-3 text-sm text-gray-300">
-                        <p class="font-semibold text-white">Jarek Drabek</p>
-                        <a href="mailto:contact@jarekdrabek.pl" class="focus-ring w-fit font-semibold text-white hover:text-teal-300">contact@jarekdrabek.pl</a>
-                        <a href="tel:+48662077499" class="focus-ring w-fit font-semibold text-white hover:text-teal-300">(+48) 662 077 499</a>
-                    </div>
-                </div>
-                <form action="https://formspree.io/f/xanojqqp" method="POST" class="rounded-lg border border-white/15 bg-white p-6 text-gray-950 md:p-8">
-                    <div class="grid gap-5">
-                        <div>
-                            <label for="name" class="block text-sm font-bold" data-i18n="contact.form.name.label">Full name</label>
-                            <input type="text" name="name" id="name" autocomplete="name" required class="mt-2 w-full rounded-md border border-gray-300 px-4 py-3 focus:border-teal-700 focus:outline-none focus:ring-4 focus:ring-teal-700/15" placeholder="Full name" data-i18n-placeholder="contact.form.name.placeholder">
-                        </div>
-                        <div>
-                            <label for="email" class="block text-sm font-bold" data-i18n="contact.form.email.label">Email address</label>
-                            <input type="email" name="email" id="email" autocomplete="email" required class="mt-2 w-full rounded-md border border-gray-300 px-4 py-3 focus:border-teal-700 focus:outline-none focus:ring-4 focus:ring-teal-700/15" placeholder="Email address" data-i18n-placeholder="contact.form.email.placeholder">
-                        </div>
-                        <div>
-                            <label for="message" class="block text-sm font-bold" data-i18n="contact.form.message.label">What are you building?</label>
-                            <textarea id="message" name="message" rows="5" required class="mt-2 w-full rounded-md border border-gray-300 px-4 py-3 focus:border-teal-700 focus:outline-none focus:ring-4 focus:ring-teal-700/15" placeholder="A few words about the prototype, workflow, or system..." data-i18n-placeholder="contact.form.message.placeholder"></textarea>
-                        </div>
-                        <button type="submit" class="focus-ring rounded-md bg-teal-800 px-5 py-3 text-sm font-bold text-white hover:bg-teal-900" data-i18n="contact.form.submit">Start the conversation</button>
-                        <p class="text-sm leading-6 text-gray-600" data-i18n="contact.form.microcopy">I’ll reply personally with the next practical step.</p>
-                    </div>
-                </form>
-            </div>
-        </section>
     </main>
-
-    <footer class="bg-gray-950 px-5 pb-10 text-gray-400 md:px-8">
-        <div class="mx-auto flex max-w-7xl flex-col justify-between gap-4 border-t border-white/10 pt-8 text-sm md:flex-row">
-            <p class="brand-font text-white">Jarek Drabek</p>
-            <p data-i18n="footer.copyright">&copy; <span id="currentYear"></span> Jarek Drabek. All rights reserved.</p>
-        </div>
-    </footer>
-
-    <script src="js/translations/pl.js"></script>
-    <script src="js/translations/en.js"></script>
-    <script src="js/translations/translations.js"></script>
-    <script>
-        const currentYear = new Date().getFullYear();
-        let currentLang = 'en';
-        translations = loadTranslations(currentLang);
-
-        function setLanguage(lang) {
-            currentLang = lang;
-            translations = loadTranslations(lang);
-            document.documentElement.lang = lang;
-
-            document.querySelectorAll('[data-i18n]').forEach(element => {
-                const key = element.getAttribute('data-i18n');
-                if (translations[key]) {
-                    element.innerHTML = translations[key];
-                }
-            });
-
-            document.querySelectorAll('[data-i18n-placeholder]').forEach(element => {
-                const key = element.getAttribute('data-i18n-placeholder');
-                if (translations[key]) {
-                    element.placeholder = translations[key];
-                }
-            });
-
-            document.getElementById('lang-pl').className = lang === 'pl'
-                ? 'focus-ring rounded-full bg-gray-950 px-3 py-1.5 text-xs font-semibold text-white'
-                : 'focus-ring rounded-full border border-gray-300 px-3 py-1.5 text-xs font-semibold text-gray-700';
-
-            document.getElementById('lang-en').className = lang === 'en'
-                ? 'focus-ring rounded-full bg-gray-950 px-3 py-1.5 text-xs font-semibold text-white'
-                : 'focus-ring rounded-full border border-gray-300 px-3 py-1.5 text-xs font-semibold text-gray-700';
-
-            document.title = lang === 'pl'
-                ? 'Jarek Drabek — produkcyjne systemy AI dla startupów i firm'
-                : 'Jarek Drabek — Production-Grade AI Systems for Startups and Businesses';
-
-            const copyrightText = translations['footer.copyright'];
-            document.querySelector('[data-i18n="footer.copyright"]').innerHTML =
-                copyrightText.replace(lang === 'pl' ? '[rok]' : '[year]', currentYear);
-        }
-
-        document.getElementById('lang-pl').addEventListener('click', () => setLanguage('pl'));
-        document.getElementById('lang-en').addEventListener('click', () => setLanguage('en'));
-
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (event) {
-                event.preventDefault();
-                const targetId = this.getAttribute('href');
-                if (targetId === '#') {
-                    window.scrollTo({ top: 0, behavior: 'smooth' });
-                    return;
-                }
-
-                const targetElement = document.querySelector(targetId);
-                if (targetElement) {
-                    targetElement.scrollIntoView({ behavior: 'smooth' });
-                }
-            });
-        });
-
-        setLanguage('en');
-    </script>
 </body>
 </html>

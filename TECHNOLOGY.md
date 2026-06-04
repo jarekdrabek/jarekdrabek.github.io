@@ -1,16 +1,29 @@
 # Technology Notes
 
-This landing page is a static website for `jarekdrabek.pl`. It is intentionally simple: there is no build step, no package manager, and no frontend framework. Future features should preserve that simplicity unless there is a clear reason to introduce more tooling.
+This website is a static personal consulting site for `jarekdrabek.pl`. It is intentionally simple: there is no build step, no package manager, no CMS, no database, and no frontend framework.
 
 ## Current Stack
 
-- HTML: `index.html` contains the page structure, sections, inline behavior, and small page-specific styles.
-- CSS: styling is done with Tailwind CSS utility classes loaded from the Tailwind CDN in `index.html`.
+- HTML: each route is a plain static `index.html` file.
+- CSS: shared styling lives in `assets/site.css`.
 - Fonts: Google Fonts loads `Inter` for general text and `Tektur` for the personal brand/logo style.
-- JavaScript: plain browser JavaScript is used directly in `index.html`.
-- Translations: Polish and English copy live in `js/translations/pl.js` and `js/translations/en.js`, with `js/translations/translations.js` selecting the active language.
-- Images: local image assets live in the repository root and are referenced directly by relative path.
-- Contact form: the form posts to Formspree.
+- JavaScript: only tiny inline redirect scripts are used for `/` language routing and old blog compatibility redirects.
+- Images: local image assets live in the repository root and are referenced directly by absolute static paths when needed.
+- Contact form: contact pages post to Formspree.
+
+## URL Structure
+
+English is the primary language. Polish is a full translated route set.
+
+- `/`: lightweight language router. Polish browser languages go to `/pl/`; all others go to `/en/`.
+- `/en/`: English homepage.
+- `/pl/`: Polish homepage.
+- `/en/saas-product-teams/` and `/pl/saas-i-zespoly-produktowe/`
+- `/en/business-automation/` and `/pl/automatyzacja-biznesu/`
+- `/en/technical-teams/` and `/pl/zespoly-techniczne/`
+- `/en/blog/` and `/pl/blog/`
+- `/en/contact/` and `/pl/kontakt/`
+- `/blog/` and `/blog/why-ai-generated-software-still-needs-architecture/`: compatibility redirects to the English blog routes.
 
 ## Hosting And Deployment
 
@@ -22,14 +35,20 @@ The site is deployed as static content through GitHub Pages.
 - Custom domain: `CNAME` points GitHub Pages to `jarekdrabek.pl`
 - DNS/domain management: the domain is managed in OVH
 
-There is no application server in this repository. Any OVH configuration should be treated as DNS/domain configuration around the GitHub Pages deployment unless future attached infrastructure files show otherwise.
+There is no application server in this repository. Any OVH configuration should be treated as DNS/domain configuration around the GitHub Pages deployment unless future infrastructure files show otherwise.
 
 ## File Responsibilities
 
-- `index.html`: main landing page, layout, embedded custom CSS, language switcher logic, smooth scrolling, current-year footer logic.
-- `js/translations/pl.js`: Polish UI copy.
-- `js/translations/en.js`: English UI copy.
-- `js/translations/translations.js`: simple language lookup helper.
+- `index.html`: language router and manual language fallback links.
+- `assets/site.css`: shared layout, typography, cards, navigation, footer, contact form, and responsive behavior.
+- `en/index.html` and `pl/index.html`: language-specific homepages.
+- `en/saas-product-teams/index.html` and `pl/saas-i-zespoly-produktowe/index.html`: SaaS/product audience pages.
+- `en/business-automation/index.html` and `pl/automatyzacja-biznesu/index.html`: business automation audience pages.
+- `en/technical-teams/index.html` and `pl/zespoly-techniczne/index.html`: technical-team audience pages.
+- `en/blog/index.html` and `pl/blog/index.html`: static blog listing pages.
+- `en/blog/[article-slug]/index.html` and `pl/blog/[article-slug]/index.html`: paired static article pages.
+- `en/contact/index.html` and `pl/kontakt/index.html`: dedicated contact pages.
+- `blog/`: compatibility redirects for older English blog URLs.
 - `CNAME`: GitHub Pages custom domain declaration.
 - `.github/workflows/static.yml`: GitHub Actions deployment to GitHub Pages.
 - `AGENTS.md`: brand, tone, product direction, and working rules for future development.
@@ -39,18 +58,20 @@ There is no application server in this repository. Any OVH configuration should 
 
 Keep new work consistent with the current static architecture:
 
-- Prefer plain HTML, Tailwind utility classes, and small vanilla JavaScript.
+- Prefer plain HTML and shared CSS.
 - Do not add React, Vue, Astro, Next.js, Vite, npm, or a build pipeline unless the feature clearly needs it.
-- Keep copy translatable. If visible text is shown in the page, add keys to both `pl.js` and `en.js`.
-- Keep Polish as the default language unless the product direction changes.
-- Keep assets local when they are part of the personal brand or proof. Reference them with simple relative paths.
+- Keep English and Polish pages paired when a translated route exists.
+- Update canonical and `hreflang` links when adding paired pages.
+- For blog articles, create paired English and Polish static pages when a translation exists.
+- Put useful article metadata in the HTML comment block near the top of each article: title, slug, language, translation URL, description, date, audience, tags, SEO title, meta description, optional image prompt, and optional LinkedIn draft.
+- Keep assets local when they are part of the personal brand or proof. Reference them with simple static paths.
 - Keep page behavior browser-native where possible: anchors, forms, semantic HTML, and progressive enhancement.
 - Keep the brand direction from `AGENTS.md`: specific, useful, human, and credible instead of generic portfolio language.
 - Avoid adding secrets or environment-specific configuration to the repository.
 
 ## Local Preview
 
-Because the site is static, it can be previewed by opening `index.html` directly in a browser. For a closer production-like check, serve the folder with any simple static server, for example:
+Because the site is static, it can be previewed by opening HTML files directly in a browser. For a closer production-like check, serve the folder with a simple static server:
 
 ```bash
 python3 -m http.server 8000
@@ -62,10 +83,10 @@ Then open `http://localhost:8000`.
 
 Before pushing feature changes to `main`:
 
-- Open the page locally and check the main viewport sizes.
-- Test both `PL` and `EN` language buttons.
-- Confirm new text exists in both translation files.
-- Confirm image paths work with the repository root as the static site root.
+- Serve the folder locally and check `/`, `/en/`, `/pl/`, the three category pages, blog pages, and contact pages.
+- Check desktop and mobile viewport widths.
+- Confirm cross-language links work on paired pages.
+- Confirm canonical and `hreflang` URLs match the final route.
 - Confirm the contact form action still points to the intended Formspree endpoint.
 - Confirm `CNAME` still contains `jarekdrabek.pl`.
 
