@@ -1,139 +1,547 @@
-# Jarek Drabek Personal Brand Brain
+# AGENTS.md
 
-This file is the operating brain for `jarekdrabek.github.io`. Codex should treat it as the source of truth for the vision, tone, priorities, and working rules of the Jarek Drabek personal brand.
+# Jarek Drabek Website Instructions
 
-## Core Vision
+This file documents the current direction, protected decisions, content strategy, and implementation rules for future AI coding agents working on this project.
 
-Build `jarekdrabek.pl` into the digital home of Jarek Drabek: a clear, credible, memorable personal brand that shows how Jarek thinks, what he builds, what he believes, and why people should want to work with him.
+This website is the personal consulting website for Jarek Drabek.
 
-The site should feel personal, sharp, and useful. It should not be a generic portfolio template. Every page should help visitors quickly understand:
+## Core Positioning
 
-- who Jarek is,
-- what kind of work he does best,
-- what point of view he brings,
-- what proof exists,
-- how to start a conversation.
+English:
 
-## Brand Intent
+> I help companies design, fix, and automate IT systems in the age of AI.
 
-Jarek Drabek should come across as:
+Polish:
 
-- thoughtful and practical,
-- ambitious without being loud,
-- technically capable,
-- creatively curious,
-- clear in communication,
-- reliable in execution,
-- human and approachable.
+> Pomagam firmom projektować, naprawiać i automatyzować systemy IT w czasach AI.
 
-The brand should make competence visible through specificity, not hype.
+The website should feel calm, clear, technical, premium, and personal without becoming self-centered or overdesigned.
 
-## Primary Audiences
+## Current Website Direction
 
-The project should serve these people first:
+The website has been intentionally redesigned to be simpler and more focused.
 
-- Potential clients or collaborators deciding whether to trust Jarek with meaningful work.
-- Recruiters, founders, or teams looking for a capable technical partner.
-- Peers who want to understand Jarek's thinking, projects, and taste.
-- Future Jarek, returning here to sharpen direction and publish new proof.
+The previous problem was that the site exposed too much information too early. It tried to explain services, use cases, AI systems, RAG, copilots, backend architecture, automation, process, and consulting options all at once. That made it unclear who the page was for and what the visitor should do next.
 
-## Site Goals
+The current direction is different:
 
-The site should help Jarek:
+The homepage is not a classic long landing page.
 
-- present a strong first impression,
-- publish projects and case studies,
-- explain his services or professional focus,
-- collect writing, notes, experiments, and opinions,
-- make contact easy,
-- turn scattered personal material into a coherent brand system.
+The homepage is a clean decision screen.
 
-## Content Pillars
+## Protected Homepage Concept
 
-Prefer content that fits at least one of these pillars:
+The homepage should only do these things:
 
-- Work: projects, case studies, shipped products, technical decisions, outcomes.
-- Thinking: essays, notes, frameworks, lessons, opinions, principles.
-- Craft: engineering, design, automation, AI, product building, systems thinking.
-- Proof: testimonials, metrics, screenshots, demos, before-and-after stories.
-- Personal Signal: values, taste, background, constraints, ambitions, working style.
+1. Show a small personal trust signal.
+2. State the positioning sentence.
+3. Ask the visitor what problem they are trying to solve.
+4. Route the visitor into one of three paths.
 
-## Voice And Tone
+Do not turn the homepage back into a long sales page.
 
-Write in a voice that is:
+Do not add service lists, stats, long process sections, case-study-like claims, or detailed AI/RAG/copilot/backend explanations to the homepage unless explicitly requested.
 
-- direct,
-- clear,
-- warm,
-- confident,
-- specific,
-- never corporate,
-- never over-polished to the point of sounding empty.
+Detailed content belongs on the relevant audience pages.
 
-Use simple language. Prefer concrete claims over abstract adjectives. Avoid startup cliches, inflated self-praise, and vague motivational language.
+## Homepage Structure
 
-Good direction:
+The homepage should preserve this structure:
 
-- "I build practical systems that make work easier to repeat."
-- "This project turned a messy manual process into a reliable workflow."
-- "I care about useful software, clear interfaces, and decisions that survive contact with real users."
+- subtle header
+- small circular avatar or portrait
+- positioning sentence
+- main question
+- three decision cards
+
+Main question:
+
+English:
+
+> What kind of problem are you trying to solve?
+
+Polish:
+
+> Jaki problem próbujesz rozwiązać?
+
+Decision paths:
+
+1. SaaS & Product Teams
+2. Business Automation
+3. Technical Teams
+
+## Homepage Visual Direction
+
+The homepage should feel:
+
+- minimal
+- calm
+- premium
+- technical
+- personal but not self-centered
+- spacious, but not like a tiny widget floating on a huge screen
+- clear within a few seconds
 
 Avoid:
 
-- "Passionate innovator disrupting the future."
-- "World-class solutions for every business need."
-- "Leveraging cutting-edge synergies."
+- generic AI hype
+- large portrait hero layouts
+- background hero images
+- heavy sales copy
+- decorative visual noise
+- long explanations
+- extra homepage sections unless explicitly requested
 
-## Visual Direction
+## Responsive Behavior
 
-The site should feel modern, editorial, and functional. Avoid generic portfolio gloss. Favor:
+The homepage should look balanced on laptop screens and large desktop screens.
 
-- restrained layouts,
-- strong typography,
-- real project visuals,
-- useful structure,
-- readable spacing,
-- crisp interactions,
-- a design system that can grow over time.
+Important rule:
 
-The first screen should communicate Jarek's name, professional direction, and strongest signal immediately.
+Do not globally enlarge the layout in a way that makes 15-inch laptop screens feel oversized.
 
-## Codex Working Rules
+Use responsive breakpoints.
 
-When Codex works in this repo:
+General intent:
 
-- Read this file first.
-- Preserve the personal brand direction unless Jarek explicitly changes it.
-- Prefer building real usable pages and components over placeholder marketing sections.
-- Keep copy specific and human.
-- Keep the site easy to update.
-- Document meaningful structure as the project grows.
-- Do not add heavy frameworks or dependencies unless they clearly help the project.
-- Treat every change as part of a long-lived personal brand system, not a one-off page.
+- normal laptop screens: compact premium layout
+- large desktop screens: slightly larger and more spacious layout
+- mobile: simple stacked layout with cards that are easy to tap
 
-## Initial Product Shape
+## Header And Navigation
 
-A strong first version should include:
+The header should be visually quiet.
 
-- Home: immediate identity, sharp positioning, selected proof, and contact path.
-- About: Jarek's story, values, working style, and current focus.
-- Work: projects, case studies, experiments, or notable shipped things.
-- Writing: essays, notes, or thinking archive.
-- Contact: simple ways to reach Jarek.
+Navigation items:
 
-If there is not enough real content yet, create clean structures that make missing material obvious and easy to fill.
+English:
 
-## Open Questions For Jarek
+- SaaS & Product Teams
+- Business Automation
+- Technical Teams
+- Blog
+- Contact
 
-Codex should gradually help answer these as the project evolves:
+Polish:
 
-- What is Jarek's clearest professional positioning?
-- What kind of work should the site attract?
-- Which projects are strongest proof?
-- What should visitors remember after 30 seconds?
-- What topics should Jarek publish about consistently?
-- What opportunities should the brand filter in or filter out?
+- SaaS i zespoły produktowe
+- Automatyzacja biznesu
+- Zespoły techniczne
+- Blog
+- Kontakt
 
-## Current North Star
+Header rules:
 
-Make the site feel like the natural home base for Jarek Drabek's professional identity: clear enough to trust, distinctive enough to remember, and flexible enough to grow with him.
+- inactive links should be muted/light gray and not bold
+- active/current page should be darker and slightly bolder
+- hover state should be subtle
+- do not use a separate prominent Contact button unless explicitly requested
+- the header should be available, but it should not compete with the homepage decision cards
+
+## Active Navigation State
+
+The current section must be visually active in the navigation.
+
+Examples:
+
+- `/saas-product-teams/` activates `SaaS & Product Teams`
+- `/business-automation/` activates `Business Automation`
+- `/technical-teams/` activates `Technical Teams`
+- `/blog/` activates `Blog`
+- `/contact/` activates `Contact`
+
+Apply the equivalent behavior on Polish routes.
+
+## Main Audience Paths
+
+### 1. SaaS & Product Teams
+
+For SaaS founders, product teams, startup builders, and companies building software products.
+
+Focus areas:
+
+- AI features inside SaaS products
+- product architecture
+- backend architecture
+- scalability
+- prototype to production
+- production-ready AI functionality
+- technical debt
+- AI-native product development
+
+Visitor problems:
+
+- "We want to add AI features to our SaaS product."
+- "Our product grew and the backend architecture is becoming messy."
+- "We have a prototype, but we need to make it production-ready."
+- "We need technical guidance before building the wrong thing."
+
+### 2. Business Automation
+
+For small and medium businesses that are not necessarily software companies, but want to use IT and AI to improve operations.
+
+Focus areas:
+
+- workflow automation
+- AI automations
+- internal tools
+- document processing
+- reporting automation
+- RAG / knowledge assistants
+- replacing manual work with reliable systems
+
+Visitor problems:
+
+- "We do too much repetitive work manually."
+- "Our company has data and documents, but people waste time searching for answers."
+- "We want to introduce AI, but we do not know where it makes business sense."
+- "We need practical automation, not AI hype."
+
+### 3. Technical Teams
+
+For CTOs, tech leads, engineering managers, software houses, and technical teams.
+
+Focus areas:
+
+- backend architecture review
+- AI system architecture
+- RAG architecture
+- maintainability
+- clean architecture
+- production readiness
+- integration design
+- implementation support
+- technical advisory
+
+Visitor problems:
+
+- "We need an external architecture review."
+- "We are building an AI/RAG system and want to avoid production mistakes."
+- "Our system is becoming hard to change."
+- "We need senior backend/architecture support."
+
+## Audience Pages
+
+Audience pages should be more detailed than the homepage.
+
+They may include:
+
+- clear headline
+- who this page is for
+- concrete problems solved
+- services
+- use cases
+- how I work
+- CTA
+- relevant blog/articles section
+
+Audience pages may be more explanatory and sales-oriented than the homepage, but should still remain calm, concrete, and not hype-driven.
+
+## Blog Strategy
+
+Keep one main `Blog` item in the navigation.
+
+Blog content should support audience categories:
+
+- SaaS & Product Teams
+- Business Automation
+- Technical Teams
+- General
+
+Do not treat the blog as one undifferentiated bucket forever.
+
+Expected behavior:
+
+- `/blog/` can show all articles
+- `/blog/` can provide filters or sections by audience
+- audience pages can show only relevant articles for that audience
+- do not show deeply technical software articles as primary content for non-technical business visitors unless they are clearly framed for them
+
+## Recommended Article Sections
+
+Audience pages may include recommended article sections.
+
+English:
+
+- Recommended articles for SaaS & Product Teams
+- Recommended articles for Business Automation
+- Recommended articles for Technical Teams
+
+Polish:
+
+- Polecane artykuły dla SaaS i zespołów produktowych
+- Polecane artykuły dla automatyzacji biznesu
+- Polecane artykuły dla zespołów technicznych
+
+If no relevant articles exist yet, either skip the section or show a very subtle empty state.
+
+## Blog Implementation
+
+For now, keep the blog simple and static.
+
+Do not introduce a CMS, database, or unnecessary content pipeline unless explicitly requested.
+
+Use the simplest static approach consistent with the current project.
+
+Future blog content may cover:
+
+- software design
+- clean architecture
+- AI-generated software
+- LLM context windows
+- backend architecture
+- AI systems
+- RAG
+- copilots
+- practical AI use in business
+
+Blog style should be:
+
+- practical
+- concrete
+- smart but not academic
+- useful for founders, managers, SaaS builders, CTOs, tech leads, and engineers
+- connected to why design and architecture matter in the AI era
+
+## Language And Internationalization
+
+The website is bilingual:
+
+- Polish
+- English
+
+Expected behavior:
+
+- If browser language is Polish, show Polish by default.
+- If browser language is English or anything else, show English by default.
+- Always allow manual language switching.
+- Prefer clean language-specific URLs if already implemented.
+- Do not make language switching confusing.
+
+## SEO
+
+Keep the site SEO-friendly without overengineering.
+
+Use:
+
+- proper page titles
+- meta descriptions
+- semantic HTML
+- clear heading hierarchy
+- clean URLs where possible
+- Open Graph metadata where appropriate
+- accessible links and buttons
+- good internal linking between homepage, audience pages, blog, and contact
+
+Do not add unnecessary dependencies or infrastructure only for SEO.
+
+## Contact Page
+
+The contact page should feel personal, calm, and practical.
+
+Preferred headline:
+
+English:
+
+> Tell me what problem you want to solve.
+
+Polish:
+
+> Opowiedz, jaki problem chcesz rozwiązać.
+
+Supporting text:
+
+English:
+
+> A short message is enough. Describe the system, process, product idea, or place where software or AI should start working better.
+
+Polish:
+
+> Krótka wiadomość wystarczy. Opisz system, proces, pomysł produktowy albo miejsce, w którym software lub AI powinny zacząć działać lepiej.
+
+Contact form fields:
+
+- name
+- email
+- message/problem
+
+Message label:
+
+English:
+
+> What should software or AI improve?
+
+Polish:
+
+> Co software albo AI powinny usprawnić?
+
+Button:
+
+English:
+
+> Start the conversation
+
+Polish:
+
+> Zacznij rozmowę
+
+Helper text:
+
+English:
+
+> I'll reply personally and suggest the next practical step.
+
+Polish:
+
+> Odpowiem osobiście i zaproponuję następny praktyczny krok.
+
+Contact page layout rules:
+
+- avoid awkward headline wrapping
+- avoid huge vertical gaps
+- form should not stretch too wide on large screens
+- keep the form clean and compact
+- avoid a corporate-looking oversized form
+
+## LinkedIn
+
+Use this exact LinkedIn URL:
+
+`https://www.linkedin.com/in/jaroslaw-drabek/`
+
+Use it in:
+
+- global footer
+- contact page
+
+Display label may simply be:
+
+`LinkedIn`
+
+Do not make LinkedIn a dominant header CTA.
+
+## Footer
+
+The footer should be global and may include:
+
+- LinkedIn link
+- contact information or contact CTA
+- basic navigation
+- language switcher if appropriate
+
+Keep it calm and useful.
+
+## Visual Style
+
+Preserve the current direction:
+
+- clean
+- premium
+- minimalist
+- technical
+- calm
+- trustworthy
+- not overloaded
+- not generic AI hype
+
+Avoid:
+
+- buzzword-heavy AI marketing
+- vague promises
+- aggressive sales copy
+- too many services listed at once
+- inflated startup language
+- generic consultant copy
+- walls of text
+- distracting animations
+- fake testimonials
+- fake logos
+- invented metrics
+- invented case studies
+
+Prefer:
+
+- short sections
+- concrete examples
+- problem-first messaging
+- audience-specific pages
+- calm technical credibility
+- simple CTAs
+- useful explanations
+
+## Copywriting Rules
+
+Use direct, concrete language.
+
+Do not over-explain on the homepage.
+
+On audience pages, explain more, but keep content structured and practical.
+
+Do not invent credentials, client names, testimonials, metrics, case studies, or claims not already present.
+
+Avoid startup cliches, generic AI hype, and inflated self-praise.
+
+## Implementation Rules For Future Agents
+
+Before making significant changes:
+
+1. Inspect the current project structure.
+2. Understand the existing routing, language handling, styling, and content model.
+3. Identify what files will likely change.
+4. Ask questions if anything is unclear.
+5. Do not assume business decisions.
+6. Do not change protected concepts without explicit approval.
+
+When unsure, ask before implementing.
+
+Especially ask before:
+
+- changing homepage structure
+- adding homepage sections
+- changing navigation strategy
+- changing blog architecture
+- adding dependencies
+- adding a CMS
+- changing language routing
+- changing CTA strategy
+- modifying contact form behavior
+- introducing animations or visual effects
+- removing existing content entirely
+
+## Verification Rules
+
+After changes:
+
+- run available build/test/lint commands
+- verify relevant routes
+- verify language switching
+- verify active nav state
+- verify responsive layout on laptop and large desktop widths
+- summarize what changed
+- mention any limitations or follow-up work
+
+For frontend changes, visually verify the affected pages whenever possible.
+
+## Regression Protection
+
+Future changes must not accidentally:
+
+- turn the homepage back into a long landing page
+- make the header visually dominant
+- remove the three-path decision model
+- remove bilingual support
+- remove manual language switching
+- break active navigation states
+- make the blog a single unstructured bucket
+- remove audience-specific blog categorization
+- use the wrong LinkedIn URL
+- make the contact page overly corporate
+- add generic AI marketing copy
+- invent case studies, clients, testimonials, or metrics
+
+## North Star
+
+Make the site feel like the natural professional home base for Jarek Drabek:
+
+clear enough to trust, specific enough to remember, calm enough to read, and structured enough to grow.
