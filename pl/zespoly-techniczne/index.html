@@ -39,17 +39,39 @@
 
     <main>
         <header class="page-header">
-            <div class="container">
-                <p class="breadcrumb"><a href="../">Strona główna</a> / Zespoły techniczne</p>
-                <p class="eyebrow">Dla CTO, tech leadów i zespołów inżynierskich</p>
-                <h1>Zewnętrzne wsparcie architektoniczne i implementacyjne, gdy system potrzebuje ostrzejszego osądu.</h1>
-                <p>Ta strona jest dla CTO, tech leadów, engineering managerów, software house'ów i zespołów technicznych, które potrzebują seniorskiego wsparcia backendowego, architektury AI albo gotowości produkcyjnej.</p>
-                <div class="tag-row">
-                    <span class="tag">Review architektury</span>
-                    <span class="tag">Architektura RAG</span>
-                    <span class="tag">Utrzymywalność</span>
-                    <span class="tag">Wsparcie implementacji</span>
+            <div class="container audience-hero">
+                <div class="audience-hero-copy">
+                    <p class="breadcrumb"><a href="../">Strona główna</a> / Zespoły techniczne</p>
+                    <p class="eyebrow">Dla CTO, tech leadów i zespołów inżynierskich</p>
+                    <h1>Zewnętrzne wsparcie architektoniczne i implementacyjne, gdy system potrzebuje ostrzejszego osądu.</h1>
+                    <p>Ta strona jest dla CTO, tech leadów, engineering managerów, software house'ów i zespołów technicznych, które potrzebują seniorskiego wsparcia backendowego, architektury AI albo gotowości produkcyjnej.</p>
+                    <div class="tag-row">
+                        <span class="tag">Review architektury</span>
+                        <span class="tag">Architektura RAG</span>
+                        <span class="tag">Utrzymywalność</span>
+                        <span class="tag">Wsparcie implementacji</span>
+                    </div>
                 </div>
+                <aside class="audience-summary" aria-label="Podsumowanie dla zespołów technicznych">
+                    <div class="audience-summary-group">
+                        <h2>Dla kogo</h2>
+                        <ul>
+                            <li>CTO</li>
+                            <li>Tech leadzi</li>
+                            <li>Zespoły inżynierskie</li>
+                            <li>Software house'y</li>
+                        </ul>
+                    </div>
+                    <div class="audience-summary-group">
+                        <h2>Typowa praca</h2>
+                        <ul>
+                            <li>Review architektury</li>
+                            <li>Systemy RAG / AI</li>
+                            <li>Wsparcie implementacji backendu</li>
+                            <li>Utrzymywalność</li>
+                        </ul>
+                    </div>
+                </aside>
             </div>
         </header>
 
@@ -59,11 +81,23 @@
                     <p class="eyebrow">Problemy, w których pomagam</p>
                     <h2>Gdy zespół potrzebuje zewnętrznego partnera technicznego.</h2>
                 </div>
-                <div class="cards two">
-                    <article class="card tinted"><p>Potrzebujemy zewnętrznego review architektury.</p></article>
-                    <article class="card tinted"><p>Budujemy system AI/RAG i chcemy uniknąć błędów produkcyjnych.</p></article>
-                    <article class="card tinted"><p>Nasz system staje się trudny do zmieniania.</p></article>
-                    <article class="card tinted"><p>Potrzebujemy seniorskiego wsparcia backendowego albo architektonicznego podczas implementacji.</p></article>
+                <div class="cards two problem-cards">
+                    <article class="card tinted problem-card">
+                        <h3>Architektura potrzebuje spojrzenia z zewnątrz</h3>
+                        <p>Potrzebujesz seniorskiej perspektywy na granice, ryzyka, trade-offy i gotowość produkcyjną.</p>
+                    </article>
+                    <article class="card tinted problem-card">
+                        <h3>System AI/RAG zbliża się do produkcji</h3>
+                        <p>Zespół chce uniknąć błędów w retrievalu, kontekście, uprawnieniach, ewaluacji i obserwowalności.</p>
+                    </article>
+                    <article class="card tinted problem-card">
+                        <h3>System coraz trudniej zmieniać</h3>
+                        <p>Coupling, niejasny ownership albo dług techniczny spowalniają delivery i zwiększają ryzyko wdrożeń.</p>
+                    </article>
+                    <article class="card tinted problem-card">
+                        <h3>Zespół potrzebuje seniorskiego wsparcia</h3>
+                        <p>Potrzebujesz hands-on pomocy backendowej lub architektonicznej przy trudnym buildzie, integracji albo wdrożeniu.</p>
+                    </article>
                 </div>
             </div>
         </section>
@@ -144,8 +178,31 @@
 
     <footer class="site-footer">
         <div class="container footer-inner">
-            <div><p class="brand-font">Jarek Drabek</p><p class="footer-meta">© 2026 Jarek Drabek. Wszelkie prawa zastrzeżone.</p></div>
-            <div class="footer-links"><a href="../">Strona główna</a><a href="../saas-i-zespoly-produktowe/">SaaS i zespoły produktowe</a><a href="../automatyzacja-biznesu/">Automatyzacja biznesu</a><a href="../blog/">Blog</a><a href="../kontakt/">Kontakt</a><a href="https://www.linkedin.com/in/jaroslaw-drabek/">LinkedIn</a><a href="../../en/technical-teams/">EN</a></div>
+            <div class="footer-brand">
+                <p class="brand-font">Jarek Drabek</p>
+                <p class="footer-tagline">Backend, architektura i systemy AI.</p>
+                <p class="footer-meta">© 2026 Jarek Drabek. Wszelkie prawa zastrzeżone.</p>
+            </div>
+            <div class="footer-columns">
+                <div class="footer-column">
+                    <h2>Nawigacja</h2>
+                    <div class="footer-links">
+                        <a href="../">Strona główna</a>
+                        <a href="../saas-i-zespoly-produktowe/">SaaS i zespoły produktowe</a>
+                        <a href="../automatyzacja-biznesu/">Automatyzacja biznesu</a>
+                        <a href="./">Zespoły techniczne</a>
+                        <a href="../blog/">Blog</a>
+                        <a href="../kontakt/">Kontakt</a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h2>Kontakt</h2>
+                    <div class="footer-links">
+                        <a href="https://www.linkedin.com/in/jaroslaw-drabek/">LinkedIn</a>
+                        <a href="mailto:contact@jarekdrabek.pl">Email</a>
+                    </div>
+                </div>
+            </div>
         </div>
     </footer>
 </body>
