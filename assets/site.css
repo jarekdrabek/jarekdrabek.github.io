@@ -870,20 +870,20 @@ p {
     font-weight: 640;
 }
 
-.technical-page {
+.expert-page {
     background: var(--paper);
 }
 
-.technical-readable {
+.expert-readable {
     max-width: 940px;
 }
 
-.technical-hero {
+.expert-hero {
     border-bottom: 1px solid var(--line);
     padding: 56px 0 48px;
 }
 
-.technical-hero h1 {
+.expert-hero h1 {
     max-width: 820px;
     margin-bottom: 18px;
     font-size: clamp(2rem, 3.25vw, 3.35rem);
@@ -892,14 +892,14 @@ p {
     letter-spacing: 0;
 }
 
-.technical-lede {
+.expert-lede {
     max-width: 800px;
     color: #374151;
     font-size: 1.04rem;
     line-height: 1.78;
 }
 
-.technical-hero-actions {
+.expert-hero-actions {
     display: flex;
     flex-wrap: wrap;
     gap: 14px;
@@ -907,35 +907,35 @@ p {
     margin-top: 30px;
 }
 
-.technical-secondary-link {
+.expert-secondary-link {
     color: var(--muted);
     font-size: 0.94rem;
     font-weight: 650;
     text-decoration: none;
 }
 
-.technical-secondary-link:hover {
+.expert-secondary-link:hover {
     color: var(--accent-dark);
     text-decoration: underline;
     text-decoration-thickness: 1px;
     text-underline-offset: 5px;
 }
 
-.technical-content {
+.expert-content {
     padding: 18px 0 68px;
 }
 
-.technical-article-section {
+.expert-article-section {
     border-top: 1px solid rgba(229, 231, 235, 0.9);
     padding: 46px 0 6px;
 }
 
-.technical-article-section:first-child {
+.expert-article-section:first-child {
     border-top: 0;
 }
 
-.technical-article-section h2,
-.technical-final-cta h2 {
+.expert-article-section h2,
+.expert-final-cta h2 {
     max-width: 880px;
     margin-bottom: 18px;
     font-size: clamp(1.45rem, 2vw, 2.15rem);
@@ -944,8 +944,8 @@ p {
     letter-spacing: 0;
 }
 
-.technical-article-section > p,
-.technical-final-cta p {
+.expert-article-section > p,
+.expert-final-cta p {
     max-width: 800px;
     color: #374151;
     font-size: 1.02rem;
@@ -953,7 +953,7 @@ p {
 }
 
 .expert-service-list,
-.technical-process {
+.expert-process {
     display: grid;
     gap: 24px;
     margin-top: 28px;
@@ -964,7 +964,7 @@ p {
 }
 
 .expert-service-row h3,
-.technical-process h3 {
+.expert-process h3 {
     margin-bottom: 7px;
     font-size: 1.02rem;
     line-height: 1.34;
@@ -972,7 +972,7 @@ p {
 }
 
 .expert-service-row p,
-.technical-process p {
+.expert-process p {
     max-width: 760px;
     margin-bottom: 0;
     color: var(--muted);
@@ -981,7 +981,7 @@ p {
 }
 
 .situations-list,
-.technical-simple-list {
+.expert-simple-list {
     display: grid;
     gap: 12px;
     margin: 24px 0 0;
@@ -990,7 +990,7 @@ p {
 }
 
 .situations-list li,
-.technical-simple-list li {
+.expert-simple-list li {
     position: relative;
     padding-left: 22px;
     color: #374151;
@@ -999,7 +999,7 @@ p {
 }
 
 .situations-list li::before,
-.technical-simple-list li::before {
+.expert-simple-list li::before {
     content: "";
     position: absolute;
     top: 0.78em;
@@ -1011,16 +1011,16 @@ p {
     background: var(--surface);
 }
 
-.technical-process {
+.expert-process {
     counter-reset: technical-steps;
 }
 
-.technical-process article {
+.expert-process article {
     position: relative;
     padding-left: 42px;
 }
 
-.technical-process article::before {
+.expert-process article::before {
     counter-increment: technical-steps;
     content: "0" counter(technical-steps);
     position: absolute;
@@ -1031,7 +1031,7 @@ p {
     font-weight: 650;
 }
 
-.technical-final-cta {
+.expert-final-cta {
     border: 1px solid rgba(229, 231, 235, 0.86);
     border-radius: 8px;
     margin-top: 52px;
@@ -1040,16 +1040,16 @@ p {
     background: rgba(255, 255, 255, 0.52);
 }
 
-.technical-final-cta h2 {
+.expert-final-cta h2 {
     margin-bottom: 12px;
     font-size: clamp(1.45rem, 2.1vw, 2.05rem);
 }
 
-.technical-final-cta .button {
+.expert-final-cta .button {
     margin-top: 8px;
 }
 
-.technical-page .button {
+.expert-page .button {
     font-weight: 720;
 }
 
@@ -1404,7 +1404,7 @@ p {
         align-items: start;
     }
 
-    .technical-process {
+    .expert-process {
         gap: 20px;
     }
 
@@ -1459,19 +1459,19 @@ p {
         padding: 52px 0;
     }
 
-    .technical-hero {
+    .expert-hero {
         padding: 46px 0 42px;
     }
 
-    .technical-content {
+    .expert-content {
         padding-bottom: 48px;
     }
 
-    .technical-article-section {
+    .expert-article-section {
         padding-top: 38px;
     }
 
-    .technical-final-cta {
+    .expert-final-cta {
         padding: 24px;
     }
 
