@@ -6,6 +6,33 @@ This file documents the current direction, protected decisions, content strategy
 
 This website is the personal consulting website for Jarek Drabek.
 
+## Current Baseline Rule
+
+The current repository state is the baseline.
+
+Future agents must inspect the current implementation and treat what is present in the codebase as the source of truth.
+
+> The current repository state is the baseline. Do not assume earlier discussed changes are implemented unless they are present in the current codebase.
+
+Do not rely on old prompts, old screenshots, earlier design discussions, or previously proposed changes unless those decisions are visible in the current codebase or explicitly requested again.
+
+At the time of this document update, the project is a simple static website with root, English, Polish, blog, asset, and translation/script files. Future agents should re-check the structure before making changes instead of assuming it is unchanged.
+
+## Working Mode
+
+Treat future changes as careful refinements, not redesigns.
+
+Agents should:
+
+- inspect the current implementation before changing anything
+- preserve existing working design decisions
+- make small, reviewable changes
+- avoid broad redesigns unless explicitly requested
+- ask questions when business, content, UX, or architecture decisions are unclear
+- summarize what changed after implementation
+
+Do not modify application code when the request is documentation-only.
+
 ## Core Positioning
 
 English:
@@ -238,6 +265,27 @@ They may include:
 
 Audience pages may be more explanatory and sales-oriented than the homepage, but should still remain calm, concrete, and not hype-driven.
 
+Audience page refinements should prefer:
+
+- calmer section labels
+- fewer loud uppercase labels
+- less aggressive letter-spacing
+- smaller secondary headings compared to hero headings
+- more conversational problem statements
+- less mechanical repetition of "label + huge heading + cards"
+- lighter CTA sections
+- practical examples over vague marketing language
+
+Audience pages should not feel heavy, aggressive, overly corporate, or overly "agency-like".
+
+Do not add:
+
+- fake case studies
+- fake testimonials
+- fake client logos
+- invented metrics
+- generic AI transformation claims
+
 ## Blog Strategy
 
 Keep one main `Blog` item in the navigation.
@@ -257,6 +305,10 @@ Expected behavior:
 - `/blog/` can provide filters or sections by audience
 - audience pages can show only relevant articles for that audience
 - do not show deeply technical software articles as primary content for non-technical business visitors unless they are clearly framed for them
+
+Do not show empty public sections that make the site feel unfinished unless explicitly requested.
+
+Avoid public labels like `draft`, `work in progress`, or `placeholder` unless the content is intentionally not public.
 
 ## Recommended Article Sections
 
@@ -442,6 +494,7 @@ Preserve the current direction:
 - technical
 - calm
 - trustworthy
+- personal but not self-centered
 - not overloaded
 - not generic AI hype
 
@@ -450,6 +503,9 @@ Avoid:
 - buzzword-heavy AI marketing
 - vague promises
 - aggressive sales copy
+- oversized section headings everywhere
+- too much bold text
+- too many uppercase labels
 - too many services listed at once
 - inflated startup language
 - generic consultant copy
