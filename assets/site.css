@@ -870,6 +870,146 @@ p {
     font-weight: 640;
 }
 
+.technical-page .page-header {
+    padding-bottom: 50px;
+}
+
+.technical-page .section-header {
+    max-width: 780px;
+}
+
+.technical-page .section-header h2 {
+    max-width: 760px;
+}
+
+.technical-hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+    align-items: center;
+    margin-top: 28px;
+}
+
+.technical-secondary-link {
+    color: var(--muted);
+    font-size: 0.92rem;
+    font-weight: 650;
+    text-decoration: none;
+}
+
+.technical-secondary-link:hover {
+    color: var(--accent-dark);
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 5px;
+}
+
+.expert-service-list {
+    display: grid;
+    margin-top: 30px;
+    border-top: 1px solid rgba(229, 231, 235, 0.86);
+}
+
+.expert-service-row {
+    display: grid;
+    grid-template-columns: minmax(180px, 0.34fr) minmax(0, 1fr);
+    gap: 36px;
+    border-bottom: 1px solid rgba(229, 231, 235, 0.86);
+    padding: 22px 0;
+}
+
+.expert-service-row h3,
+.technical-process h3,
+.faq-list h3 {
+    margin-bottom: 8px;
+    font-size: 1.05rem;
+    line-height: 1.35;
+    font-weight: 690;
+}
+
+.expert-service-row p,
+.technical-process p,
+.faq-list p {
+    margin-bottom: 0;
+    color: var(--muted);
+    font-size: 0.95rem;
+    line-height: 1.7;
+}
+
+.situations-list {
+    display: grid;
+    max-width: 940px;
+    margin: 28px 0 0;
+    padding: 0;
+    border-top: 1px solid rgba(229, 231, 235, 0.86);
+    list-style: none;
+}
+
+.situations-list li {
+    position: relative;
+    border-bottom: 1px solid rgba(229, 231, 235, 0.86);
+    padding: 17px 0 17px 24px;
+    color: #374151;
+    font-size: 1rem;
+    line-height: 1.65;
+}
+
+.situations-list li::before {
+    content: "";
+    position: absolute;
+    top: 27px;
+    left: 0;
+    width: 8px;
+    height: 8px;
+    border: 1px solid rgba(15, 118, 110, 0.44);
+    border-radius: 999px;
+    background: var(--surface);
+}
+
+.technical-process {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 28px;
+    margin-top: 28px;
+    counter-reset: technical-steps;
+}
+
+.technical-process article {
+    border-top: 1px solid rgba(229, 231, 235, 0.86);
+    padding-top: 18px;
+}
+
+.technical-process article::before {
+    counter-increment: technical-steps;
+    content: "0" counter(technical-steps);
+    display: block;
+    margin-bottom: 12px;
+    color: var(--soft);
+    font-size: 0.78rem;
+    font-weight: 640;
+}
+
+.faq-list {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0 42px;
+    margin-top: 30px;
+    border-top: 1px solid rgba(229, 231, 235, 0.86);
+}
+
+.faq-list article {
+    border-bottom: 1px solid rgba(229, 231, 235, 0.86);
+    padding: 22px 0;
+}
+
+.technical-page .technical-cta {
+    padding: 44px 0;
+}
+
+.technical-page .technical-cta .cta-band h2 {
+    max-width: 760px;
+}
+
 .process {
     counter-reset: steps;
 }
@@ -1219,6 +1359,24 @@ p {
 
     .cta-band {
         align-items: start;
+    }
+
+    .expert-service-row,
+    .technical-process,
+    .faq-list {
+        grid-template-columns: 1fr;
+    }
+
+    .expert-service-row {
+        gap: 8px;
+    }
+
+    .technical-process {
+        gap: 20px;
+    }
+
+    .faq-list {
+        gap: 0;
     }
 
     .contact-grid {
