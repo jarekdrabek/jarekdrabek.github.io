@@ -219,12 +219,12 @@ textarea:focus-visible {
 .decision-wrap {
     display: grid;
     gap: 44px;
-    max-width: 1180px;
+    max-width: 1060px;
     margin: 0 auto;
 }
 
 .decision-intro {
-    max-width: 980px;
+    max-width: 880px;
     margin: 0 auto;
 }
 
@@ -233,7 +233,7 @@ textarea:focus-visible {
     grid-template-columns: auto minmax(0, 1fr);
     gap: 24px;
     align-items: center;
-    max-width: 980px;
+    max-width: 880px;
 }
 
 .decision-avatar {
@@ -257,7 +257,7 @@ textarea:focus-visible {
 
 .decision-question {
     margin: 32px 0 0;
-    max-width: 980px;
+    max-width: 880px;
     font-size: clamp(2.2rem, 3.45vw, 3.18rem);
     line-height: 1.12;
     letter-spacing: 0;
@@ -1264,14 +1264,14 @@ p {
     }
 
     .decision-wrap {
-        max-width: 1580px;
+        max-width: 1420px;
         gap: 76px;
     }
 
     .decision-intro,
     .decision-positioning,
     .decision-question {
-        max-width: 1320px;
+        max-width: 1188px;
     }
 
     .decision-positioning {
@@ -1321,7 +1321,7 @@ p {
 
 @media (max-width: 1180px) {
     .decision-wrap {
-        max-width: 1100px;
+        max-width: 990px;
         gap: 40px;
     }
 
