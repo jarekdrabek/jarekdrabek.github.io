@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blog - Jarek Drabek</title>
-    <meta name="description" content="Praktyczne notatki Jarka Drabka o projektowaniu softwareu, clean architecture, software generowanym przez AI, backendzie, systemach AI, RAG, copilots i praktycznym AI w biznesie.">
+    <meta name="description" content="Praktyczne teksty o tym, jak projektować, automatyzować i utrzymywać software oraz systemy AI — od decyzji biznesowych po architekturę techniczną.">
     <meta property="og:title" content="Blog - Jarek Drabek">
-    <meta property="og:description" content="Praktyczne notatki o software, architekturze i AI-native engineering.">
+    <meta property="og:description" content="Praktyczne teksty o tym, jak projektować, automatyzować i utrzymywać software oraz systemy AI — od decyzji biznesowych po architekturę techniczną.">
     <meta property="og:type" content="website">
     <link rel="canonical" href="https://jarekdrabek.pl/pl/blog/">
     <link rel="alternate" hreflang="en" href="https://jarekdrabek.pl/en/blog/">
@@ -17,7 +17,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;850&family=Tektur:wght@400;500&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../../assets/site.css">
+    <link rel="stylesheet" href="../../assets/site.css?v=audience-calm-20260607">
 </head>
 <body>
     <nav class="site-nav">
@@ -31,8 +31,8 @@
                 <a href="../kontakt/">Kontakt</a>
             </div>
             <div class="nav-actions">
-                <a class="lang-link active" href="./" aria-current="page">PL</a>
-                <a class="lang-link" href="../../en/blog/">EN</a>
+                <a class="lang-link active" href="./" aria-label="Polski" aria-current="page"><span aria-hidden="true">🇵🇱</span><span class="sr-only">Polski</span></a>
+                <a class="lang-link" href="../../en/blog/" aria-label="English"><span aria-hidden="true">🇬🇧</span><span class="sr-only">English</span></a>
             </div>
         </div>
     </nav>
@@ -42,82 +42,10 @@
             <div class="container">
                 <p class="breadcrumb"><a href="../">Strona główna</a> / Blog</p>
                 <p class="eyebrow">Blog</p>
-                <h1>Praktyczne notatki o software, architekturze i AI-native engineering.</h1>
-                <p>Piszę o projektowaniu softwareu, clean architecture, software generowanym przez AI, oknach kontekstu LLM, backendzie, systemach AI, RAG, copilots i praktycznym AI w biznesie.</p>
-                <nav class="filter-row" aria-label="Kategorie bloga">
-                    <a href="#all" aria-current="page">Wszystkie</a>
-                    <a href="#saas-product-teams">SaaS i zespoły produktowe</a>
-                    <a href="#business-automation">Automatyzacja biznesu</a>
-                    <a href="#technical-teams">Zespoły techniczne</a>
-                </nav>
+                <h1>Praktyczne teksty o tym, jak projektować, automatyzować i utrzymywać software oraz systemy AI.</h1>
+                <p>Od decyzji biznesowych po architekturę techniczną.</p>
             </div>
         </header>
-
-        <section class="section white" id="all">
-            <div class="container">
-                <div class="section-header">
-                    <p class="eyebrow">Wszystkie artykuły</p>
-                    <h2>Najnowsze teksty</h2>
-                </div>
-                <div class="article-list">
-                    <article class="article-card">
-                        <p class="eyebrow">Artykuł roboczy</p>
-                        <h3>Dlaczego software generowany przez AI nadal potrzebuje architektury</h3>
-                        <p>AI potrafi szybko generować kod. Nie potrafi automatycznie zdecydować, z jakimi granicami, tradeoffami, workflowami i trybami awarii Twoja firma powinna żyć.</p>
-                        <div class="tag-row">
-                            <span class="tag">SaaS i zespoły produktowe</span>
-                            <span class="tag">Zespoły techniczne</span>
-                            <span class="tag">Ogólne</span>
-                        </div>
-                        <a class="card-link" href="./dlaczego-oprogramowanie-generowane-przez-ai-nadal-potrzebuje-architektury/">Czytaj artykuł</a>
-                    </article>
-                </div>
-            </div>
-        </section>
-
-        <section class="section" id="saas-product-teams">
-            <div class="container">
-                <div class="section-header">
-                    <p class="eyebrow">Kategoria</p>
-                    <h2>SaaS i zespoły produktowe</h2>
-                </div>
-                <div class="recommended-list">
-                    <article class="article-card">
-                        <p class="eyebrow">Artykuł roboczy</p>
-                        <h3>Dlaczego software generowany przez AI nadal potrzebuje architektury</h3>
-                        <p>Dla founderów i zespołów produktowych, które traktują AI jako przyspieszenie, a nie zamiennik osądu technicznego.</p>
-                        <a class="card-link" href="./dlaczego-oprogramowanie-generowane-przez-ai-nadal-potrzebuje-architektury/">Czytaj artykuł</a>
-                    </article>
-                </div>
-            </div>
-        </section>
-
-        <section class="section white" id="business-automation">
-            <div class="container">
-                <div class="section-header">
-                    <p class="eyebrow">Kategoria</p>
-                    <h2>Automatyzacja biznesu</h2>
-                </div>
-                <p class="empty-state">Nie ma jeszcze artykułów w tej kategorii.</p>
-            </div>
-        </section>
-
-        <section class="section" id="technical-teams">
-            <div class="container">
-                <div class="section-header">
-                    <p class="eyebrow">Kategoria</p>
-                    <h2>Zespoły techniczne</h2>
-                </div>
-                <div class="recommended-list">
-                    <article class="article-card">
-                        <p class="eyebrow">Artykuł roboczy</p>
-                        <h3>Dlaczego software generowany przez AI nadal potrzebuje architektury</h3>
-                        <p>Dla CTO, tech leadów i engineerów myślących o granicach, utrzymywalności, testowaniu, obserwowalności i ownershipie.</p>
-                        <a class="card-link" href="./dlaczego-oprogramowanie-generowane-przez-ai-nadal-potrzebuje-architektury/">Czytaj artykuł</a>
-                    </article>
-                </div>
-            </div>
-        </section>
     </main>
 
     <footer class="site-footer">

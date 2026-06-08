@@ -41,6 +41,16 @@ a {
     font-weight: 500;
 }
 
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    clip-path: inset(50%);
+}
+
 .site-nav {
     position: sticky;
     top: 0;
@@ -109,13 +119,25 @@ a {
 }
 
 .lang-link {
+    display: inline-flex;
+    width: 42px;
+    height: 42px;
+    align-items: center;
+    justify-content: center;
     border: 1px solid rgba(229, 231, 235, 0.9);
     border-radius: 999px;
-    padding: 6px 10px;
+    padding: 0;
     color: #8f98a6;
-    font-size: 0.82rem;
+    font-size: 1.55rem;
     font-weight: 700;
+    line-height: 1;
     text-decoration: none;
+}
+
+.lang-link span[aria-hidden="true"] {
+    display: block;
+    line-height: 1;
+    transform: scale(1.12);
 }
 
 .lang-link.active {
@@ -688,6 +710,85 @@ p {
     line-height: 1.6;
 }
 
+.audience-page .page-header {
+    padding: 66px 0 52px;
+}
+
+.audience-page .section {
+    padding: 62px 0;
+}
+
+.audience-page .eyebrow {
+    margin-bottom: 12px;
+    color: var(--soft);
+    font-size: 0.84rem;
+    font-weight: 650;
+    letter-spacing: 0.01em;
+    text-transform: none;
+}
+
+.audience-page .section-header h2 {
+    max-width: 720px;
+    margin-bottom: 14px;
+    font-size: clamp(1.65rem, 2.25vw, 2.45rem);
+    line-height: 1.16;
+    font-weight: 760;
+}
+
+.audience-page .section-header p,
+.audience-page .page-header p {
+    font-size: 1rem;
+}
+
+.audience-page .cards {
+    margin-top: 30px;
+}
+
+.audience-page .split-grid {
+    gap: 42px;
+}
+
+.audience-page .audience-summary {
+    border-color: rgba(229, 231, 235, 0.76);
+    background: rgba(255, 255, 255, 0.48);
+    box-shadow: none;
+}
+
+.audience-page .audience-summary-group + .audience-summary-group {
+    border-top-color: rgba(229, 231, 235, 0.76);
+}
+
+.audience-page .audience-summary h2 {
+    color: #4b5563;
+    font-size: 0.88rem;
+    font-weight: 680;
+}
+
+.audience-page .audience-summary ul {
+    color: var(--soft);
+    font-size: 0.92rem;
+}
+
+.audience-page .section.dark {
+    background: #17202b;
+    padding: 54px 0;
+}
+
+.audience-page .section.dark .eyebrow {
+    color: #aeb7c3;
+}
+
+.audience-page .cta-band h2 {
+    max-width: 780px;
+    font-size: clamp(1.65rem, 2.35vw, 2.45rem);
+    line-height: 1.16;
+}
+
+.audience-page .cta-text {
+    max-width: 560px;
+    font-size: 0.98rem;
+}
+
 .process {
     counter-reset: steps;
 }
@@ -887,8 +988,10 @@ p {
     }
 
     .lang-link {
-        font-size: 0.88rem;
-        padding: 7px 11px;
+        width: 44px;
+        height: 44px;
+        padding: 0;
+        font-size: 1.65rem;
     }
 
     .decision-main {
