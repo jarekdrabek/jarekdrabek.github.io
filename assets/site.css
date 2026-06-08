@@ -1053,6 +1053,165 @@ p {
     font-weight: 720;
 }
 
+.problem-home {
+    padding: 0 0 74px;
+}
+
+.problem-readable {
+    max-width: 1120px;
+}
+
+.problem-opening {
+    padding: clamp(58px, 8vw, 104px) 0 clamp(34px, 5vw, 62px);
+}
+
+.problem-kicker {
+    margin-bottom: 20px;
+    color: var(--soft);
+    font-size: 0.9rem;
+    font-weight: 650;
+}
+
+.problem-opening h1 {
+    max-width: 980px;
+    margin-bottom: 24px;
+    font-size: clamp(2.15rem, 4.4vw, 5rem);
+    line-height: 1.02;
+    font-weight: 760;
+    letter-spacing: 0;
+}
+
+.problem-opening p:not(.problem-kicker) {
+    max-width: 820px;
+    color: #374151;
+    font-size: clamp(1.04rem, 1.35vw, 1.22rem);
+    line-height: 1.78;
+}
+
+.problem-opening p + p {
+    margin-top: 12px;
+}
+
+.problem-examples {
+    padding: 16px 0 0;
+}
+
+.problem-examples h2 {
+    max-width: 900px;
+    margin-bottom: 26px;
+    font-size: clamp(1.58rem, 2.45vw, 2.55rem);
+    line-height: 1.18;
+    font-weight: 690;
+    letter-spacing: 0;
+}
+
+.problem-category {
+    display: grid;
+    grid-template-columns: minmax(240px, 0.44fr) minmax(0, 1fr);
+    gap: clamp(28px, 4vw, 60px);
+    border-top: 1px solid rgba(17, 24, 39, 0.16);
+    padding: clamp(34px, 5vw, 58px) 0;
+}
+
+.problem-category h3 {
+    margin: 0;
+    max-width: 430px;
+    font-size: clamp(1.45rem, 2.2vw, 2.28rem);
+    line-height: 1.12;
+    font-weight: 720;
+    letter-spacing: 0;
+}
+
+.problem-category ul {
+    display: grid;
+    gap: 0;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.problem-category li {
+    border-top: 1px solid rgba(229, 231, 235, 0.92);
+    padding: 17px 0;
+    color: #374151;
+    font-size: clamp(1rem, 1.12vw, 1.1rem);
+    line-height: 1.68;
+}
+
+.problem-category li:first-child {
+    border-top: 0;
+    padding-top: 0;
+}
+
+.problem-category li:last-child {
+    padding-bottom: 0;
+}
+
+.problem-secondary-paths {
+    padding: 22px 0 0;
+}
+
+.problem-secondary-paths h2 {
+    margin-bottom: 16px;
+    color: var(--soft);
+    font-size: 0.96rem;
+    line-height: 1.4;
+    font-weight: 650;
+}
+
+.problem-link-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.problem-link-row a {
+    border: 1px solid rgba(209, 213, 219, 0.82);
+    border-radius: 999px;
+    padding: 9px 13px;
+    color: var(--muted);
+    font-size: 0.92rem;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.problem-link-row a:hover {
+    border-color: rgba(15, 118, 110, 0.4);
+    color: var(--accent-dark);
+}
+
+.problem-cta {
+    padding: clamp(48px, 7vw, 82px) 0 0;
+}
+
+.problem-cta .problem-readable {
+    border-top: 1px solid rgba(17, 24, 39, 0.16);
+    padding-top: clamp(34px, 5vw, 54px);
+}
+
+.problem-cta h2 {
+    max-width: 900px;
+    margin-bottom: 16px;
+    font-size: clamp(1.55rem, 2.45vw, 2.55rem);
+    line-height: 1.18;
+    font-weight: 700;
+    letter-spacing: 0;
+}
+
+.problem-cta p {
+    max-width: 760px;
+    color: #374151;
+    font-size: 1.04rem;
+    line-height: 1.76;
+}
+
+.problem-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 26px;
+}
+
 .process {
     counter-reset: steps;
 }
@@ -1412,6 +1571,15 @@ p {
         gap: 30px;
         align-items: start;
     }
+
+    .problem-category {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .problem-category h3 {
+        max-width: 720px;
+    }
 }
 
 @media (max-width: 640px) {
@@ -1438,6 +1606,62 @@ p {
 
     .decision-card {
         min-height: 150px;
+    }
+
+    .problem-home {
+        padding-bottom: 50px;
+    }
+
+    .problem-opening {
+        padding: 42px 0 24px;
+    }
+
+    .problem-kicker {
+        margin-bottom: 16px;
+        font-size: 0.84rem;
+    }
+
+    .problem-opening h1 {
+        font-size: clamp(1.9rem, 9.5vw, 2.55rem);
+        line-height: 1.06;
+    }
+
+    .problem-opening p:not(.problem-kicker),
+    .problem-cta p {
+        font-size: 1rem;
+        line-height: 1.7;
+    }
+
+    .problem-examples h2,
+    .problem-cta h2 {
+        font-size: clamp(1.55rem, 8vw, 2.18rem);
+    }
+
+    .problem-category {
+        padding: 32px 0;
+    }
+
+    .problem-category h3 {
+        font-size: clamp(1.42rem, 8vw, 2rem);
+    }
+
+    .problem-category li {
+        padding: 14px 0;
+        font-size: 0.98rem;
+        line-height: 1.64;
+    }
+
+    .problem-link-row {
+        display: grid;
+        gap: 10px;
+    }
+
+    .problem-link-row a {
+        width: 100%;
+    }
+
+    .problem-actions {
+        display: grid;
     }
 
     .audience-summary,
