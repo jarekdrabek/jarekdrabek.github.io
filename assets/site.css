@@ -143,6 +143,45 @@
     padding: clamp(76px, 10vw, 132px) 0 clamp(52px, 7vw, 88px);
 }
 
+.diagnosis-hero-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 0.68fr) minmax(280px, 0.32fr);
+    gap: clamp(34px, 6vw, 78px);
+    align-items: center;
+}
+
+.hero-copy {
+    min-width: 0;
+}
+
+.hero-kicker {
+    margin-bottom: 30px;
+    color: var(--soft);
+    font-family: "JetBrains Mono", Inter, sans-serif;
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.hero-portrait {
+    width: min(330px, 27vw);
+    margin: 0;
+    justify-self: end;
+}
+
+.hero-portrait img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 1;
+    height: auto;
+    border: 1px solid var(--line);
+    border-radius: 999px;
+    object-fit: cover;
+    object-position: center 18%;
+    filter: grayscale(0.08);
+}
+
 .diagnosis-hero h1,
 .case-hero h1,
 .case-cta h2 {
@@ -477,6 +516,26 @@
     padding: clamp(58px, 8vw, 100px) 0 0;
 }
 
+.contact-stack {
+    display: grid;
+    gap: clamp(36px, 5vw, 64px);
+}
+
+.contact-wide-photo {
+    margin: 0;
+}
+
+.contact-wide-photo img {
+    display: block;
+    width: 100%;
+    height: clamp(220px, 26vw, 340px);
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    object-fit: cover;
+    object-position: 62% 42%;
+    filter: grayscale(0.08);
+}
+
 .contact-layout {
     display: grid;
     grid-template-columns: minmax(0, 0.72fr) minmax(360px, 0.58fr);
@@ -619,6 +678,15 @@
         gap: 18px;
     }
 
+    .diagnosis-hero-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-portrait {
+        width: min(280px, 70vw);
+        justify-self: start;
+    }
+
     .diagnosis-card {
         align-items: start;
     }
@@ -648,8 +716,21 @@
         padding-top: 58px;
     }
 
+    .hero-kicker {
+        font-size: 0.64rem;
+        line-height: 1.6;
+        margin-bottom: 24px;
+        overflow-wrap: break-word;
+    }
+
     .diagnosis-hero h1 {
-        font-size: clamp(2.6rem, 13vw, 3.25rem);
+        max-width: 100%;
+        font-size: clamp(2rem, 8.5vw, 2.25rem);
+    }
+
+    .diagnosis-hero p {
+        max-width: 100%;
+        font-size: 1rem;
     }
 
     .diagnosis-card {
@@ -692,6 +773,10 @@
     .contact-lines li {
         grid-template-columns: 1fr;
         gap: 6px;
+    }
+
+    .contact-wide-photo img {
+        height: 190px;
     }
 
     .technical-contact-panel {

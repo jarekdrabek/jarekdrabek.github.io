@@ -47,34 +47,38 @@
         </header>
 
         <section class="contact-content">
-            <div class="container technical-container contact-layout">
-                <div class="contact-copy">
-                    <h2>Start with the situation, not a polished brief.</h2>
-                    <p>Tell me where time disappears, where the system slows people down, or where AI looks promising but unclear. I’ll reply personally and suggest the next practical step.</p>
-                    <ul class="contact-lines">
-                        <li><strong>Email</strong> <a href="mailto:contact@jarekdrabek.pl">contact@jarekdrabek.pl</a></li>
-                        <li><strong>Phone</strong> <a href="tel:+48662077499">(+48) 662 077 499</a></li>
-                        <li><strong>Calendar</strong> <a href="https://calendar.app.google/M4yVwNGidYNer4XP9">Book a short call</a></li>
-                        <li><strong>LinkedIn</strong> <a href="https://www.linkedin.com/in/jaroslaw-drabek/">LinkedIn</a></li>
-                    </ul>
+            <div class="container technical-container contact-stack">
+                <figure class="contact-wide-photo">
+                    <img src="../../assets/jarek-contact-editorial.jpg" alt="Jarek Drabek working at a laptop" width="1600" height="1066" loading="lazy">
+                </figure>
+                <div class="contact-layout">
+                    <div class="contact-copy">
+                        <h2>Start with the situation, not a polished brief.</h2>
+                        <p>Tell me where time disappears, where the system slows people down, or where AI looks promising but unclear. I’ll reply personally and suggest the next practical step.</p>
+                        <ul class="contact-lines">
+                            <li><strong>Email</strong> <a href="mailto:contact@jarekdrabek.pl">contact@jarekdrabek.pl</a></li>
+                            <li><strong>Phone</strong> <a href="tel:+48662077499">(+48) 662 077 499</a></li>
+                            <li><strong>Calendar</strong> <a href="https://calendar.app.google/M4yVwNGidYNer4XP9">Book a short call</a></li>
+                            <li><strong>LinkedIn</strong> <a href="https://www.linkedin.com/in/jaroslaw-drabek/">LinkedIn</a></li>
+                        </ul>
+                    </div>
+                    <form action="https://formspree.io/f/xanojqqp" method="POST" class="technical-contact-panel">
+                        <div class="field">
+                            <label for="name">Name</label>
+                            <input id="name" name="name" type="text" autocomplete="name" required>
+                        </div>
+                        <div class="field">
+                            <label for="email">Email</label>
+                            <input id="email" name="email" type="email" autocomplete="email" required>
+                        </div>
+                        <div class="field">
+                            <label for="message">What should software or AI improve?</label>
+                            <textarea id="message" name="message" rows="7" required></textarea>
+                        </div>
+                        <button class="button" type="submit">Start the conversation</button>
+                        <p class="footer-meta">I’ll reply personally and suggest the next practical step.</p>
+                    </form>
                 </div>
-
-                <form action="https://formspree.io/f/xanojqqp" method="POST" class="technical-contact-panel">
-                    <div class="field">
-                        <label for="name">Name</label>
-                        <input id="name" name="name" type="text" autocomplete="name" required>
-                    </div>
-                    <div class="field">
-                        <label for="email">Email</label>
-                        <input id="email" name="email" type="email" autocomplete="email" required>
-                    </div>
-                    <div class="field">
-                        <label for="message">What should software or AI improve?</label>
-                        <textarea id="message" name="message" rows="7" required></textarea>
-                    </div>
-                    <button class="button" type="submit">Start the conversation</button>
-                    <p class="footer-meta">I’ll reply personally and suggest the next practical step.</p>
-                </form>
             </div>
         </section>
     </main>
