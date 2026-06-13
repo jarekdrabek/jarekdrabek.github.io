@@ -704,8 +704,25 @@
         width: min(100% - 36px, 1200px);
     }
 
+    .technical-skin .nav-inner {
+        row-gap: 10px;
+        padding: 14px 0 12px;
+    }
+
     .technical-skin .brand-font {
         font-size: 0.74rem;
+    }
+
+    .technical-skin .nav-links {
+        gap: 18px;
+        margin-right: -18px;
+        padding-bottom: 4px;
+        font-size: 0.64rem;
+        scrollbar-width: none;
+    }
+
+    .technical-skin .nav-links::-webkit-scrollbar {
+        display: none;
     }
 
     .technical-skin .nav-actions {
@@ -713,28 +730,61 @@
     }
 
     .diagnosis-hero {
-        padding-top: 58px;
+        padding: 46px 0 42px;
+    }
+
+    .diagnosis-hero-grid {
+        gap: 26px;
+    }
+
+    .hero-copy {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .hero-portrait {
+        order: -1;
+        width: min(164px, 46vw);
+        justify-self: start;
     }
 
     .hero-kicker {
         font-size: 0.64rem;
         line-height: 1.6;
-        margin-bottom: 24px;
+        margin-bottom: 18px;
         overflow-wrap: break-word;
     }
 
     .diagnosis-hero h1 {
         max-width: 100%;
-        font-size: clamp(2rem, 8.5vw, 2.25rem);
+        margin-bottom: 18px;
+        font-size: clamp(2.35rem, 11vw, 3rem);
+        line-height: 1.02;
     }
 
     .diagnosis-hero p {
         max-width: 100%;
         font-size: 1rem;
+        line-height: 1.6;
+    }
+
+    .diagnosis-paths .technical-container {
+        gap: 14px;
     }
 
     .diagnosis-card {
-        padding: 22px;
+        gap: 14px;
+        padding: 20px;
+    }
+
+    .diagnosis-card h2 {
+        font-size: clamp(1.45rem, 7.5vw, 2rem);
+        line-height: 1.08;
+    }
+
+    .diagnosis-card p {
+        margin-top: 12px;
+        font-size: 0.96rem;
     }
 
     .diagnosis-card strong,
