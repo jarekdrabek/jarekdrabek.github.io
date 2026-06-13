@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SaaS i zespoły produktowe - Jarek Drabek</title>
-    <meta name="description" content="Wsparcie inżynierii produktu AI i architektury backendu dla założycieli SaaS, zespołów produktowych i firm budujących produkty cyfrowe.">
-    <meta property="og:title" content="SaaS i zespoły produktowe - Jarek Drabek">
-    <meta property="og:description" content="Funkcje AI, architektura backendu, skalowalność produktu, przejście od prototypu do produkcji i produkcyjne systemy AI.">
+    <title>SaaS i produkty - Jarek Drabek</title>
+    <meta name="description" content="Konkretne przykłady pomocy dla zespołów produktowych: architektura, MVP, funkcje AI i decyzje techniczne, które zaczynają blokować rozwój produktu.">
+    <meta property="og:title" content="SaaS i produkty - Jarek Drabek">
+    <meta property="og:description" content="Wsparcie techniczne, gdy produkt SaaS zaczyna rosnąć szybciej niż jego architektura.">
     <meta property="og:type" content="website">
     <link rel="canonical" href="https://jarekdrabek.pl/pl/saas-i-zespoly-produktowe/">
     <link rel="alternate" hreflang="en" href="https://jarekdrabek.pl/en/saas-product-teams/">
@@ -16,14 +16,14 @@
     <link rel="apple-touch-icon" href="../../1651059159546_.jpeg">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;850&family=Tektur:wght@400;500&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../../assets/site.css?v=audience-calm-20260607">
+    <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@600;700&amp;family=Inter:wght@400;500;600;700;800&amp;family=JetBrains+Mono:wght@500;600&amp;family=Tektur:wght@500&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../assets/site.css?v=technical-flow-20260613">
 </head>
-<body>
+<body class="technical-skin">
     <nav class="site-nav">
         <div class="nav-inner">
             <a class="brand-link brand-font" href="../">Jarek Drabek</a>
-            <div class="nav-links">
+            <div class="nav-links" aria-label="Główna nawigacja">
                 <a href="./" aria-current="page">SaaS i zespoły produktowe</a>
                 <a href="../automatyzacja-biznesu/">Automatyzacja biznesu</a>
                 <a href="../zespoly-techniczne/">Zespoły techniczne</a>
@@ -31,104 +31,88 @@
                 <a href="../kontakt/">Kontakt</a>
             </div>
             <div class="nav-actions">
-                <a class="lang-link" href="../../en/saas-product-teams/" aria-label="English"><span aria-hidden="true">🇬🇧</span><span class="sr-only">English</span></a>
-                <a class="lang-link active" href="./" aria-label="Polski" aria-current="page"><span aria-hidden="true">🇵🇱</span><span class="sr-only">Polski</span></a>
+                <a class="lang-link" href="../../en/saas-product-teams/" aria-label="English"><span aria-hidden="true">EN</span><span class="sr-only">English</span></a>
+                <a class="lang-link active" href="./" aria-label="Polski" aria-current="page"><span aria-hidden="true">PL</span><span class="sr-only">Polski</span></a>
             </div>
         </div>
     </nav>
 
-    <main class="expert-page">
-        <header class="expert-hero">
-            <div class="container expert-readable">
-                <p class="breadcrumb"><a href="../">Strona główna</a> / SaaS i zespoły produktowe</p>
-                <h1>Buduj funkcje AI i systemy produktowe, które działają dla realnych użytkowników.</h1>
-                <p class="expert-lede">Dla założycieli SaaS, zespołów produktowych, startupów i firm budujących produkty cyfrowe, które potrzebują praktycznego osądu inżynierskiego przed implementacją, w jej trakcie albo po wdrożeniu.</p>
-                <div class="expert-hero-actions">
-                    <a class="button" href="../kontakt/">Opisz produkt</a>
-                    <a class="expert-secondary-link" href="#expert-help">Zobacz, gdzie mogę pomóc</a>
+    <main class="case-page">
+        <header class="case-hero">
+            <div class="container technical-container">
+                <p class="breadcrumb"><a href="../">Strona główna</a> / SaaS i produkty</p>
+                <h1>Pomagam zespołom produktowym i founderom uporządkować technologię, gdy produkt zaczyna rosnąć szybciej niż jego architektura.</h1>
+                <div class="case-hero-copy">
+                    <p>Czasem chodzi o backend zbudowany szybko pod MVP. Czasem o funkcję AI dodaną do produktu bez jasnych granic. Czasem o decyzję, czy dalej łatać system, refaktoryzować go, czy przebudować jego część.</p>
+                    <p>Sens jest prosty: technologia ma pomagać produktowi rosnąć, a nie spowalniać każdą kolejną decyzję.</p>
                 </div>
             </div>
         </header>
 
-        <div class="container expert-readable expert-content" id="expert-help">
-            <section class="expert-article-section">
-                <h2>Gdzie mogę pomóc zespołowi produktowemu</h2>
-                <div class="expert-service-list">
-                    <article class="expert-service-row">
-                        <h3>Projektowanie i implementacja funkcji AI</h3>
-                        <p>Asystenci, analiza, generowanie treści, rekomendacje, podsumowania i procesy produktowe wspierane przez AI.</p>
+        <section class="case-examples" aria-labelledby="examples-title">
+            <div class="container technical-container">
+                <div class="case-section-heading">
+                    <span class="technical-label">Przykłady</span>
+                    <h2 id="examples-title">Gdzie to zwykle widać</h2>
+                </div>
+
+                <div class="case-grid">
+                    <article class="case-card">
+                        <h3>Rozwój produktu robi się coraz wolniejszy</h3>
+                        <dl>
+                            <div><dt>Problem</dt><dd>Nowe funkcje zajmują coraz więcej czasu.</dd></div>
+                            <div><dt>IT/AI pomoc</dt><dd>Przegląd architektury, granice modułów, analiza zależności, ocena długu technicznego.</dd></div>
+                            <div><dt>Rezultat</dt><dd>Jasny plan uproszczenia i szybszy rozwój produktu.</dd></div>
+                        </dl>
                     </article>
-                    <article class="expert-service-row">
-                        <h3>Architektura backendu i skalowalność</h3>
-                        <p>API, przepływy danych, granice usług, ryzyka wydajnościowe, integracje i porządkowanie długu technicznego.</p>
+
+                    <article class="case-card">
+                        <h3>MVP zaczyna boleć</h3>
+                        <dl>
+                            <div><dt>Problem</dt><dd>Szybkie wczesne decyzje produktowe zaczynają blokować wzrost.</dd></div>
+                            <div><dt>IT/AI pomoc</dt><dd>Decyzja, co zostawić, co refaktoryzować, a co wydzielić.</dd></div>
+                            <div><dt>Rezultat</dt><dd>Mniej chaosu bez niepotrzebnego przepisywania wszystkiego.</dd></div>
+                        </dl>
                     </article>
-                    <article class="expert-service-row">
-                        <h3>Od prototypu do produkcji</h3>
-                        <p>Zamiana demo albo eksperymentu w system z testami, monitoringiem, uprawnieniami, dokumentacją i jasną odpowiedzialnością po stronie zespołu.</p>
+
+                    <article class="case-card">
+                        <h3>AI zostało doklejone do produktu</h3>
+                        <dl>
+                            <div><dt>Problem</dt><dd>Funkcja AI działa w demo, ale nie ma jasnej architektury, ewaluacji ani monitoringu.</dd></div>
+                            <div><dt>IT/AI pomoc</dt><dd>Zaprojektowanie granic, przepływu danych, kontroli jakości i awaryjnych ścieżek działania.</dd></div>
+                            <div><dt>Rezultat</dt><dd>AI staje się częścią produktu, a nie ryzykownym dodatkiem.</dd></div>
+                        </dl>
                     </article>
-                    <article class="expert-service-row">
-                        <h3>Przegląd architektury produktu</h3>
-                        <p>Sprawdzenie, czy kolejna funkcja, proces AI albo decyzja backendowa pasuje do kierunku produktu.</p>
-                    </article>
-                    <article class="expert-service-row">
-                        <h3>Przegląd kodu tworzonego z pomocą AI</h3>
-                        <p>Ocena kodu wygenerowanego przez AI albo napisanego w pośpiechu, zanim stanie się długiem produktowym.</p>
+
+                    <article class="case-card">
+                        <h3>Klienci proszą o rzeczy, których system nie wspiera</h3>
+                        <dl>
+                            <div><dt>Problem</dt><dd>Obecny model danych albo architektura nie pasują do nowych wymagań.</dd></div>
+                            <div><dt>IT/AI pomoc</dt><dd>Analiza kierunku rozwoju produktu i konsekwencji technicznych wyborów.</dd></div>
+                            <div><dt>Rezultat</dt><dd>Mniej rozwoju opartego na obejściach i bardziej świadomy roadmap.</dd></div>
+                        </dl>
                     </article>
                 </div>
-            </section>
+            </div>
+        </section>
 
-            <section class="expert-article-section">
-                <h2>Kiedy wsparcie architektury produktu ma sens</h2>
-                <p>Zewnętrzne wsparcie pomaga wtedy, gdy ambicja produktowa zaczyna tworzyć decyzje techniczne, które później trudno odwrócić.</p>
-                <ul class="situations-list">
-                    <li>Chcesz dodać funkcje AI do istniejącego produktu SaaS bez niestabilnego zachowania modelu.</li>
-                    <li>Prototyp działa, ale potrzebuje dyscypliny produkcyjnej, zanim trafi do realnych użytkowników.</li>
-                    <li>Backend coraz trudniej zmieniać, a każda nowa funkcja niesie zbyt dużo ryzyka.</li>
-                    <li>Zespół potrzebuje technicznego kierunku, zanim zacznie budować w złym kierunku.</li>
-                </ul>
-            </section>
-
-            <section class="expert-article-section">
-                <h2>Jak pracuję z zespołami produktowymi</h2>
-                <div class="expert-process">
-                    <article>
-                        <h3>Doprecyzować problem produktowy</h3>
-                        <p>Najpierw ustalam, co ma się zmienić dla użytkownika, zespołu albo biznesu.</p>
-                    </article>
-                    <article>
-                        <h3>Ułożyć ścieżkę techniczną</h3>
-                        <p>Ustalam architekturę, granice danych, zachowanie modelu, ryzyka i kolejność dostarczania.</p>
-                    </article>
-                    <article>
-                        <h3>Budować z dyscypliną produkcyjną</h3>
-                        <p>Wdrażam użyteczną część i dodaję niezawodność potrzebną do realnego użycia.</p>
-                    </article>
+        <section class="case-cta" aria-labelledby="case-cta-title">
+            <div class="container technical-container">
+                <h2 id="case-cta-title">Jeśli któryś z tych przykładów brzmi znajomo, porozmawiajmy bez presji.</h2>
+                <p>Opowiedz, jak sytuacja wygląda u ciebie. Powiem uczciwie, czy widzę sensowny kierunek i od czego bym zaczął.</p>
+                <div class="case-actions">
+                    <a class="button" href="https://calendar.app.google/M4yVwNGidYNer4XP9">Umów krótką rozmowę</a>
+                    <a class="technical-link" href="../kontakt/">Napisz wiadomość <span aria-hidden="true">></span></a>
                 </div>
-            </section>
-
-            <section class="expert-article-section">
-                <h2>Co jest trudne w funkcjach AI na produkcji</h2>
-                <p>Funkcja AI to nie tylko integracja z modelem. Wpływa na doświadczenie użytkownika, uprawnienia, jakość danych, ewaluację, koszt, latencję i utrzymywalność.</p>
-                <ul class="expert-simple-list">
-                    <li>Funkcja musi być użyteczna w realnej ścieżce produktu, nie tylko efektowna w demo.</li>
-                    <li>Granice danych, uprawnienia i obsługa błędów muszą być zaprojektowane przed wdrożeniem.</li>
-                    <li>Zespół potrzebuje sposobu na ocenę jakości i bezpieczne poprawianie zachowania systemu.</li>
-                </ul>
-            </section>
-
-            <section class="expert-final-cta">
-                <h2>Potrzebujesz osądu produktowego i technicznego przed kolejną iteracją?</h2>
-                <p>Opisz produkt, funkcję albo decyzję architektoniczną. Pomogę znaleźć najbliższy praktyczny krok.</p>
-                <a class="button" href="../kontakt/">Opisz produkt</a>
-            </section>
-        </div>
+            </div>
+        </section>
     </main>
 
     <footer class="site-footer">
         <div class="container footer-inner">
             <div class="footer-brand">
                 <p class="brand-font">Jarek Drabek</p>
-                <p class="footer-tagline">Backend, architektura i systemy AI.</p>
+                <p class="footer-tagline">Software, architektura, automatyzacja i AI.</p>
                 <p class="footer-meta">© 2026 Jarek Drabek. Wszelkie prawa zastrzeżone.</p>
             </div>
             <div class="footer-columns">

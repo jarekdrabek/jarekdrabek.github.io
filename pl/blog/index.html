@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blog - Jarek Drabek</title>
-    <meta name="description" content="Praktyczne teksty o tym, jak projektować, automatyzować i utrzymywać oprogramowanie oraz systemy AI — od decyzji biznesowych po architekturę techniczną.">
+    <meta name="description" content="Praktyczne teksty o software, architekturze, automatyzacji i systemach AI — uporządkowane według problemów, które firma próbuje rozwiązać.">
     <meta property="og:title" content="Blog - Jarek Drabek">
-    <meta property="og:description" content="Praktyczne teksty o tym, jak projektować, automatyzować i utrzymywać oprogramowanie oraz systemy AI — od decyzji biznesowych po architekturę techniczną.">
+    <meta property="og:description" content="Praktyczne teksty o software, architekturze, automatyzacji i systemach AI.">
     <meta property="og:type" content="website">
     <link rel="canonical" href="https://jarekdrabek.pl/pl/blog/">
     <link rel="alternate" hreflang="en" href="https://jarekdrabek.pl/en/blog/">
@@ -16,14 +16,14 @@
     <link rel="apple-touch-icon" href="../../1651059159546_.jpeg">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;850&family=Tektur:wght@400;500&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../../assets/site.css?v=audience-calm-20260607">
+    <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@600;700&amp;family=Inter:wght@400;500;600;700;800&amp;family=JetBrains+Mono:wght@500;600&amp;family=Tektur:wght@500&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../assets/site.css?v=technical-flow-20260613">
 </head>
-<body>
+<body class="technical-skin">
     <nav class="site-nav">
         <div class="nav-inner">
             <a class="brand-link brand-font" href="../">Jarek Drabek</a>
-            <div class="nav-links">
+            <div class="nav-links" aria-label="Główna nawigacja">
                 <a href="../saas-i-zespoly-produktowe/">SaaS i zespoły produktowe</a>
                 <a href="../automatyzacja-biznesu/">Automatyzacja biznesu</a>
                 <a href="../zespoly-techniczne/">Zespoły techniczne</a>
@@ -31,28 +31,63 @@
                 <a href="../kontakt/">Kontakt</a>
             </div>
             <div class="nav-actions">
-                <a class="lang-link" href="../../en/blog/" aria-label="English"><span aria-hidden="true">🇬🇧</span><span class="sr-only">English</span></a>
-                <a class="lang-link active" href="./" aria-label="Polski" aria-current="page"><span aria-hidden="true">🇵🇱</span><span class="sr-only">Polski</span></a>
+                <a class="lang-link" href="../../en/blog/" aria-label="English"><span aria-hidden="true">EN</span><span class="sr-only">English</span></a>
+                <a class="lang-link active" href="./" aria-label="Polski" aria-current="page"><span aria-hidden="true">PL</span><span class="sr-only">Polski</span></a>
             </div>
         </div>
     </nav>
 
-    <main>
-        <header class="page-header">
-            <div class="container">
+    <main class="journal-page">
+        <header class="journal-hero">
+            <div class="container technical-container">
                 <p class="breadcrumb"><a href="../">Strona główna</a> / Blog</p>
-                <p class="eyebrow">Blog</p>
-                <h1>Praktyczne teksty o tym, jak projektować, automatyzować i utrzymywać oprogramowanie oraz systemy AI.</h1>
-                <p>Od decyzji biznesowych po architekturę techniczną.</p>
+                <h1>Praktyczne teksty o software, architekturze, automatyzacji i systemach AI.</h1>
+                <p>To nie jest ogólny feed. Teksty są uporządkowane wokół tych samych problemów, z którymi firmy do mnie przychodzą: produkty, operacje biznesowe, zespoły techniczne i decyzje, które je łączą.</p>
             </div>
         </header>
+
+        <section class="journal-topics" aria-labelledby="journal-topics-title">
+            <div class="container technical-container">
+                <div class="case-section-heading">
+                    <span class="technical-label">Kategorie</span>
+                    <h2 id="journal-topics-title">Na czym blog ma pozostać skupiony</h2>
+                </div>
+
+                <div class="journal-grid">
+                    <article class="journal-card">
+                        <span class="technical-label">SaaS</span>
+                        <h2>SaaS i produkty</h2>
+                        <p>Architektura, funkcje AI, prototypy i systemy produktowe, które muszą wytrzymać realnych użytkowników.</p>
+                    </article>
+                    <article class="journal-card">
+                        <span class="technical-label">Ops</span>
+                        <h2>Automatyzacja biznesu</h2>
+                        <p>Ręczna praca, dokumenty, raporty, narzędzia wewnętrzne i miejsca, w których software powinien zdjąć tarcie.</p>
+                    </article>
+                    <article class="journal-card">
+                        <span class="technical-label">Tech</span>
+                        <h2>Zespoły techniczne</h2>
+                        <p>Decyzje architektoniczne, utrzymywalność, kod generowany przez AI, systemy RAG i gotowość produkcyjna.</p>
+                    </article>
+                    <article class="journal-card">
+                        <span class="technical-label">Ogólne</span>
+                        <h2>Osąd software'owy</h2>
+                        <p>Jak myśleć jasno przed wyborem narzędzia, modelu, przepisywania systemu, automatyzacji albo kierunku architektury.</p>
+                    </article>
+                </div>
+
+                <div class="journal-note">
+                    <p>Blog pozostaje celowo wąski: konkretne teksty dla founderów, menedżerów, CTO, tech leadów i inżynierów, którzy potrzebują lepszych decyzji o software i AI, a nie głośniejszego marketingu technologicznego.</p>
+                </div>
+            </div>
+        </section>
     </main>
 
     <footer class="site-footer">
         <div class="container footer-inner">
             <div class="footer-brand">
                 <p class="brand-font">Jarek Drabek</p>
-                <p class="footer-tagline">Backend, architektura i systemy AI.</p>
+                <p class="footer-tagline">Software, architektura, automatyzacja i AI.</p>
                 <p class="footer-meta">© 2026 Jarek Drabek. Wszelkie prawa zastrzeżone.</p>
             </div>
             <div class="footer-columns">

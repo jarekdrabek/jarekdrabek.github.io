@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Technical Teams - Jarek Drabek</title>
-    <meta name="description" content="Backend architecture review, AI system architecture, RAG architecture, maintainability, integration design, and implementation support for technical teams.">
+    <meta name="description" content="Concrete examples of outside architecture, maintainability, AI-generated code review, and technical planning support for CTOs, tech leads, and development teams.">
     <meta property="og:title" content="Technical Teams - Jarek Drabek">
-    <meta property="og:description" content="Experienced backend and architecture support for CTOs, tech leads, engineering managers, software houses, and technical teams.">
+    <meta property="og:description" content="Outside technical perspective when the system, architecture, or pace of change starts getting out of control.">
     <meta property="og:type" content="website">
     <link rel="canonical" href="https://jarekdrabek.pl/en/technical-teams/">
     <link rel="alternate" hreflang="en" href="https://jarekdrabek.pl/en/technical-teams/">
@@ -16,134 +16,102 @@
     <link rel="apple-touch-icon" href="../../1651059159546_.jpeg">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;850&family=Tektur:wght@400;500&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../../assets/site.css?v=audience-calm-20260607">
+    <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@600;700&amp;family=Inter:wght@400;500;600;700;800&amp;family=JetBrains+Mono:wght@500;600&amp;family=Tektur:wght@500&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../assets/site.css?v=technical-flow-20260613">
 </head>
-<body>
+<body class="technical-skin">
     <nav class="site-nav">
         <div class="nav-inner">
             <a class="brand-link brand-font" href="../">Jarek Drabek</a>
-            <div class="nav-links">
-                <a href="../saas-product-teams/">SaaS & Product Teams</a>
+            <div class="nav-links" aria-label="Main navigation">
+                <a href="../saas-product-teams/">SaaS &amp; Product Teams</a>
                 <a href="../business-automation/">Business Automation</a>
                 <a href="./" aria-current="page">Technical Teams</a>
                 <a href="../blog/">Blog</a>
                 <a href="../contact/">Contact</a>
             </div>
             <div class="nav-actions">
-                <a class="lang-link active" href="./" aria-label="English" aria-current="page"><span aria-hidden="true">🇬🇧</span><span class="sr-only">English</span></a>
-                <a class="lang-link" href="../../pl/zespoly-techniczne/" aria-label="Polski"><span aria-hidden="true">🇵🇱</span><span class="sr-only">Polski</span></a>
+                <a class="lang-link active" href="./" aria-label="English" aria-current="page"><span aria-hidden="true">EN</span><span class="sr-only">English</span></a>
+                <a class="lang-link" href="../../pl/zespoly-techniczne/" aria-label="Polski"><span aria-hidden="true">PL</span><span class="sr-only">Polski</span></a>
             </div>
         </div>
     </nav>
 
-    <main class="expert-page">
-        <header class="expert-hero">
-            <div class="container expert-readable">
+    <main class="case-page">
+        <header class="case-hero">
+            <div class="container technical-container">
                 <p class="breadcrumb"><a href="../">Home</a> / Technical Teams</p>
-                <h1>Architecture and implementation support for technical teams.</h1>
-                <p class="expert-lede">For CTOs, tech leads, engineering managers, software houses, and software teams that need outside judgment on backend architecture, AI/RAG systems, integrations, or production readiness.</p>
-                <div class="expert-hero-actions">
-                    <a class="button" href="../contact/">Tell me about the problem</a>
-                    <a class="expert-secondary-link" href="#expert-help">See where I can help</a>
+                <h1>I help technical teams regain clarity when the system, architecture, or pace of change starts getting out of control.</h1>
+                <div class="case-hero-copy">
+                    <p>Sometimes it is an architectural decision. Sometimes it is technical chaos after fast development. Sometimes it is code generated with AI that works, but nobody is sure whether it is a good foundation for the future.</p>
                 </div>
             </div>
         </header>
 
-        <div class="container expert-readable expert-content" id="expert-help">
-            <section class="expert-article-section">
-                <h2>Where I can help your technical team</h2>
-                <div class="expert-service-list">
-                    <article class="expert-service-row">
-                        <h3>Architecture review</h3>
-                        <p>Review system boundaries, data flows, deployment, coupling, and risk before a major change, rewrite, or product decision.</p>
+        <section class="case-examples" aria-labelledby="examples-title">
+            <div class="container technical-container">
+                <div class="case-section-heading">
+                    <span class="technical-label">Examples</span>
+                    <h2 id="examples-title">Where this usually shows up</h2>
+                </div>
+
+                <div class="case-grid">
+                    <article class="case-card">
+                        <h3>An architectural decision is ahead</h3>
+                        <dl>
+                            <div><dt>Problem</dt><dd>The team is facing an important technical choice.</dd></div>
+                            <div><dt>IT/AI help</dt><dd>External review, trade-off analysis, recommendation.</dd></div>
+                            <div><dt>Result</dt><dd>A decision based on arguments, not gut feeling.</dd></div>
+                        </dl>
                     </article>
-                    <article class="expert-service-row">
-                        <h3>RAG / AI system architecture</h3>
-                        <p>Design retrieval, context flow, permissions, evaluation, observability, and failure handling for AI systems moving toward real users.</p>
+
+                    <article class="case-card">
+                        <h3>The system works, but is hard to maintain</h3>
+                        <dl>
+                            <div><dt>Problem</dt><dd>Changes are risky, dependencies are unclear, and the code is hard to evolve.</dd></div>
+                            <div><dt>IT/AI help</dt><dd>Structure review, module boundaries, data flow analysis.</dd></div>
+                            <div><dt>Result</dt><dd>A clean-up plan without freezing development.</dd></div>
+                        </dl>
                     </article>
-                    <article class="expert-service-row">
-                        <h3>Backend implementation support</h3>
-                        <p>Work with the team on difficult backend, integration, refactoring, or production-hardening tasks.</p>
+
+                    <article class="case-card">
+                        <h3>AI-generated code needs review</h3>
+                        <dl>
+                            <div><dt>Problem</dt><dd>Code was created quickly, but it is unclear whether it is safe, maintainable, and aligned with the architecture.</dd></div>
+                            <div><dt>IT/AI help</dt><dd>Review, risk identification, refactoring recommendations.</dd></div>
+                            <div><dt>Result</dt><dd>Fast development without creating technical debt nobody understands.</dd></div>
+                        </dl>
                     </article>
-                    <article class="expert-service-row">
-                        <h3>Integration design</h3>
-                        <p>Plan clean connections between product, CRM, data, internal tools, and operational systems.</p>
-                    </article>
-                    <article class="expert-service-row">
-                        <h3>Maintainability and technical debt reduction</h3>
-                        <p>Identify the coupling and ownership problems that make new features risky, then choose a practical cleanup path.</p>
-                    </article>
-                    <article class="expert-service-row">
-                        <h3>Production readiness</h3>
-                        <p>Check tests, permissions, monitoring, failure modes, documentation, and handover before real users depend on the system.</p>
+
+                    <article class="case-card">
+                        <h3>Chaos needs to become a plan</h3>
+                        <dl>
+                            <div><dt>Problem</dt><dd>There are many technical problems at once and no clear priority.</dd></div>
+                            <div><dt>IT/AI help</dt><dd>Diagnosis, problem map, action order.</dd></div>
+                            <div><dt>Result</dt><dd>A plan that makes sense to both the team and the business.</dd></div>
+                        </dl>
                     </article>
                 </div>
-            </section>
+            </div>
+        </section>
 
-            <section class="expert-article-section">
-                <h2>When external architecture support makes sense</h2>
-                <p>External support is useful when the team has enough context to build, but needs an experienced outside view before a decision becomes expensive to reverse.</p>
-                <ul class="situations-list">
-                    <li>The team is building an AI or RAG system and wants to avoid production mistakes.</li>
-                    <li>The system is getting harder to change, and every new feature feels risky.</li>
-                    <li>Major architecture decisions are being made without enough confidence.</li>
-                    <li>The team needs experienced backend or architecture support without handing over ownership.</li>
-                    <li>AI-generated or rushed code needs review before it becomes long-term product debt.</li>
-                </ul>
-            </section>
-
-            <section class="expert-article-section">
-                <h2>How I work with your team without taking over</h2>
-                <div class="expert-process">
-                    <article>
-                        <h3>Understand the system and constraints</h3>
-                        <p>Review goals, architecture, code or diagrams, operational pain, team context, and delivery pressure.</p>
-                    </article>
-                    <article>
-                        <h3>Identify risks and options</h3>
-                        <p>Separate real architectural risk from preference, premature refactoring, and noise.</p>
-                    </article>
-                    <article>
-                        <h3>Help design or implement the next practical step</h3>
-                        <p>Turn findings into decisions, implementation options, or hands-on support where the team needs momentum.</p>
-                    </article>
+        <section class="case-cta" aria-labelledby="case-cta-title">
+            <div class="container technical-container">
+                <h2 id="case-cta-title">If any of these examples sound familiar, let’s have a no-pressure conversation.</h2>
+                <p>Tell me what the situation looks like on your side. I’ll tell you honestly whether I see a sensible direction and where I would start.</p>
+                <div class="case-actions">
+                    <a class="button" href="https://calendar.app.google/M4yVwNGidYNer4XP9">Book a short call</a>
+                    <a class="technical-link" href="../contact/">Send me a message <span aria-hidden="true">></span></a>
                 </div>
-            </section>
-
-            <section class="expert-article-section">
-                <h2>What makes AI and RAG systems hard in production</h2>
-                <p>AI and RAG systems are difficult because the risk is spread across product behavior, data boundaries, retrieval quality, and operations. A demo can look convincing while production questions are still unresolved.</p>
-                <ul class="expert-simple-list">
-                    <li>Retrieval quality and context construction need regular evaluation, not just a successful prototype.</li>
-                    <li>Permissions and data boundaries must be designed before sensitive information enters model context.</li>
-                    <li>Latency, cost, observability, failure handling, and ownership determine whether the system can be maintained.</li>
-                </ul>
-            </section>
-
-            <section class="expert-article-section">
-                <h2>What “production-ready” actually means</h2>
-                <p>Production readiness means the team can operate, change, and trust the system after launch. It is not only about code quality; it is about ownership and failure behavior.</p>
-                <ul class="expert-simple-list">
-                    <li>Tests, monitoring, permissions, rollback paths, and clear failure modes are in place.</li>
-                    <li>Documentation and handover are good enough that the team can maintain the system without guesswork.</li>
-                    <li>The architecture leaves room for change instead of turning every next feature into a risky rewrite.</li>
-                </ul>
-            </section>
-
-            <section class="expert-final-cta">
-                <h2>Need experienced technical judgment before the next architecture decision?</h2>
-                <p>Describe the situation. I’ll help identify the next practical step.</p>
-                <a class="button" href="../contact/">Tell me about the problem</a>
-            </section>
-        </div>
+            </div>
+        </section>
     </main>
 
     <footer class="site-footer">
         <div class="container footer-inner">
             <div class="footer-brand">
                 <p class="brand-font">Jarek Drabek</p>
-                <p class="footer-tagline">Backend, architecture, and AI systems.</p>
+                <p class="footer-tagline">Software, architecture, automation, and AI.</p>
                 <p class="footer-meta">© 2026 Jarek Drabek. All rights reserved.</p>
             </div>
             <div class="footer-columns">
@@ -151,7 +119,7 @@
                     <h2>Navigation</h2>
                     <div class="footer-links">
                         <a href="../">Home</a>
-                        <a href="../saas-product-teams/">SaaS & Product Teams</a>
+                        <a href="../saas-product-teams/">SaaS &amp; Product Teams</a>
                         <a href="../business-automation/">Business Automation</a>
                         <a href="./">Technical Teams</a>
                         <a href="../blog/">Blog</a>

@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Zespoły techniczne - Jarek Drabek</title>
-    <meta name="description" content="Przegląd architektury backendu, architektura systemów AI/RAG, utrzymywalność, projektowanie integracji i wsparcie implementacji dla zespołów technicznych.">
+    <meta name="description" content="Konkretne przykłady zewnętrznego wsparcia architektonicznego, utrzymywalności, przeglądu kodu generowanego przez AI i porządkowania kierunku technicznego.">
     <meta property="og:title" content="Zespoły techniczne - Jarek Drabek">
-    <meta property="og:description" content="Doświadczone wsparcie backendowe i architektoniczne dla CTO, tech leadów, menedżerów inżynierii, software house'ów i zespołów technicznych.">
+    <meta property="og:description" content="Zewnętrzne spojrzenie techniczne, gdy system, architektura albo tempo zmian zaczynają wymykać się spod kontroli.">
     <meta property="og:type" content="website">
     <link rel="canonical" href="https://jarekdrabek.pl/pl/zespoly-techniczne/">
     <link rel="alternate" hreflang="en" href="https://jarekdrabek.pl/en/technical-teams/">
@@ -16,14 +16,14 @@
     <link rel="apple-touch-icon" href="../../1651059159546_.jpeg">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;850&family=Tektur:wght@400;500&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../../assets/site.css?v=audience-calm-20260607">
+    <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@600;700&amp;family=Inter:wght@400;500;600;700;800&amp;family=JetBrains+Mono:wght@500;600&amp;family=Tektur:wght@500&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../assets/site.css?v=technical-flow-20260613">
 </head>
-<body>
+<body class="technical-skin">
     <nav class="site-nav">
         <div class="nav-inner">
             <a class="brand-link brand-font" href="../">Jarek Drabek</a>
-            <div class="nav-links">
+            <div class="nav-links" aria-label="Główna nawigacja">
                 <a href="../saas-i-zespoly-produktowe/">SaaS i zespoły produktowe</a>
                 <a href="../automatyzacja-biznesu/">Automatyzacja biznesu</a>
                 <a href="./" aria-current="page">Zespoły techniczne</a>
@@ -31,119 +31,87 @@
                 <a href="../kontakt/">Kontakt</a>
             </div>
             <div class="nav-actions">
-                <a class="lang-link" href="../../en/technical-teams/" aria-label="English"><span aria-hidden="true">🇬🇧</span><span class="sr-only">English</span></a>
-                <a class="lang-link active" href="./" aria-label="Polski" aria-current="page"><span aria-hidden="true">🇵🇱</span><span class="sr-only">Polski</span></a>
+                <a class="lang-link" href="../../en/technical-teams/" aria-label="English"><span aria-hidden="true">EN</span><span class="sr-only">English</span></a>
+                <a class="lang-link active" href="./" aria-label="Polski" aria-current="page"><span aria-hidden="true">PL</span><span class="sr-only">Polski</span></a>
             </div>
         </div>
     </nav>
 
-    <main class="expert-page">
-        <header class="expert-hero">
-            <div class="container expert-readable">
+    <main class="case-page">
+        <header class="case-hero">
+            <div class="container technical-container">
                 <p class="breadcrumb"><a href="../">Strona główna</a> / Zespoły techniczne</p>
-                <h1>Wsparcie architektoniczne i implementacyjne dla zespołów technicznych.</h1>
-                <p class="expert-lede">Dla CTO, tech leadów, menedżerów inżynierii, software house'ów i zespołów, które potrzebują zewnętrznego spojrzenia na backend, systemy AI/RAG, integracje albo gotowość do produkcji.</p>
-                <div class="expert-hero-actions">
-                    <a class="button" href="../kontakt/">Opisz problem</a>
-                    <a class="expert-secondary-link" href="#expert-help">Zobacz, gdzie mogę pomóc</a>
+                <h1>Pomagam zespołom technicznym odzyskać jasność, gdy system, architektura albo tempo zmian zaczynają wymykać się spod kontroli.</h1>
+                <div class="case-hero-copy">
+                    <p>Czasem chodzi o decyzję architektoniczną. Czasem o chaos techniczny po szybkim rozwoju. Czasem o kod wygenerowany przez AI, który działa, ale nikt nie jest pewien, czy jest dobrą podstawą na przyszłość.</p>
                 </div>
             </div>
         </header>
 
-        <div class="container expert-readable expert-content" id="expert-help">
-            <section class="expert-article-section">
-                <h2>Gdzie mogę pomóc zespołowi technicznemu</h2>
-                <div class="expert-service-list">
-                    <article class="expert-service-row">
-                        <h3>Przegląd architektury</h3>
-                        <p>Ocena granic systemu, przepływów danych, wdrożeń, zależności i ryzyka przed dużą zmianą, refaktoryzacją albo decyzją produktową.</p>
+        <section class="case-examples" aria-labelledby="examples-title">
+            <div class="container technical-container">
+                <div class="case-section-heading">
+                    <span class="technical-label">Przykłady</span>
+                    <h2 id="examples-title">Gdzie to zwykle widać</h2>
+                </div>
+
+                <div class="case-grid">
+                    <article class="case-card">
+                        <h3>Przed zespołem jest decyzja architektoniczna</h3>
+                        <dl>
+                            <div><dt>Problem</dt><dd>Zespół stoi przed ważnym wyborem technicznym.</dd></div>
+                            <div><dt>IT/AI pomoc</dt><dd>Zewnętrzny przegląd, analiza trade-offów, rekomendacja.</dd></div>
+                            <div><dt>Rezultat</dt><dd>Decyzja oparta na argumentach, nie na przeczuciu.</dd></div>
+                        </dl>
                     </article>
-                    <article class="expert-service-row">
-                        <h3>Architektura systemów AI/RAG</h3>
-                        <p>Projektowanie wyszukiwania, przepływu kontekstu, uprawnień, ewaluacji, obserwowalności i obsługi błędów w systemach AI dla realnych użytkowników.</p>
+
+                    <article class="case-card">
+                        <h3>System działa, ale trudno go utrzymać</h3>
+                        <dl>
+                            <div><dt>Problem</dt><dd>Zmiany są ryzykowne, zależności niejasne, a kod trudno rozwijać.</dd></div>
+                            <div><dt>IT/AI pomoc</dt><dd>Przegląd struktury, granice modułów, analiza przepływu danych.</dd></div>
+                            <div><dt>Rezultat</dt><dd>Plan porządkowania bez zatrzymywania rozwoju.</dd></div>
+                        </dl>
                     </article>
-                    <article class="expert-service-row">
-                        <h3>Wsparcie implementacji backendu</h3>
-                        <p>Praca z zespołem przy trudnych zadaniach backendowych, integracyjnych, refaktoryzacyjnych albo przy utwardzaniu systemu przed produkcją.</p>
+
+                    <article class="case-card">
+                        <h3>Kod generowany przez AI wymaga przeglądu</h3>
+                        <dl>
+                            <div><dt>Problem</dt><dd>Kod powstał szybko, ale nie wiadomo, czy jest bezpieczny, utrzymywalny i zgodny z architekturą.</dd></div>
+                            <div><dt>IT/AI pomoc</dt><dd>Przegląd, identyfikacja ryzyka, rekomendacje refaktoryzacji.</dd></div>
+                            <div><dt>Rezultat</dt><dd>Szybki rozwój bez tworzenia długu technicznego, którego nikt nie rozumie.</dd></div>
+                        </dl>
                     </article>
-                    <article class="expert-service-row">
-                        <h3>Projektowanie integracji</h3>
-                        <p>Układanie czystych połączeń między produktem, CRM, danymi, narzędziami wewnętrznymi i systemami operacyjnymi.</p>
-                    </article>
-                    <article class="expert-service-row">
-                        <h3>Utrzymywalność i redukcja długu technicznego</h3>
-                        <p>Wskazanie miejsc, gdzie silne zależności i niejasna odpowiedzialność podnoszą ryzyko zmian, a potem wybór praktycznej ścieżki porządkowania.</p>
-                    </article>
-                    <article class="expert-service-row">
-                        <h3>Gotowość produkcyjna</h3>
-                        <p>Sprawdzenie testów, uprawnień, monitoringu, trybów awarii, dokumentacji i przekazania wiedzy, zanim system zacznie obsługiwać realnych użytkowników.</p>
+
+                    <article class="case-card">
+                        <h3>Chaos trzeba zamienić w plan</h3>
+                        <dl>
+                            <div><dt>Problem</dt><dd>Jest wiele problemów technicznych naraz i nie ma jasnego priorytetu.</dd></div>
+                            <div><dt>IT/AI pomoc</dt><dd>Diagnoza, mapa problemów, kolejność działań.</dd></div>
+                            <div><dt>Rezultat</dt><dd>Plan zrozumiały dla zespołu i biznesu.</dd></div>
+                        </dl>
                     </article>
                 </div>
-            </section>
+            </div>
+        </section>
 
-            <section class="expert-article-section">
-                <h2>Kiedy zewnętrzne wsparcie architektoniczne ma sens</h2>
-                <p>Zewnętrzne wsparcie pomaga wtedy, gdy zespół ma kontekst do budowania, ale potrzebuje doświadczonego spojrzenia z boku, zanim decyzja stanie się kosztowna do odwrócenia.</p>
-                <ul class="situations-list">
-                    <li>Zespół buduje system AI albo RAG i chce uniknąć błędów produkcyjnych.</li>
-                    <li>System coraz trudniej zmieniać, a każda nowa funkcja robi się ryzykowna.</li>
-                    <li>Duże decyzje architektoniczne zapadają bez wystarczającej pewności.</li>
-                    <li>Zespół potrzebuje doświadczonego wsparcia backendowego lub architektonicznego bez oddawania odpowiedzialności za system.</li>
-                    <li>Kod generowany przez AI albo pisany w pośpiechu wymaga przeglądu, zanim stanie się długiem na lata.</li>
-                </ul>
-            </section>
-
-            <section class="expert-article-section">
-                <h2>Jak pracuję z zespołem bez przejmowania kontroli</h2>
-                <div class="expert-process">
-                    <article>
-                        <h3>Zrozumieć system i ograniczenia</h3>
-                        <p>Przeglądam cele, architekturę, kod albo diagramy, problemy operacyjne, kontekst zespołu i presję terminu.</p>
-                    </article>
-                    <article>
-                        <h3>Wskazać ryzyka i możliwe ścieżki</h3>
-                        <p>Oddzielam realne ryzyko architektoniczne od preferencji, przedwczesnej refaktoryzacji i szumu.</p>
-                    </article>
-                    <article>
-                        <h3>Pomóc zaprojektować albo wdrożyć następny praktyczny krok</h3>
-                        <p>Zamieniam wnioski w decyzje, opcje implementacji albo praktyczne wsparcie tam, gdzie zespół potrzebuje tempa.</p>
-                    </article>
+        <section class="case-cta" aria-labelledby="case-cta-title">
+            <div class="container technical-container">
+                <h2 id="case-cta-title">Jeśli któryś z tych przykładów brzmi znajomo, porozmawiajmy bez presji.</h2>
+                <p>Opowiedz, jak sytuacja wygląda u ciebie. Powiem uczciwie, czy widzę sensowny kierunek i od czego bym zaczął.</p>
+                <div class="case-actions">
+                    <a class="button" href="https://calendar.app.google/M4yVwNGidYNer4XP9">Umów krótką rozmowę</a>
+                    <a class="technical-link" href="../kontakt/">Napisz wiadomość <span aria-hidden="true">></span></a>
                 </div>
-            </section>
-
-            <section class="expert-article-section">
-                <h2>Dlaczego systemy AI i RAG są trudne w produkcji</h2>
-                <p>Systemy AI i RAG są trudne, bo ryzyko rozkłada się między zachowanie produktu, granice danych, jakość wyszukiwania i operacje. Demo może wyglądać przekonująco, gdy pytania produkcyjne nadal są nierozwiązane.</p>
-                <ul class="expert-simple-list">
-                    <li>Jakość wyszukiwania i budowanie kontekstu wymagają regularnej ewaluacji, nie tylko działającego prototypu.</li>
-                    <li>Uprawnienia i granice danych trzeba zaprojektować zanim wrażliwe informacje trafią do kontekstu modelu.</li>
-                    <li>Latencja, koszt, obserwowalność, obsługa błędów i jasna odpowiedzialność decydują, czy system da się utrzymać.</li>
-                </ul>
-            </section>
-
-            <section class="expert-article-section">
-                <h2>Co naprawdę znaczy „gotowe produkcyjnie”</h2>
-                <p>Gotowość produkcyjna oznacza, że zespół potrafi system obsługiwać, zmieniać i ufać mu po wdrożeniu. To nie tylko jakość kodu; to także odpowiedzialność za system i zachowanie w sytuacjach awaryjnych.</p>
-                <ul class="expert-simple-list">
-                    <li>Testy, monitoring, uprawnienia, ścieżki wycofania zmian i jasne tryby awarii są gotowe.</li>
-                    <li>Dokumentacja i przekazanie wiedzy wystarczają, żeby zespół utrzymywał system bez zgadywania.</li>
-                    <li>Architektura zostawia miejsce na zmianę zamiast zamieniać każdą kolejną funkcję w ryzykowną przebudowę.</li>
-                </ul>
-            </section>
-
-            <section class="expert-final-cta">
-                <h2>Potrzebujesz doświadczonego spojrzenia przed kolejną decyzją architektoniczną?</h2>
-                <p>Opisz sytuację. Pomogę znaleźć najbliższy praktyczny krok.</p>
-                <a class="button" href="../kontakt/">Opisz problem</a>
-            </section>
-        </div>
+            </div>
+        </section>
     </main>
 
     <footer class="site-footer">
         <div class="container footer-inner">
             <div class="footer-brand">
                 <p class="brand-font">Jarek Drabek</p>
-                <p class="footer-tagline">Backend, architektura i systemy AI.</p>
+                <p class="footer-tagline">Software, architektura, automatyzacja i AI.</p>
                 <p class="footer-meta">© 2026 Jarek Drabek. Wszelkie prawa zastrzeżone.</p>
             </div>
             <div class="footer-columns">

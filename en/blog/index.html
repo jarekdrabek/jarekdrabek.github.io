@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blog - Jarek Drabek</title>
-    <meta name="description" content="Practical notes on designing, automating, and maintaining software and AI systems — from business decisions to technical architecture.">
+    <meta name="description" content="Practical notes on software, architecture, automation, and AI systems — organized by the kind of problem a company is trying to solve.">
     <meta property="og:title" content="Blog - Jarek Drabek">
-    <meta property="og:description" content="Practical notes on designing, automating, and maintaining software and AI systems — from business decisions to technical architecture.">
+    <meta property="og:description" content="Practical notes on software, architecture, automation, and AI systems.">
     <meta property="og:type" content="website">
     <link rel="canonical" href="https://jarekdrabek.pl/en/blog/">
     <link rel="alternate" hreflang="en" href="https://jarekdrabek.pl/en/blog/">
@@ -16,43 +16,78 @@
     <link rel="apple-touch-icon" href="../../1651059159546_.jpeg">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;850&family=Tektur:wght@400;500&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../../assets/site.css?v=audience-calm-20260607">
+    <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@600;700&amp;family=Inter:wght@400;500;600;700;800&amp;family=JetBrains+Mono:wght@500;600&amp;family=Tektur:wght@500&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../assets/site.css?v=technical-flow-20260613">
 </head>
-<body>
+<body class="technical-skin">
     <nav class="site-nav">
         <div class="nav-inner">
             <a class="brand-link brand-font" href="../">Jarek Drabek</a>
-            <div class="nav-links">
-                <a href="../saas-product-teams/">SaaS & Product Teams</a>
+            <div class="nav-links" aria-label="Main navigation">
+                <a href="../saas-product-teams/">SaaS &amp; Product Teams</a>
                 <a href="../business-automation/">Business Automation</a>
                 <a href="../technical-teams/">Technical Teams</a>
                 <a href="./" aria-current="page">Blog</a>
                 <a href="../contact/">Contact</a>
             </div>
             <div class="nav-actions">
-                <a class="lang-link active" href="./" aria-label="English" aria-current="page"><span aria-hidden="true">🇬🇧</span><span class="sr-only">English</span></a>
-                <a class="lang-link" href="../../pl/blog/" aria-label="Polski"><span aria-hidden="true">🇵🇱</span><span class="sr-only">Polski</span></a>
+                <a class="lang-link active" href="./" aria-label="English" aria-current="page"><span aria-hidden="true">EN</span><span class="sr-only">English</span></a>
+                <a class="lang-link" href="../../pl/blog/" aria-label="Polski"><span aria-hidden="true">PL</span><span class="sr-only">Polski</span></a>
             </div>
         </div>
     </nav>
 
-    <main>
-        <header class="page-header">
-            <div class="container">
+    <main class="journal-page">
+        <header class="journal-hero">
+            <div class="container technical-container">
                 <p class="breadcrumb"><a href="../">Home</a> / Blog</p>
-                <p class="eyebrow">Blog</p>
-                <h1>Practical notes on designing, automating, and maintaining software and AI systems.</h1>
-                <p>From business decisions to technical architecture.</p>
+                <h1>Practical notes on software, architecture, automation, and AI systems.</h1>
+                <p>Not a generic feed. The writing here is organized around the same kinds of problems companies bring to me: product systems, business operations, technical teams, and the decisions that connect them.</p>
             </div>
         </header>
+
+        <section class="journal-topics" aria-labelledby="journal-topics-title">
+            <div class="container technical-container">
+                <div class="case-section-heading">
+                    <span class="technical-label">Categories</span>
+                    <h2 id="journal-topics-title">What the blog will stay focused on</h2>
+                </div>
+
+                <div class="journal-grid">
+                    <article class="journal-card">
+                        <span class="technical-label">SaaS</span>
+                        <h2>SaaS and products</h2>
+                        <p>Architecture, AI features, prototypes, and product systems that need to survive real users.</p>
+                    </article>
+                    <article class="journal-card">
+                        <span class="technical-label">Ops</span>
+                        <h2>Business automation</h2>
+                        <p>Manual work, documents, reports, internal tools, and practical places where software should remove friction.</p>
+                    </article>
+                    <article class="journal-card">
+                        <span class="technical-label">Tech</span>
+                        <h2>Technical teams</h2>
+                        <p>Architecture decisions, maintainability, AI-generated code, RAG systems, and production readiness.</p>
+                    </article>
+                    <article class="journal-card">
+                        <span class="technical-label">General</span>
+                        <h2>Software judgment</h2>
+                        <p>How to think clearly before choosing a tool, model, rewrite, automation, or architecture direction.</p>
+                    </article>
+                </div>
+
+                <div class="journal-note">
+                    <p>The blog stays intentionally narrow: concrete writing for founders, managers, CTOs, tech leads, and engineers who need better software and AI decisions, not louder technology marketing.</p>
+                </div>
+            </div>
+        </section>
     </main>
 
     <footer class="site-footer">
         <div class="container footer-inner">
             <div class="footer-brand">
                 <p class="brand-font">Jarek Drabek</p>
-                <p class="footer-tagline">Backend, architecture, and AI systems.</p>
+                <p class="footer-tagline">Software, architecture, automation, and AI.</p>
                 <p class="footer-meta">© 2026 Jarek Drabek. All rights reserved.</p>
             </div>
             <div class="footer-columns">
@@ -60,7 +95,7 @@
                     <h2>Navigation</h2>
                     <div class="footer-links">
                         <a href="../">Home</a>
-                        <a href="../saas-product-teams/">SaaS & Product Teams</a>
+                        <a href="../saas-product-teams/">SaaS &amp; Product Teams</a>
                         <a href="../business-automation/">Business Automation</a>
                         <a href="../technical-teams/">Technical Teams</a>
                         <a href="./">Blog</a>
