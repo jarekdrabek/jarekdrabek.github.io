@@ -94,8 +94,8 @@ Polish:
 
 Decision paths:
 
-1. SaaS & Product Teams
-2. Business Automation
+1. Business Automation
+2. SaaS & Product Teams
 3. Technical Teams
 
 ## Homepage Visual Direction
@@ -144,19 +144,23 @@ Navigation items:
 
 English:
 
-- SaaS & Product Teams
 - Business Automation
+- SaaS & Product Teams
 - Technical Teams
-- Blog
 - Contact
 
 Polish:
 
-- SaaS i zespoły produktowe
 - Automatyzacja biznesu
+- SaaS i zespoły produktowe
 - Zespoły techniczne
-- Blog
 - Kontakt
+
+Temporary blog visibility rule:
+
+- The blog exists in the codebase, but the public `Blog` navigation/footer link is temporarily hidden until real articles are published.
+- Do not re-add `Blog` to the header or footer unless explicitly requested.
+- The blog pages may remain accessible by direct URL so content can be prepared privately.
 
 Header rules:
 
@@ -175,14 +179,34 @@ Examples:
 - `/saas-product-teams/` activates `SaaS & Product Teams`
 - `/business-automation/` activates `Business Automation`
 - `/technical-teams/` activates `Technical Teams`
-- `/blog/` activates `Blog`
 - `/contact/` activates `Contact`
 
 Apply the equivalent behavior on Polish routes.
 
 ## Main Audience Paths
 
-### 1. SaaS & Product Teams
+### 1. Business Automation
+
+For small and medium businesses that are not necessarily software companies, but want to use IT and AI to improve operations.
+
+Focus areas:
+
+- workflow automation
+- AI automations
+- internal tools
+- document processing
+- reporting automation
+- RAG / knowledge assistants
+- replacing manual work with reliable systems
+
+Visitor problems:
+
+- "We do too much repetitive work manually."
+- "Our company has data and documents, but people waste time searching for answers."
+- "We want to introduce AI, but we do not know where it makes business sense."
+- "We need practical automation, not AI hype."
+
+### 2. SaaS & Product Teams
 
 For SaaS founders, product teams, startup builders, and companies building software products.
 
@@ -203,27 +227,6 @@ Visitor problems:
 - "Our product grew and the backend architecture is becoming messy."
 - "We have a prototype, but we need to make it production-ready."
 - "We need technical guidance before building the wrong thing."
-
-### 2. Business Automation
-
-For small and medium businesses that are not necessarily software companies, but want to use IT and AI to improve operations.
-
-Focus areas:
-
-- workflow automation
-- AI automations
-- internal tools
-- document processing
-- reporting automation
-- RAG / knowledge assistants
-- replacing manual work with reliable systems
-
-Visitor problems:
-
-- "We do too much repetitive work manually."
-- "Our company has data and documents, but people waste time searching for answers."
-- "We want to introduce AI, but we do not know where it makes business sense."
-- "We need practical automation, not AI hype."
 
 ### 3. Technical Teams
 
@@ -288,7 +291,9 @@ Do not add:
 
 ## Blog Strategy
 
-Keep one main `Blog` item in the navigation.
+The blog is temporarily hidden from public navigation and footer links until real articles are published.
+
+When the blog is ready to go public, reintroduce one main `Blog` item in the navigation and restore useful footer/internal links.
 
 Blog content should support audience categories:
 
