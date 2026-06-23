@@ -393,6 +393,8 @@ Use:
 
 Do not add unnecessary dependencies or infrastructure only for SEO.
 
+Keep `sitemap.xml` aligned with the public site. Add new canonical public pages and blog posts, and exclude redirects, drafts, private/test routes, prototypes, assets, and duplicate URLs. Keep `robots.txt` pointed at `https://jarekdrabek.pl/sitemap.xml`.
+
 ## Contact Page
 
 The contact page should feel personal, calm, and practical.

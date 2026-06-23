@@ -9,7 +9,7 @@ The site uses a minimal, privacy-conscious analytics foundation that works direc
 ## Remaining setup
 
 1. Deploy the changes to GitHub Pages.
-2. Submit the sitemap in Search Console if a sitemap is added to the site. There is no sitemap in the repository at the time of this setup.
+2. Submit `https://jarekdrabek.pl/sitemap.xml` in Search Console.
 3. Check Cloudflare Web Analytics after the site has received some traffic.
 
 The Cloudflare site token is already installed. If Cloudflare issues a replacement token, update the `data-cf-beacon` value in every public HTML file.
