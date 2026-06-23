@@ -7,7 +7,7 @@ This website is a static personal consulting site for `jarekdrabek.pl`. It is in
 - HTML: each route is a plain static `index.html` file.
 - CSS: shared styling lives in `assets/site.css`.
 - Fonts: Google Fonts loads `Inter` for general text and `Tektur` for the personal brand/logo style.
-- JavaScript: only tiny inline redirect scripts are used for `/` language routing and old blog compatibility redirects.
+- JavaScript: tiny inline redirect scripts handle `/` language routing and old blog compatibility redirects. `assets/js/analytics-events.js` provides dependency-free, provider-neutral interaction events.
 - Images: local image assets live in the repository root and are referenced directly by absolute static paths when needed.
 - Contact form: contact pages post to Formspree.
 
@@ -41,6 +41,7 @@ There is no application server in this repository. Any OVH configuration should 
 
 - `index.html`: language router and manual language fallback links.
 - `assets/site.css`: shared layout, typography, cards, navigation, footer, contact form, and responsive behavior.
+- `assets/js/analytics-events.js`: privacy-conscious click classification and provider-neutral custom analytics events.
 - `en/index.html` and `pl/index.html`: language-specific homepages.
 - `en/saas-product-teams/index.html` and `pl/saas-i-zespoly-produktowe/index.html`: SaaS/product audience pages.
 - `en/business-automation/index.html` and `pl/automatyzacja-biznesu/index.html`: business automation audience pages.
@@ -68,6 +69,7 @@ Keep new work consistent with the current static architecture:
 - Keep page behavior browser-native where possible: anchors, forms, semantic HTML, and progressive enhancement.
 - Keep the brand direction from `AGENTS.md`: specific, useful, human, and credible instead of generic portfolio language.
 - Avoid adding secrets or environment-specific configuration to the repository.
+- Keep analytics compatible with static GitHub Pages hosting and follow the privacy rules in `ANALYTICS.md`.
 
 ## Local Preview
 

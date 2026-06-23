@@ -584,6 +584,15 @@ After changes:
 
 For frontend changes, visually verify the affected pages whenever possible.
 
+## Analytics And Privacy
+
+- Keep analytics privacy-friendly and compatible with the plain HTML/GitHub Pages architecture.
+- Do not add invasive tracking or collect form input values, user-entered text, email addresses, telephone numbers, or other personal data in analytics events.
+- Keep custom event names and labels generic and useful for aggregate insight.
+- Do not hardcode real analytics tokens or verification codes in examples unless the user explicitly provides them for deployment.
+- Do not add Google Analytics, Microsoft Clarity, cookie banners, or other analytics infrastructure unless explicitly requested.
+- Preserve the provider-neutral event behavior documented in `ANALYTICS.md` when changing links, calls to action, or the analytics script.
+
 ## Regression Protection
 
 Future changes must not accidentally:

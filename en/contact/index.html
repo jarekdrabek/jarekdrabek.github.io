@@ -18,6 +18,10 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@600;700&amp;family=Inter:wght@400;500;600;700;800&amp;family=JetBrains+Mono:wght@500;600&amp;family=Tektur:wght@500&amp;display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../../assets/site.css?v=technical-flow-20260614-burger5">
+    <script defer src="../../assets/js/analytics-events.js"></script>
+    <!-- Cloudflare Web Analytics -->
+    <script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "91619316ee544dd3807578c00a2578d9"}'></script>
+    <!-- End Cloudflare Web Analytics -->
 </head>
 <body class="technical-skin">
     <nav class="site-nav">
@@ -58,10 +62,10 @@
                         <h2>Start with the situation, not a polished brief.</h2>
                         <p>Tell me where time disappears, where the system slows people down, or where AI looks promising but unclear. I’ll reply personally and suggest the next practical step.</p>
                         <ul class="contact-lines">
-                            <li><strong>Email</strong> <a href="mailto:contact@jarekdrabek.pl">contact@jarekdrabek.pl</a></li>
-                            <li><strong>Phone</strong> <a href="tel:+48662077499">(+48) 662 077 499</a></li>
-                            <li><strong>Calendar</strong> <a href="https://calendar.app.google/M4yVwNGidYNer4XP9">Book a short call</a></li>
-                            <li><strong>LinkedIn</strong> <a href="https://www.linkedin.com/in/jaroslaw-drabek/">LinkedIn</a></li>
+                            <li><strong>Email</strong> <a href="mailto:contact@jarekdrabek.pl" data-analytics-event="contact_email_click" data-analytics-category="conversion" data-analytics-label="email">contact@jarekdrabek.pl</a></li>
+                            <li><strong>Phone</strong> <a href="tel:+48662077499" data-analytics-event="contact_phone_click" data-analytics-category="conversion" data-analytics-label="phone">(+48) 662 077 499</a></li>
+                            <li><strong>Calendar</strong> <a href="https://calendar.app.google/M4yVwNGidYNer4XP9" data-analytics-event="book_call_click" data-analytics-category="conversion" data-analytics-label="calendar">Book a short call</a></li>
+                            <li><strong>LinkedIn</strong> <a href="https://www.linkedin.com/in/jaroslaw-drabek/" data-analytics-event="linkedin_click" data-analytics-category="social" data-analytics-label="linkedin">LinkedIn</a></li>
                         </ul>
                     </div>
                     <form action="https://formspree.io/f/xanojqqp" method="POST" class="technical-contact-panel">
@@ -77,7 +81,7 @@
                             <label for="message">What should software or AI improve?</label>
                             <textarea id="message" name="message" rows="7" required></textarea>
                         </div>
-                        <button class="button" type="submit">Start the conversation</button>
+                        <button class="button" type="submit" data-analytics-event="contact_form_submit_click" data-analytics-category="conversion" data-analytics-label="contact form">Start the conversation</button>
                         <p class="footer-meta">I’ll reply personally and suggest the next practical step.</p>
                     </form>
                 </div>

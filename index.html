@@ -28,6 +28,10 @@
             window.location.replace(prefersPolish ? 'pl/' : 'en/');
         })();
     </script>
+    <script defer src="assets/js/analytics-events.js"></script>
+    <!-- Cloudflare Web Analytics -->
+    <script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "91619316ee544dd3807578c00a2578d9"}'></script>
+    <!-- End Cloudflare Web Analytics -->
 </head>
 <body>
     <main class="hero">
@@ -36,8 +40,8 @@
             <h1 style="max-width: 760px; margin-top: 32px;">I help companies design, fix, and automate IT systems in the age of AI.</h1>
             <p class="hero-lede">Choose your preferred language. If JavaScript is enabled, this page redirects automatically based on your browser language.</p>
             <div class="hero-actions">
-                <a class="button" href="en/">English</a>
-                <a class="button-secondary" href="pl/">Polski</a>
+                <a class="button" href="en/" data-analytics-event="language_switch_click" data-analytics-category="navigation" data-analytics-label="language">English</a>
+                <a class="button-secondary" href="pl/" data-analytics-event="language_switch_click" data-analytics-category="navigation" data-analytics-label="language">Polski</a>
             </div>
         </div>
     </main>
