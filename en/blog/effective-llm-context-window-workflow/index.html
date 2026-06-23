@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Context Window Is a Workspace, Not a Trash Bin</title>
+    <meta name="description" content="Learn how to use LLM context windows effectively in software engineering, product work, and AI-native systems by designing context instead of dumping information.">
+    <meta property="og:title" content="The Context Window Is a Workspace, Not a Trash Bin">
+    <meta property="og:description" content="Learn how to use LLM context windows effectively in software engineering, product work, and AI-native systems by designing context instead of dumping information.">
+    <meta property="og:type" content="article">
+    <meta property="article:published_time" content="2026-06-23">
+    <meta property="article:section" content="Design Principles for AI-Native Builders">
+    <meta property="article:tag" content="AI">
+    <meta property="article:tag" content="LLM">
+    <meta property="article:tag" content="Software Architecture">
+    <meta property="article:tag" content="Clean Design">
+    <meta property="article:tag" content="AI-Native Builders">
+    <link rel="canonical" href="https://jarekdrabek.pl/en/blog/effective-llm-context-window-workflow/">
+    <link rel="alternate" hreflang="en" href="https://jarekdrabek.pl/en/blog/effective-llm-context-window-workflow/">
+    <link rel="alternate" hreflang="x-default" href="https://jarekdrabek.pl/en/blog/effective-llm-context-window-workflow/">
+    <link rel="icon" type="image/jpeg" href="../../../1651059159546_.jpeg">
+    <link rel="apple-touch-icon" href="../../../1651059159546_.jpeg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@600;700&amp;family=Inter:wght@400;500;600;700;800&amp;family=JetBrains+Mono:wght@500;600&amp;family=Tektur:wght@500&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../../assets/site.css?v=technical-flow-20260623-article1">
+</head>
+<body class="technical-skin article-page">
+    <!--
+    Article metadata
+    Title: The Context Window Is a Workspace, Not a Trash Bin
+    Slug: effective-llm-context-window-workflow
+    Language: English
+    Translation URL: none
+    Description: A large context window is useful, but it is not a trash bin. It is the LLM's active workspace, and it should be designed with the same care as software architecture.
+    Date: 2026-06-23
+    Audience: Founders, SaaS builders, managers, product owners, software engineers, tech leads, and CTOs
+    Category / series: Design Principles for AI-Native Builders
+    Phase: Phase 1 — Why design matters
+    Tags: AI, LLM, Software Architecture, Clean Design, AI-Native Builders
+    SEO title: The Context Window Is a Workspace, Not a Trash Bin
+    Meta description: Learn how to use LLM context windows effectively in software engineering, product work, and AI-native systems by designing context instead of dumping information.
+    -->
+    <nav class="site-nav">
+        <div class="nav-inner">
+            <a class="brand-link brand-font" href="../../">Jarek Drabek</a>
+            <input class="nav-menu-toggle" type="checkbox" id="nav-menu-toggle" aria-label="Toggle navigation">
+            <label class="nav-menu-button" for="nav-menu-toggle"><span class="sr-only">Menu</span><span aria-hidden="true"></span><span aria-hidden="true"></span><span aria-hidden="true"></span></label>
+            <div class="nav-links" aria-label="Main navigation">
+                <a href="../../business-automation/">Business Automation</a>
+                <a href="../../saas-product-teams/">SaaS &amp; Product Teams</a>
+                <a href="../../technical-teams/">Technical Teams</a>
+                <a href="../" aria-current="page">Blog</a>
+                <a href="../../contact/">Contact</a>
+            </div>
+            <div class="nav-actions">
+                <a class="lang-link active" href="./" aria-label="English" aria-current="page"><span aria-hidden="true">EN</span><span class="sr-only">English</span></a>
+                <a class="lang-link" href="../../../pl/blog/" aria-label="Polski"><span aria-hidden="true">PL</span><span class="sr-only">Polski</span></a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="journal-page">
+        <header class="journal-hero">
+            <div class="container technical-container">
+                <p class="breadcrumb"><a href="../../">Home</a> / <a href="../">Blog</a> / Article</p>
+                <span class="technical-label">Design Principles for AI-Native Builders</span>
+                <h1>The Context Window Is a Workspace, Not a Trash Bin</h1>
+                <p class="article-excerpt">A large context window is useful, but it is not a trash bin. It is the LLM’s active workspace, and it should be designed with the same care as software architecture.</p>
+                <p class="article-meta">Phase 1 — Why design matters · June 23, 2026 · Jarek Drabek</p>
+            </div>
+        </header>
+
+        <section class="article-content">
+            <div class="container technical-container">
+                <article class="article-body">
+                    <p>A large context window feels powerful until you start using it like storage. Then the LLM has more text, more noise, more contradictions, and less clarity about what actually matters.</p>
+
+                    <h2>TL;DR</h2>
+
+                    <p>The context window is not a place to dump everything. It is the LLM’s active workspace.</p>
+
+                    <p>Think about a clean workbench in a workshop. If you are fixing one machine part, you want the manual, the part itself, the right tools, and maybe one previous repair note. You do not want every tool in the building, all old invoices, five unrelated manuals, and someone’s meeting notes from last year spread across the table.</p>
+
+                    <p>LLMs work in a similar way. A bigger context window does not automatically mean better reasoning. Research and practice both show that models can miss important information buried inside long prompts, especially when the input is noisy, repetitive, or poorly structured. The model may pay more attention to the beginning and end than to the middle. It may also get distracted by narrative flow, irrelevant details, or conflicting instructions.</p>
+
+                    <p>Why should you care?</p>
+
+                    <p>Because AI makes it very easy to produce more: more code, more documents, more analysis, more tickets, more ideas. But if you do not design the context, the model works inside a mess.</p>
+
+                    <p>Effective use of context means selecting, ordering, compressing, and refreshing information deliberately. Good context is not “everything the model might need.” Good context is “the minimum useful working set for this task.”</p>
+
+                    <p>In AI-native work, context design is becoming a core engineering skill.</p>
+
+                    <h2>For founders, SaaS builders, managers, and product owners</h2>
+
+                    <p>When people talk about LLM context windows, they often treat the topic as a technical limit.</p>
+
+                    <p>“How many tokens can this model handle?”</p>
+
+                    <p>That is the wrong first question.</p>
+
+                    <p>A better question is:</p>
+
+                    <p>“What does the model need to understand right now to make a good decision?”</p>
+
+                    <p>That is a product and management question as much as an engineering question.</p>
+
+                    <p>Imagine a product team planning a new onboarding flow for a SaaS app. You ask an AI assistant to help. You paste customer feedback, analytics exports, support tickets, previous strategy docs, notes from three meetings, competitor research, old roadmap ideas, and a half-finished PRD.</p>
+
+                    <p>Technically, all of this might fit inside the context window.</p>
+
+                    <p>But does that mean the model can use it well?</p>
+
+                    <p>Not necessarily.</p>
+
+                    <p>You may have given the model more information, but less direction. The important customer pain may be hidden in the middle. The current business goal may conflict with an outdated note. The support tickets may include edge cases that should not drive the whole product decision. The model may produce an answer that sounds complete, but quietly blends old priorities with new ones.</p>
+
+                    <p>This is where people get fooled.</p>
+
+                    <p>The output looks smart. It references many things. It feels comprehensive.</p>
+
+                    <p>But it may not be focused.</p>
+
+                    <p>The same problem happens in companies all the time without AI. A meeting becomes useless when everyone brings too much context and nobody frames the decision. A project becomes slow when documents pile up but ownership is unclear. A roadmap becomes confusing when old assumptions are never removed.</p>
+
+                    <p>AI does not remove this problem. It amplifies it.</p>
+
+                    <p>If your team already has messy documentation, unclear ownership, scattered decision records, and inconsistent terminology, an LLM will not magically create clarity from that mess. It may help, but only if you guide it with a clean working context.</p>
+
+                    <p>This matters a lot for SaaS builders.</p>
+
+                    <p>In SaaS, decisions are rarely isolated. A pricing change affects billing, onboarding, support, analytics, sales, permissions, and sometimes compliance. If you ask an LLM for help with “pricing logic” and dump the whole company wiki into the prompt, you are not helping it. You are making it guess which parts of the company matter for this specific decision.</p>
+
+                    <p>Better context design looks different.</p>
+
+                    <p>You give the model:</p>
+
+                    <ul>
+                        <li>the current goal,</li>
+                        <li>the relevant constraints,</li>
+                        <li>the current decision that needs to be made,</li>
+                        <li>the few documents that matter,</li>
+                        <li>the current source of truth,</li>
+                        <li>the known trade-offs,</li>
+                        <li>what should be ignored.</li>
+                    </ul>
+
+                    <p>That last part is underrated.</p>
+
+                    <p>Telling the model what not to use is often as important as telling it what to use.</p>
+
+                    <p>For example:</p>
+
+                    <blockquote>
+                        <p>Ignore old pricing experiments before March 2026. Use the current packaging model only. Focus on reducing onboarding friction for small teams, not enterprise procurement.</p>
+                    </blockquote>
+
+                    <p>That is not just prompting. That is management clarity.</p>
+
+                    <p>A well-designed context window forces you to separate current facts from old noise. It makes you decide what matters. It exposes gaps in your thinking. It turns AI from a random answer generator into a useful thinking partner.</p>
+
+                    <p>This is also why clean documentation matters more in the AI era, not less.</p>
+
+                    <p>If your company has clear product principles, current architecture notes, concise decision records, well-named concepts, and updated workflows, AI becomes much more useful. You can feed it the right slice of the system instead of dragging the whole messy history into every task.</p>
+
+                    <p>The context window should be treated like a meeting room.</p>
+
+                    <p>You do not invite everyone in the company to every meeting. You invite the people needed for that decision. You bring the right documents. You define the topic. You remove distractions. You make a decision. Then you write down what changed.</p>
+
+                    <p>That is how you should work with LLMs too.</p>
+
+                    <p>Big context windows are useful. But they are not a substitute for thinking.</p>
+
+                    <p>They are useful when you already know how to structure the work.</p>
+
+                    <h2>For software engineers, tech leads, and CTOs</h2>
+
+                    <p>For engineers, context window management becomes even more concrete.</p>
+
+                    <p>The tempting workflow is simple:</p>
+
+                    <blockquote>
+                        <p>“Here is my entire repo. Fix this bug.”</p>
+                    </blockquote>
+
+                    <p>Sometimes this works.</p>
+
+                    <p>But as a default habit, it is lazy and fragile.</p>
+
+                    <p>Large context windows create the illusion that we no longer need to understand boundaries. Just paste more files. Add more logs. Include more documentation. Attach more tickets. Let the model figure it out.</p>
+
+                    <p>That approach breaks down quickly in real systems.</p>
+
+                    <p>The LLM may miss the important part of the input. It may overfit to a recently pasted file. It may use an outdated abstraction because it appeared later in the conversation. It may blend two modules that should stay separate. It may generate a patch that works locally but violates the architecture.</p>
+
+                    <p>The model is not only reasoning about your task. It is also navigating the shape of the context you created.</p>
+
+                    <p>Bad context creates bad work.</p>
+
+                    <p>Here is a common anti-pattern:</p>
+
+                    <pre><code>Task:
+Fix the invoice bug.
+
+Context:
+- 12 files from billing
+- 8 files from payments
+- old Slack discussion
+- current error log
+- two unrelated stack traces
+- database schema dump
+- entire API client
+- previous failed AI attempt
+- half of the README
+- "make it clean"</code></pre>
+
+                    <p>This looks thorough. It is not.</p>
+
+                    <p>It gives the model many signals but no map.</p>
+
+                    <p>A better approach is to build a context pack.</p>
+
+                    <p>Not a giant dump. A designed working set.</p>
+
+                    <pre><code>Task:
+Fix duplicated invoice generation when a payment webhook is retried.
+
+Goal:
+Make invoice creation idempotent.
+
+Current behavior:
+The same payment event can create multiple invoices when the webhook is retried.
+
+Relevant domain rule:
+One successful payment should produce at most one invoice.
+
+Relevant modules:
+- payments/webhooks.py
+- billing/invoice_service.py
+- billing/invoice_repository.py
+
+Important constraints:
+- Do not change the public webhook API.
+- Do not make invoice creation dependent on request timing.
+- Prefer database-level uniqueness where appropriate.
+
+Ignore:
+- Legacy CSV invoice export.
+- Admin invoice editing flow.
+- Old migration notes before 2025.
+
+Expected output:
+1. Explain the cause.
+2. Propose the smallest safe design change.
+3. Show the patch.
+4. Suggest tests.</code></pre>
+
+                    <p>This is a completely different working environment.</p>
+
+                    <p>The model now has a goal, a boundary, a domain rule, relevant files, constraints, exclusions, and output format. You are not asking it to swim through the whole lake. You are giving it a clean lane.</p>
+
+                    <p>That is the core idea: <strong>treat context as architecture.</strong></p>
+
+                    <p>A good backend system has boundaries. A good prompt context should have boundaries too.</p>
+
+                    <p>A good backend system separates domain logic from infrastructure noise. A good context window should separate task-critical information from background material.</p>
+
+                    <p>A good backend system avoids global mutable state. A good LLM workflow avoids long messy chats where every old assumption remains active forever.</p>
+
+                    <p>This is especially important in AI-assisted coding sessions.</p>
+
+                    <p>Long chats decay.</p>
+
+                    <p>At the beginning, the model may understand the task well. After 40 messages, five changes of direction, three failed attempts, and many pasted files, the conversation becomes polluted. Old decisions remain in the context. Reverted ideas still exist. Previous mistakes may influence the next answer.</p>
+
+                    <p>At that point, continuing the same chat may feel efficient, but it can become counterproductive.</p>
+
+                    <p>A better workflow is to periodically compress and reset.</p>
+
+                    <p>For example:</p>
+
+                    <pre><code>Summarize the current state for a fresh implementation context.
+
+Include:
+- final goal,
+- decisions already made,
+- files changed,
+- current architecture constraints,
+- known failed approaches,
+- remaining task,
+- tests that must pass.
+
+Exclude:
+- brainstorming,
+- rejected ideas,
+- outdated assumptions,
+- verbose logs unless still relevant.</code></pre>
+
+                    <p>Then start a new context with that summary plus the relevant files.</p>
+
+                    <p>This is not wasted time. This is context refactoring.</p>
+
+                    <p>And just like code refactoring, it protects you from accumulated mess.</p>
+
+                    <p>A practical technical workflow could look like this:</p>
+
+                    <pre><code>1. Define the task
+   What exactly are we trying to change?
+
+2. Define the system boundary
+   Which module, service, endpoint, workflow, or domain area is involved?
+
+3. Provide the map before the details
+   Give the model a short architecture overview before dumping files.
+
+4. Add only relevant source files
+   Prefer the files that own the behavior, not every file that mentions a keyword.
+
+5. Add contracts and constraints
+   APIs, database constraints, events, invariants, backward compatibility rules.
+
+6. Ask for analysis before implementation
+   Make the model explain the cause and the design options first.
+
+7. Implement in small steps
+   Avoid asking for a huge multi-module rewrite unless that is truly the goal.
+
+8. Refresh the context
+   Summarize decisions and remove outdated information.
+
+9. Validate with tests and review
+   Never treat the model’s output as correct just because it sounds coherent.</code></pre>
+
+                    <p>This workflow works because it mirrors clean architecture thinking.</p>
+
+                    <p>Before changing a system, understand the boundary.</p>
+
+                    <p>Before editing code, understand the responsibility.</p>
+
+                    <p>Before adding more context, ask whether the information belongs in the current working set.</p>
+
+                    <p>Here is a simple pattern I like:</p>
+
+                    <pre><code>Map → Slice → Task → Validate → Compress</code></pre>
+
+                    <p><strong>Map</strong> the system at a high level.</p>
+
+                    <pre><code>This service handles payments.
+Successful payments emit PaymentCompleted.
+Billing listens to that event and creates invoices.
+Invoices must be idempotent by payment_id.</code></pre>
+
+                    <p><strong>Slice</strong> the relevant part.</p>
+
+                    <pre><code>For this task, focus only on webhook handling, event publishing, and invoice creation.
+Ignore refunds, exports, and admin edits.</code></pre>
+
+                    <p><strong>Task</strong> the model clearly.</p>
+
+                    <pre><code>Find where duplicate invoices can be created and propose an idempotent design.</code></pre>
+
+                    <p><strong>Validate</strong> the answer.</p>
+
+                    <pre><code>Check the proposed change against existing tests, database constraints, and retry behavior.</code></pre>
+
+                    <p><strong>Compress</strong> the result.</p>
+
+                    <pre><code>Summarize the final decision and updated files so this can be used as fresh context.</code></pre>
+
+                    <p>This is how you keep the model useful.</p>
+
+                    <p>The same applies to larger architecture work.</p>
+
+                    <p>If you ask an LLM to review an entire codebase, do not start with files. Start with questions:</p>
+
+                    <pre><code>What are the main bounded contexts?
+Where are the business rules located?
+Which modules change together?
+Where are dependencies pointing in the wrong direction?
+Which parts are stable and which parts are volatile?
+What should not be coupled?</code></pre>
+
+                    <p>Then give it a curated slice of the system.</p>
+
+                    <p>For example:</p>
+
+                    <pre><code>Analyze the boundary between payments and billing.
+
+Use:
+- payment event definitions
+- invoice creation service
+- database schema for invoices and payments
+- tests around webhook retries
+
+Do not analyze:
+- frontend checkout UI
+- admin reporting
+- CSV exports
+- notification templates</code></pre>
+
+                    <p>This helps the model reason like an architect instead of a search engine.</p>
+
+                    <p>The important point is not that you should always use tiny prompts. Sometimes you really do need a large context. Long API documentation, multiple related files, logs, database schemas, and decision records can be useful.</p>
+
+                    <p>But size should be intentional.</p>
+
+                    <p>A large context should be structured, not dumped.</p>
+
+                    <p>Use headings. Use ordering. Put the most important instructions near the end as well as the beginning. Separate facts from requests. Mark outdated material. Label source-of-truth documents. Give the model a map before asking for conclusions.</p>
+
+                    <p>For example:</p>
+
+                    <pre><code># Goal
+
+# Current source of truth
+
+# Relevant architecture
+
+# Files included
+
+# Known constraints
+
+# What to ignore
+
+# Task
+
+# Expected output</code></pre>
+
+                    <p>This may look simple, but it changes the quality of the work.</p>
+
+                    <p>Because the real skill is not “using more tokens.”</p>
+
+                    <p>The real skill is creating a context where the model can spend its reasoning on the problem, not on guessing what matters.</p>
+
+                    <p>That is why clean code and clean architecture still matter in the AI era.</p>
+
+                    <p>When the system has clear modules, clear naming, clear domain rules, and clear ownership, it is easier to create good context for the model. You can say: “Look at this bounded context.” You can provide a small set of files. You can explain the invariant. You can isolate the change.</p>
+
+                    <p>In a messy system, everything depends on everything. Every task needs half the repo. Every explanation has exceptions. Every change pulls in old decisions nobody remembers.</p>
+
+                    <p>That does not only slow humans down.</p>
+
+                    <p>It also makes LLMs worse.</p>
+
+                    <p>AI can generate code quickly. But if the context is chaotic, it generates inside chaos.</p>
+
+                    <h2>Practical takeaway</h2>
+
+                    <p>Use the context window like a clean workbench.</p>
+
+                    <p>Before you ask the LLM to do serious work, prepare the workspace:</p>
+
+                    <pre><code>1. State the goal.
+2. Give a short system map.
+3. Add only relevant material.
+4. Mark the source of truth.
+5. Include constraints and invariants.
+6. Say what to ignore.
+7. Ask for reasoning before code.
+8. Work in small steps.
+9. Compress and reset when the chat gets noisy.</code></pre>
+
+                    <p>A useful rule:</p>
+
+                    <blockquote>
+                        <p>If you cannot explain why a piece of context is included, it probably does not belong there.</p>
+                    </blockquote>
+
+                    <p>Another useful rule:</p>
+
+                    <blockquote>
+                        <p>The model should not have to discover the task from the pile. You should frame the task first, then provide the pile only if needed.</p>
+                    </blockquote>
+
+                    <p>This applies to code, documents, product decisions, research, strategy, and team workflows.</p>
+
+                    <p>Good context is designed.</p>
+
+                    <h2>Closing thought</h2>
+
+                    <p>The context window is one of the most important interfaces in AI-native work.</p>
+
+                    <p>Not the chat box. Not the model picker. Not the token limit.</p>
+
+                    <p>The actual interface is the shape of the information you give the model.</p>
+
+                    <p>If you treat that interface casually, you get casual results. Sometimes impressive, sometimes useful, often messy.</p>
+
+                    <p>If you design it well, the LLM becomes much more than a autocomplete machine. It becomes a better coding partner, reviewer, analyst, and architectural assistant.</p>
+
+                    <p>But the responsibility stays with you.</p>
+
+                    <p>The model can process context.</p>
+
+                    <p>You have to design it.</p>
+                </article>
+
+                <aside class="article-series-note" aria-label="Article series">
+                    <span class="technical-label">Series</span>
+                    <p>This article is part of <strong>Design Principles for AI-Native Builders</strong>, Phase 1 — Why design matters.</p>
+                    <a class="technical-link" href="../">Back to the blog <span aria-hidden="true">&gt;</span></a>
+                </aside>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-inner">
+            <div class="footer-brand">
+                <p class="brand-font">Jarek Drabek</p>
+                <p class="footer-tagline">Software, architecture, automation, and AI.</p>
+                <p class="footer-meta">© 2026 Jarek Drabek. All rights reserved.</p>
+            </div>
+            <div class="footer-columns">
+                <div class="footer-column">
+                    <h2>Navigation</h2>
+                    <div class="footer-links">
+                        <a href="../../">Home</a>
+                        <a href="../../business-automation/">Business Automation</a>
+                        <a href="../../saas-product-teams/">SaaS &amp; Product Teams</a>
+                        <a href="../../technical-teams/">Technical Teams</a>
+                        <a href="../">Blog</a>
+                        <a href="../../contact/">Contact</a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h2>Connect</h2>
+                    <div class="footer-links">
+                        <a href="https://www.linkedin.com/in/jaroslaw-drabek/">LinkedIn</a>
+                        <a href="mailto:contact@jarekdrabek.pl">Email</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
