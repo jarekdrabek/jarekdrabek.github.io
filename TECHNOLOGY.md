@@ -24,6 +24,7 @@ English is the primary language. Polish is a full translated route set.
 - `/en/blog/` and `/pl/blog/`
 - `/en/contact/` and `/pl/kontakt/`
 - `/blog/` and `/blog/why-ai-generated-software-still-needs-architecture/`: compatibility redirects to the English blog routes.
+- `/stronaroza/` and similar root-level folders may be used as isolated static demo pages for quickly presenting a website look or prototype.
 
 ## Hosting And Deployment
 
@@ -50,6 +51,7 @@ There is no application server in this repository. Any OVH configuration should 
 - `en/blog/[article-slug]/index.html` and `pl/blog/[article-slug]/index.html`: paired static article pages.
 - `en/contact/index.html` and `pl/kontakt/index.html`: dedicated contact pages.
 - `blog/`: compatibility redirects for older English blog URLs.
+- `stronaroza/` and similar demo folders: self-contained static snapshots copied from separate repositories; they may keep their own local `index.html`, CSS, JavaScript, and assets.
 - `sitemap.xml`: canonical public URLs submitted to search engines; excludes redirects, drafts, prototypes, and duplicate pages.
 - `robots.txt`: allows crawlers and references the production sitemap URL.
 - `CNAME`: GitHub Pages custom domain declaration.
@@ -73,6 +75,7 @@ Keep new work consistent with the current static architecture:
 - Avoid adding secrets or environment-specific configuration to the repository.
 - Keep analytics compatible with static GitHub Pages hosting and follow the privacy rules in `ANALYTICS.md`.
 - Add every new public canonical page and blog post to `sitemap.xml`. Do not add redirect, draft, private, test, or duplicate routes.
+- For standalone demo pages, keep each imported site isolated under its own root folder, avoid wiring it into the main navigation/footer/language switcher, and leave it out of `sitemap.xml` unless the user explicitly wants that demo indexed as canonical public content.
 
 ## Local Preview
 

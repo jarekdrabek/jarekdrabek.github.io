@@ -395,6 +395,20 @@ Do not add unnecessary dependencies or infrastructure only for SEO.
 
 Keep `sitemap.xml` aligned with the public site. Add new canonical public pages and blog posts, and exclude redirects, drafts, private/test routes, prototypes, assets, and duplicate URLs. Keep `robots.txt` pointed at `https://jarekdrabek.pl/sitemap.xml`.
 
+## Standalone Demo Pages
+
+The repository may contain isolated root-level demo pages, such as `/stronaroza/`, used as a quick way to present the look of another website or prototype.
+
+For these demo imports:
+
+- copy the source site into its own root folder, for example `stronaroza/`
+- keep local assets, CSS, and JavaScript inside that folder when possible
+- do not connect the demo to the main homepage, global navigation, footer, language switcher, or audience-page structure unless explicitly requested
+- do not redesign the demo to match the personal consulting site unless explicitly requested
+- do not add demo routes to `sitemap.xml` unless the user explicitly wants them indexed as canonical public content
+- avoid copying `.git`, IDE files, caches, build output that is not required for static display, or secrets
+- verify the demo route directly, for example `/stronaroza/`, after importing
+
 ## Contact Page
 
 The contact page should feel personal, calm, and practical.
