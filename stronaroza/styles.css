@@ -437,36 +437,6 @@ body.high-contrast .button.secondary:focus-visible {
   margin-top: 8px;
 }
 
-.spec-list {
-  margin: 0;
-  background: var(--surface);
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
-  box-shadow: var(--shadow);
-}
-
-.spec-list div {
-  display: grid;
-  grid-template-columns: 0.7fr 1fr;
-  gap: 18px;
-  padding: 18px;
-  border-bottom: 1px solid var(--border);
-}
-
-.spec-list div:last-child {
-  border-bottom: 0;
-}
-
-.spec-list dt {
-  color: var(--muted-text);
-  font-weight: 700;
-}
-
-.spec-list dd {
-  margin: 0;
-  font-weight: 800;
-}
-
 .muted {
   background: var(--surface-muted);
 }
@@ -539,12 +509,27 @@ body.high-contrast .feature-icon {
   object-fit: cover;
 }
 
+.image-panel.intro-photo img {
+  height: 100%;
+  min-height: 360px;
+  object-position: center;
+}
+
 .image-panel.pdf-photo img {
   height: 100%;
   min-height: 0;
   aspect-ratio: auto;
   object-fit: cover;
   object-position: center;
+}
+
+.image-panel.pdf-photo.landscape {
+  align-self: start;
+}
+
+.image-panel.pdf-photo.landscape img {
+  height: auto;
+  aspect-ratio: 4 / 3;
 }
 
 .image-panel.pdf-photo.portrait img {
@@ -849,11 +834,6 @@ body.high-contrast .footer-links a {
 
   .hero-badges {
     grid-template-columns: 1fr;
-  }
-
-  .spec-list div {
-    grid-template-columns: 1fr;
-    gap: 4px;
   }
 
   .site-footer {
