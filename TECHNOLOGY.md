@@ -101,3 +101,20 @@ Before pushing feature changes to `main`:
 - Confirm `CNAME` still contains `jarekdrabek.pl`.
 
 After pushing to `main`, GitHub Actions should publish the updated static site to GitHub Pages automatically.
+
+## CabinetFit App Store Pages
+
+The CabinetFit support and privacy pages are static HTML, separate from the consulting homepage and its navigation. No build step is needed.
+
+- `/cabinetfit/support/`: English support page and App Store Support URL.
+- `/cabinetfit/privacy/`: English privacy policy and App Store Privacy Policy URL.
+- `/cabinetfit/pl/support/`: Polish support page.
+- `/cabinetfit/pl/privacy/`: Polish privacy policy.
+- `/cabinetfit/`: language router, excluded from the sitemap; explicit language routes do not redirect.
+- `assets/cabinetfit.css`: CabinetFit-only layout, responsive styles and print styles.
+
+Canonical URLs use `https://jarekdrabek.pl`, matching `CNAME`. Each page has reciprocal English/Polish links, canonical and hreflang metadata, and the existing website analytics. Website analytics are disclosed separately from app data handling in the privacy policy. These pages use system fonts and email links, with no contact form or new tracking provider.
+
+The policy describes the app code inspected on 11 October 2026: local project/client storage, Apple Speech recognition with a possible server fallback, user-initiated exports, and system backups. Review it alongside any future app data-handling changes.
+
+Publishing follows the existing GitHub Pages workflow: commit and push the reviewed changes to `main`, wait for `.github/workflows/static.yml` to succeed, then verify each public URL before entering it in App Store Connect. Local files alone do not publish the pages. The app still needs an accessible in-app privacy-policy link and its required privacy manifest; these web pages do not add either to the iOS app.
